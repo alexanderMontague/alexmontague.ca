@@ -36,9 +36,8 @@ class About extends Component {
                   <span>{name}</span>
                   <br />
                   <span>
-                    {street}
                     <br />
-                    {city} {state}, {zip}
+                    Toronto / Guelph / Oakville
                   </span>
                   <br />
                   <span>{phone}</span>

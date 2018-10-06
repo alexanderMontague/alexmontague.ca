@@ -35,7 +35,7 @@ header {
   height: 800px;
   min-height: 500px;
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
     url(../images/header-background.jpg) no-repeat top center;
   background-size: cover !important;
   -webkit-background-size: cover !important;
@@ -72,6 +72,7 @@ header .banner-text h1 {
 }
 header .banner-text h3 {
   font: 18px/1.9em "librebaskerville-regular", serif;
+  font-weight: bold;
   color: #a8a8a8;
   margin: 0 auto;
   width: 70%;
@@ -80,6 +81,7 @@ header .banner-text h3 {
 header .banner-text h3 span,
 header .banner-text h3 a {
   color: #fff;
+  font-weight: bold;
 }
 header .banner-text hr {
   width: 60%;

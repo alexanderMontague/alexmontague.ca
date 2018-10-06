@@ -6,6 +6,7 @@ class Header extends Component {
       var name = this.props.data.name;
       var occupation = this.props.data.occupation;
       var description = this.props.data.description;
+      var description2 = this.props.data.description2;
       var city = this.props.data.address.city;
       var networks = this.props.data.social.map(function(network) {
         return (
@@ -68,9 +69,8 @@ class Header extends Component {
             <h3>
               Hey! I'm a <span>{city}</span> based <span>{occupation}</span>
               currently studying at the <span>University of Guelph</span>.{" "}
-              {description}.
-              {/* Hey! I'm a Toronto based Software Engineering Student currently
-              studying at the University of Guelph. */}
+              {description} <span>new opportunities. </span> {description2}{" "}
+              <span>I am up for the challenge.</span>
             </h3>
             <hr />
             <ul className="social">{networks}</ul>

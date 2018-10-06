@@ -2,55 +2,36 @@
   "main": {
     "name": "Alex Montague",
     "occupation": "Software Engineering Student ",
-    "description": "I am currently in my third year of schooling, and I am always looking for new opportunities. ",
+    "description": "I am in my third year of schooling, and I am always looking for ",
+    "description2": "Whether that be open source projects, internships, or new technologies, ",
     "image": "profilepic.jpg",
-    "bio": "Use this bio section as your way of describing yourself and saying what you do, what technologies you like to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing in.",
-    "contactmessage": "Contact Message",
-    "email": "youremailhere@gmail.com",
-    "phone": "555-555-5555",
+    "bio": "I am a software engineer. This doesn't just mean I like to program, but rather I am passionate about writing clean, smart, and efficient code! Over my schooling and work terms I have been exposed to many languages and frameworks, but some of my favourite languages are Javascript, C and Java. I have recently begun my dive into web development, more specifically using the ReactJS/NodeJS libraries. I hope to explore more full stack opportunities in the future!",
+    "contactmessage": "Hit me up!",
+    "email": "me@alexmontague.ca",
+    "phone": "",
     "address": {
       "street": "(Your Street)",
       "city": "Toronto",
-      "state": "(Your State)",
-      "zip": "(Your Zip/Postal Code)"
+      "state": "Ontario",
+      "zip": ""
     },
-    "website": "http://www.timbakerdev.com",
-    "resumedownload": "http://timbakerdev.com",
+    "website": "https://www.alexmontague.ca",
+    "resumedownload": "http://google.ca",
     "social": [
       {
-        "name": "facebook",
-        "url": "http://facebook.com/tim.baker.906",
-        "className": "fa fa-facebook"
-      },
-      {
-        "name": "twitter",
-        "url": "http://twitter.com",
-        "className": "fa fa-twitter"
-      },
-      {
-        "name": "google-plus",
-        "url": "http://googleplus.com/tbakerx",
-        "className": "fa fa-google-plus"
-      },
-      {
         "name": "linkedin",
-        "url": "https://www.linkedin.com/in/tim-baker-8420009a/",
+        "url": "https://www.linkedin.com/in/alex-montague/",
         "className": "fa fa-linkedin"
       },
       {
-        "name": "instagram",
-        "url": "http://instagram.com/tbaker_x",
-        "className": "fa fa-instagram"
-      },
-      {
         "name": "github",
-        "url": "http://github.com/tbakerx",
+        "url": "https://github.com/alexanderMontague",
         "className": "fa fa-github"
       },
       {
-        "name": "skype",
-        "url": "http://skype.com",
-        "className": "fa fa-skype"
+        "name": "stack overflow",
+        "url": "https://stackoverflow.com/users/4372747/alex-montague",
+        "className": "fa fa-stack-overflow"
       }
     ]
   },
@@ -58,16 +39,16 @@
     "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
     "education": [
       {
-        "school": "University?",
-        "degree": "Masters in Beer tasting",
-        "graduated": "April 2007",
-        "description": "Describe your experience at school, what you learned, what useful skills you have acquired etc."
+        "school": "The University of Guelph",
+        "degree": "Bachelors of Computing",
+        "graduated": "Exp. April 2021",
+        "description": "Currently in my third year studying Software Engineering. Some of the most intesting/favourite courses I have taken so far have been Software Design I - IV, Data Structures, Algorithms, Operating Systems and the infamous 'Angel of Death' (Software Systems and Integrations). Currently on the Dean's List for maintaining an overall average of 80%. Currently looking forward to my databases and software design V class."
       },
       {
-        "school": "School #1 Maybe College?",
-        "degree": "What did you study 101",
-        "graduated": "March 2003",
-        "description": "Describe your experience at school, what you learned, what useful skills you have acquired etc."
+        "school": "Holy Trinity C.S.S",
+        "degree": "O.S.S.D - Ontario Scholar",
+        "graduated": "June 2016",
+        "description": "Highschool is where I took my first programming class, and I'm glad I did! Graduated as an Ontario Scholar and maintained an overall average of 95% in all CIS courses."
       }
     ],
     "work": [
