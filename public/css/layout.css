@@ -366,6 +366,30 @@ ul#nav li.current a {
   line-height: 42px;
   border-radius: 3px 0 0 3px;
 }
+.techStackContainer {
+  display: flex;
+  flex-direction: column;
+}
+.techStack {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+@media (max-width: 767px) {
+  .techStack {
+    flex-direction: column;
+  }
+}
+.techCluster {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.techIcon {
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+}
 /*
 .git {
   	-moz-animation: git 2s ease;

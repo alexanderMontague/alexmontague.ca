@@ -7,7 +7,7 @@
     "image": "profilepic.jpg",
     "bio": "I am a software engineer. This doesn't just mean I like to program, but rather I am passionate about writing clean, smart, and efficient code! Over my schooling and work terms I have been exposed to many languages and frameworks, but some of my favourite languages are Javascript, C and Java. I have recently begun my dive into web development, more specifically using the ReactJS/NodeJS libraries. I hope to explore more full stack opportunities in the future!",
     "contactmessage": "Hit me up!",
-    "email": "me@alexmontague.ca",
+    "email": "me@amontague.ca",
     "phone": "",
     "address": {
       "street": "(Your Street)",
@@ -36,7 +36,7 @@
     ]
   },
   "resume": {
-    "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
+    "skillmessage": "Just some technology I am passionate about, and an overview of my skills",
     "education": [
       {
         "school": "The University of Guelph",
@@ -48,51 +48,87 @@
         "school": "Holy Trinity C.S.S",
         "degree": "O.S.S.D - Ontario Scholar",
         "graduated": "June 2016",
-        "description": "Highschool is where I took my first programming class, and I'm glad I did! Graduated as an Ontario Scholar and maintained an overall average of 95% in all CIS courses."
+        "description": "Highschool is where I was first introduced to programming and computer science. Started learning the fundamentals using the Turing and Java programming languages. Graduated as an Ontario Scholar and maintained an overall average of 95% in all CIS courses."
       }
     ],
     "work": [
       {
-        "company": "Awesome Design Studio",
-        "title": "Senior UX God ",
-        "years": "March 2010 - Present",
-        "description": "Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+        "company": "Coinsquare",
+        "title": "Student Web Developer ",
+        "years": "May 2018 - Present",
+        "description": "Coinsquare is a 21st century financial institution specializing in trading and managing cryptocurrencies. Coinsquare was rated the 2nd most sought after startup in Canada by LinkedIn! I joined the team as a student web developer and have been working on our web application for both the front end and backend teams. As one of Coinsquare's first interns, I had the pleasure of participating and presenting in the first ever Coinsquare hackathon, as well as being able to be a full functioning and independant developer! This was an absolutely amazing placement and I have learned so much not just about web development, but also about blockchain technology, project management, leadership and communication in an agile team! Checkout an article I wrote about my experiences HERE!"
       },
       {
-        "company": "Super Cool Studio",
-        "title": "Junior bug fixer",
-        "years": "March 2007 - February 2010",
-        "description": "Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+        "company": "Oakville Golf Club",
+        "title": "Senior Greenskeeper",
+        "years": "June 2014 - August 2017",
+        "description": "Managed and led a team of junior employees on daily projects around the golf club such as coordinating the mowing of a specific area, or systematically cleaning up after weather. I also Interacted with different team members every day, to maintain and keep course conditions pristine while having a golf member centered mentality."
       }
     ],
-    "skills": [
+    "techSkills": {
+      "row1": [
+        {
+          "imageSrc": "images/react.png",
+          "header": "ReactJS",
+          "text": "I have been doing a lot of frontend work with the react library, and I absolutely love it! It is so versatile and is my go to for frontend web development. Pairing React with some other very powerful libraries and frameworks that I like (redux, axios, styled components) makes for a super strong frontend stack!"
+        },
+        {
+          "imageSrc": "images/node.png",
+          "header": "NodeJS",
+          "text": "After recently branching out into backend web development, node, express and knex are some of the tools I am using to build my backend architecture. I am still learning lots about backend development!"
+        },
+        {
+          "imageSrc": "images/mysql.png",
+          "header": "SQL",
+          "text": "After learning SQL at school through projects, I was able use these skills at my current co-op where we utilized MySQL and PostgreSQL. I still have much to learn (and my upcoming databased course will help) in terms of relational databases, but I am also open and exploring non-relational databases such as MongoDB for personal use."
+        }
+      ],
+      "row2": [
+        {
+          "imageSrc": "images/c.png",
+          "header": "C",
+          "text": "The C Programming language is the main language taught at UofG, and probably my most strong language. I liked the low-levelness of this language, and my algorithms and data structures classes all utilized C. Learning this language made me appreciate dynamic languages, but also allowed me to understand how they work behind the scenes."
+        },
+        {
+          "imageSrc": "images/java.png",
+          "header": "Java",
+          "text": "Java is my favourite OO language and I have been programming with Java since highschool. I made my first graphical application with Java while working at my previous job, check it out below!"
+        },
+        {
+          "imageSrc": "images/python.png",
+          "header": "Python",
+          "text": "Python is something I am still exploring/learning, but I am very interested in it as I would like to explore AI/Machine learning in the future. Not to mention no more curly braces and semicolons :)"
+        }
+      ]
+    },
+    "barSkills": [
       {
-        "name": "Git",
-        "level": "60%"
-      },
-      {
-        "name": "Illustrator",
-        "level": "55%"
-      },
-      {
-        "name": "ReactJs",
-        "level": "50%"
-      },
-      {
-        "name": "CSS",
+        "name": "ReactJS/Redux",
         "level": "90%"
       },
       {
-        "name": "HTML5",
+        "name": "Git",
         "level": "80%"
       },
       {
-        "name": "VueJs",
-        "level": "50%"
+        "name": "NodeJS/Express",
+        "level": "70%"
       },
       {
-        "name": "MongoDB",
-        "level": "80%"
+        "name": "SQL",
+        "level": "75%"
+      },
+      {
+        "name": "HTML5/CSS3",
+        "level": "90%"
+      },
+      {
+        "name": "Data Structures / Algorithms",
+        "level": "75%"
+      },
+      {
+        "name": "Agile Methodologies",
+        "level": "85%"
       }
     ]
   },

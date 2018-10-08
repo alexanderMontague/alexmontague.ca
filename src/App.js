@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactGA from "react-ga";
 
 import "./App.css";
-import jsonData from "./resumeData.json";
+import resumeData from "./resumeData.json";
 
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
@@ -16,20 +16,16 @@ ReactGA.initialize("UA-110570651-1");
 ReactGA.pageview(window.location.pathname);
 
 class App extends Component {
-  state = {
-    resumeData: jsonData
-  };
-
   render() {
     return (
       <div className="App">
-        <Header data={this.state.resumeData.main} />
-        <About data={this.state.resumeData.main} />
-        <Resume data={this.state.resumeData.resume} />
-        <Portfolio data={this.state.resumeData.portfolio} />
+        <Header data={resumeData.main} />
+        <About data={resumeData.main} />
+        <Resume data={resumeData.resume} />
+        <Portfolio data={resumeData.portfolio} />
         <Testimonials />
-        <Contact data={this.state.resumeData.main} />
-        <Footer data={this.state.resumeData.main} />
+        <Contact data={resumeData.main} />
+        <Footer data={resumeData.main} />
       </div>
     );
   }
