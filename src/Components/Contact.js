@@ -1,13 +1,45 @@
 import React, { Component } from "react";
+import mailjet from "node-mailjet";
 
 class Contact extends Component {
-  render() {
-    if (this.props.data) {
-      var name = this.props.data.name;
-      var phone = this.props.data.phone;
-      var email = this.props.data.email;
-      var message = this.props.data.contactmessage;
+  state = {
+    formData: {
+      contactName: "",
+      contactEmail: "",
+      contactSubject: "",
+      contactMessage: ""
     }
+  };
+
+  updateForm = e => {
+    e.preventDefault();
+
+    switch (e.target.name) {
+      case "contactName":
+        this.setState({ contactName: e.target.value });
+        break;
+      case "contactEmail":
+        this.setState({ contactEmail: e.target.value });
+        break;
+      case "contactsubject":
+        this.setState({ contactSubject: e.target.value });
+        break;
+      default:
+        this.setState({ contactMessage: e.target.value });
+        break;
+    }
+  };
+
+  sendEmail = () => {
+    const MailJet = mailjet.connect(
+      this.API_OBJECT.key,
+      this.API_OBJECT.secret
+    );
+    console.log(MailJet);
+  };
+
+  render() {
+    const message = this.props.data.contactmessage;
 
     return (
       <section id="contact">
@@ -25,7 +57,7 @@ class Contact extends Component {
 
         <div className="row">
           <div className="eight columns">
-            <form action="" method="post" id="contactForm" name="contactForm">
+            <form onSubmit={this.sendEmail}>
               <fieldset>
                 <div>
                   <label htmlFor="contactName">
@@ -37,7 +69,7 @@ class Contact extends Component {
                     size="35"
                     id="contactName"
                     name="contactName"
-                    onChange={this.handleChange}
+                    onChange={this.updateForm}
                   />
                 </div>
 
@@ -51,8 +83,7 @@ class Contact extends Component {
                     size="35"
                     id="contactEmail"
                     name="contactEmail"
-                    onChange={this.handleChange}
-                  />
+                    onChange={this.updateForm}
                   />
                 </div>
 
@@ -64,8 +95,7 @@ class Contact extends Component {
                     size="35"
                     id="contactSubject"
                     name="contactSubject"
-                    onChange={this.handleChange}
-                  />
+                    onChange={this.updateForm}
                   />
                 </div>
 
@@ -78,6 +108,7 @@ class Contact extends Component {
                     rows="15"
                     id="contactMessage"
                     name="contactMessage"
+                    onChange={this.updateForm}
                   />
                 </div>
 
@@ -100,43 +131,15 @@ class Contact extends Component {
 
           <aside className="four columns footer-widgets">
             <div className="widget widget_contact">
-              <h4>Address and Phone</h4>
+              <h4>Alex Montague</h4>
               <p className="address">
-                {name}
                 <br />
                 Toronto/Guelph/Oakville
                 <br />
-                <span>{phone}</span>
+                me@alexmontague.ca
+                <br />
+                Currently the form is WIP, email me directly!
               </p>
-            </div>
-
-            <div className="widget widget_tweets">
-              <h4 className="widget-title">Latest Tweets</h4>
-              <ul id="twitter">
-                <li>
-                  <span>
-                    This is Photoshop's version of Lorem Ipsum. Proin gravida
-                    nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-                    quis bibendum auctor, nisi elit consequat ipsum
-                    <a href="#">http://t.co/CGIrdxIlI3</a>
-                  </span>
-                  <b>
-                    <a href="#">2 Days Ago</a>
-                  </b>
-                </li>
-                <li>
-                  <span>
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis et
-                    quasi
-                    <a href="#">http://t.co/CGIrdxIlI3</a>
-                  </span>
-                  <b>
-                    <a href="#">3 Days Ago</a>
-                  </b>
-                </li>
-              </ul>
             </div>
           </aside>
         </div>

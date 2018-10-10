@@ -2,40 +2,34 @@ import React, { Component } from "react";
 
 class Portfolio extends Component {
   render() {
-    if (this.props.data) {
-      var projects = this.props.data.projects.map(function(projects) {
-        var projectImage = "images/portfolio/" + projects.image;
-        return (
-          <div key={projects.title} className="columns portfolio-item">
-            <div className="item-wrap">
-              <a href={projects.url} title={projects.title}>
-                <img alt={projects.title} src={projectImage} />
-                <div className="overlay">
-                  <div className="portfolio-item-meta">
-                    <h5>{projects.title}</h5>
-                    <p>{projects.category}</p>
-                  </div>
-                </div>
-                <div className="link-icon">
-                  <i className="fa fa-link" />
-                </div>
-              </a>
+    const projects = this.props.data.projects.map((project, index) => {
+      const { title, category, url, image } = project;
+      const projectImage = "images/portfolio/" + image;
+      return (
+        <div key={title}>
+          <a href={url} target="_blank">
+            <div className="portfolioItem">
+              <h5>{title}</h5>
+              <span className="flexMeUp">
+                <img
+                  src={projectImage}
+                  alt="portfolio item"
+                  className="portfolioImage"
+                />
+                {category}
+              </span>
             </div>
-          </div>
-        );
-      });
-    }
+          </a>
+        </div>
+      );
+    });
 
     return (
       <section id="portfolio">
         <div className="row">
           <div className="twelve columns collapsed">
-            <h1>Check Out Some of My Works.</h1>
-
-            <div
-              id="portfolio-wrapper"
-              className="bgrid-quarters s-bgrid-thirds cf"
-            >
+            <h1>Check Out Some of My Work!</h1>
+            <div id="portfolio-wrapper" className="portfolioContainer">
               {projects}
             </div>
           </div>

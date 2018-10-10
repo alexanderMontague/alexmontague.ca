@@ -88,6 +88,7 @@ class Resume extends Component {
                       imageSrc={skill.imageSrc}
                       header={skill.header}
                       text={skill.text}
+                      key={skill.header}
                     />
                   );
                 })}
@@ -99,6 +100,19 @@ class Resume extends Component {
                       imageSrc={skill.imageSrc}
                       header={skill.header}
                       text={skill.text}
+                      key={skill.header}
+                    />
+                  );
+                })}
+              </div>
+              <div className="techStack">
+                {techSkills.row3.map(skill => {
+                  return (
+                    <TechItem
+                      imageSrc={skill.imageSrc}
+                      header={skill.header}
+                      text={skill.text}
+                      key={skill.header}
                     />
                   );
                 })}

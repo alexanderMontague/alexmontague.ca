@@ -21,7 +21,7 @@ class Footer extends Component {
             <ul className="social-links">{networks}</ul>
 
             <ul className="copyright">
-              <li>&copy; Copyright 2017 Tim Baker</li>
+              <li>&copy; Copyright {new Date().getFullYear()} Alex Montague</li>
               <li>
                 Design by{" "}
                 <a title="Styleshout" href="http://www.styleshout.com/">

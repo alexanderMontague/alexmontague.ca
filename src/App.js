@@ -23,7 +23,7 @@ class App extends Component {
         <About data={resumeData.main} />
         <Resume data={resumeData.resume} />
         <Portfolio data={resumeData.portfolio} />
-        <Testimonials />
+        <Testimonials data={resumeData.testimonials} />
         <Contact data={resumeData.main} />
         <Footer data={resumeData.main} />
       </div>

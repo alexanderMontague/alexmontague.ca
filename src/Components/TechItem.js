@@ -4,7 +4,7 @@ const TechItem = props => {
   const { imageSrc, header, text } = props;
   return (
     <div className="techCluster">
-      <img src={imageSrc} className="techIcon" />
+      <img src={imageSrc} className="techIcon" alt="Tech Item" />
       <h4>{header}</h4>
       <div>{text}</div>
     </div>

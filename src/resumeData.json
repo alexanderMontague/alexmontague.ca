@@ -6,7 +6,7 @@
     "description2": "Whether that be open source projects, internships, or new technologies, ",
     "image": "profilepic.jpg",
     "bio": "I am a software engineer. This doesn't just mean I like to program, but rather I am passionate about writing clean, smart, and efficient code! Over my schooling and work terms I have been exposed to many languages and frameworks, but some of my favourite languages are Javascript, C and Java. I have recently begun my dive into web development, more specifically using the ReactJS/NodeJS libraries. I hope to explore more full stack opportunities in the future!",
-    "contactmessage": "Hit me up!",
+    "contactmessage": "Drop me a line:",
     "email": "me@amontague.ca",
     "phone": "",
     "address": {
@@ -76,11 +76,6 @@
           "imageSrc": "images/node.png",
           "header": "NodeJS",
           "text": "After recently branching out into backend web development, node, express and knex are some of the tools I am using to build my backend architecture. I am still learning lots about backend development!"
-        },
-        {
-          "imageSrc": "images/mysql.png",
-          "header": "SQL",
-          "text": "After learning SQL at school through projects, I was able use these skills at my current co-op where we utilized MySQL and PostgreSQL. I still have much to learn (and my upcoming databased course will help) in terms of relational databases, but I am also open and exploring non-relational databases such as MongoDB for personal use."
         }
       ],
       "row2": [
@@ -89,6 +84,13 @@
           "header": "C",
           "text": "The C Programming language is the main language taught at UofG, and probably my most strong language. I liked the low-levelness of this language, and my algorithms and data structures classes all utilized C. Learning this language made me appreciate dynamic languages, but also allowed me to understand how they work behind the scenes."
         },
+        {
+          "imageSrc": "images/mysql.png",
+          "header": "SQL",
+          "text": "After learning SQL at school through projects, I was able use these skills at my current co-op where we utilized MySQL and PostgreSQL. I still have much to learn (and my upcoming databased course will help) in terms of relational databases, but I am also open and exploring non-relational databases such as MongoDB for personal use."
+        }
+      ],
+      "row3": [
         {
           "imageSrc": "images/java.png",
           "header": "Java",
@@ -135,46 +137,42 @@
   "portfolio": {
     "projects": [
       {
-        "title": "Canadian Wanderlust",
-        "category": "My Travel Blog for my post-university travels",
-        "image": "canadian-wanderlust.jpg",
-        "url": "https://www.canadianwanderlust.com"
+        "title": "Cryptowatch",
+        "category": "An all in one web application to track and manage your crypto assets. No real money needed, just select the coin, the amount, and date bought and it will do the rest for you...",
+        "image": "cryptowatch.gif",
+        "url": "https://github.com/alexanderMontague/CryptoWatch"
       },
       {
-        "title": "Fury Fighting Gear",
-        "category": "(offline now) A fighting gear company I started",
-        "image": "fury-fighting-gear.jpg",
-        "url": "http://www.timbakerdev.com"
+        "title": "Awesome Ancestors",
+        "category": "This program utilizes the GEDCOM file format (file format that reflects and displays ancestral data in a specific way. Used in sites like Ancestory.com), and was created for my 'Angel of Death' course. The program's main purpose is to read in a GEDCOM file, parse all information from the file, and manipulate the data to your liking. The program can create and edit new GEDCOM files, or modify existing files. The web client gives the user an interface to interact with and view the GEDCOM files.",
+        "image": "awesomeAncestors.gif",
+        "url": "https://github.com/alexanderMontague/Awesome-Ancestors"
       },
       {
-        "title": "Original Thai Food",
-        "category": "Website I built for a restaurant I like in Thailand",
-        "image": "original-thai-food.jpg",
-        "url": "http://www.timbakerdev.com/originalthaifood.github.io"
+        "title": "Coinsquare Dashboard",
+        "category": "Dashboard application that was built in 4 hours for Coinsquare's first ever internal Hackathon. This dashboard allowed for constant monitoring of coinsquare's status, jira board, and Github PR data in a visualized way.",
+        "image": "coinsquareDashboard.gif",
+        "url": "https://alexandermontague.github.io/coinsquare-dashboard/"
       },
       {
-        "title": "Resume Website",
-        "category": "A React based resume website template",
-        "image": "resume-website.jpg",
-        "url": "http://www.timbakerdev.com"
+        "title": "Greens Tracker",
+        "category": "This Java application was created to record and display data recorded during a hand watering shift at my previous Golf Course. This information was usually kept on paper and was an overall inefficient process I tried to make better.",
+        "image": "greensTracker.gif",
+        "url": "https://github.com/alexanderMontague/GreensTracker"
       },
       {
-        "title": "Smirkspace",
-        "category": "(MVP Only) A React and Meteor based chat University project.",
-        "image": "smirkspace.jpg",
-        "url": "http://www.smirkspace.com"
+        "title": "Quick Query",
+        "category": "A Perl based query program that allowed for queries of Canadian census and crime data both individually, and cross referenced. The results were then able to be graphed using R. Created for CIS*2250 Software Design 2.",
+        "image": "quickQuery.png",
+        "url": "https://github.com/alexanderMontague/Quick-Query"
       }
     ]
   },
   "testimonials": {
     "testimonials": [
       {
-        "text": "Here you should write some nice things that someone has said about you. No lies though, employers can tell when you are lying.",
-        "user": "Kareem Abdul Jabbar"
-      },
-      {
-        "text": "That Tim Baker must be one of the most brilliant developers I've ever met! It is amazing that nobody has hired him yet. Hey you, you should hire this guy, he may be fresh out of University and have zero on the job experience but I am confident that he will be one of your best developers in no time!",
-        "user": "Steve Wozniak... impersonator"
+        "text": "'One of the best programming skills you can have is knowing when to walk away for awhile.' - Oscar Godson.",
+        "user": "I love to program, but love interacting even more. I am excited to meet and work on new and exciting things, with new and exciting people!"
       }
     ]
   }

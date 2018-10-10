@@ -505,6 +505,7 @@ ul#nav li.current a {
   background: #fff;
   overflow: hidden;
   position: relative;
+  width: calc(100% / 1 / 4 - 10px);
 
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -576,16 +577,38 @@ ul#nav li.current a {
   margin-bottom: 0;
 }
 
-/* on hover */
-.portfolio-item:hover .overlay {
-  opacity: 1;
-  -moz-opacity: 1;
-  filter: alpha(opacity=100);
+.portfolioContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-.portfolio-item:hover .link-icon {
-  opacity: 1;
-  -moz-opacity: 1;
-  filter: alpha(opacity=100);
+.portfolioItem {
+  margin: 40px;
+  color: black;
+}
+.portfolioItem:hover {
+  color: #11abb0;
+}
+.flexMeUp {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .flexMeUp {
+    flex-direction: column;
+  }
+}
+.portfolioImage {
+  width: 50%;
+  height: 50%;
+  padding-right: 50px;
+}
+@media (max-width: 767px) {
+  .portfolioImage {
+    width: 100%;
+    height: 100%;
+    padding-right: 0;
+  }
 }
 
 /* popup modal */
@@ -777,18 +800,15 @@ call-to-action .button {
   line-height: 48px;
   color: #fff;
 }
-#testimonials blockquote cite {
+#testimonials blockquote h5 {
   display: block;
   font-size: 12px;
   font-style: normal;
   line-height: 18px;
   color: #fff;
 }
-#testimonials blockquote cite:before {
-  content: "\2014 \0020";
-}
-#testimonials blockquote cite a,
-#testimonials blockquote cite a:visited {
+#testimonials blockquote h5 a,
+#testimonials blockquote h5 a:visited {
   color: #8b9798;
   border: none;
 }
