@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import mailjet from "node-mailjet";
 
 class Contact extends Component {
   state = {
@@ -30,13 +29,7 @@ class Contact extends Component {
     }
   };
 
-  sendEmail = () => {
-    const MailJet = mailjet.connect(
-      this.API_OBJECT.key,
-      this.API_OBJECT.secret
-    );
-    console.log(MailJet);
-  };
+  sendEmail = () => {};
 
   render() {
     const message = this.props.data.contactmessage;
