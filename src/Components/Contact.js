@@ -29,7 +29,9 @@ class Contact extends Component {
     }
   };
 
-  sendEmail = () => {};
+  sendEmail = e => {
+    e.preventDefault();
+  };
 
   render() {
     const message = this.props.data.contactmessage;
