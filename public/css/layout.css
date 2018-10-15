@@ -106,7 +106,7 @@ header .social li a {
   color: #fff;
 }
 header .social li a:hover {
-  color: #11abb0;
+  color: #00a5ff;
 }
 
 /* scrolldown link */
@@ -130,7 +130,7 @@ header .scrolldown a {
   transition: all 0.3s ease-in-out;
 }
 header .scrolldown a:hover {
-  color: #11abb0;
+  color: #00a5ff;
 }
 
 /* primary navigation
@@ -201,7 +201,7 @@ ul#nav li a:active {
   background-color: transparent !important;
 }
 ul#nav li.current a {
-  color: #095153;
+  color: #00a5ff;
 }
 
 /* ------------------------------------------------------------------ */
@@ -221,7 +221,7 @@ ul#nav li.current a {
 }
 #about a:hover,
 #about a:focus {
-  color: #11abb0;
+  color: #00a5ff;
 }
 
 #about h2 {
@@ -275,7 +275,7 @@ ul#nav li.current a {
 
 #resume a,
 #resume a:visited {
-  color: #11abb0;
+  color: #00a5ff;
 }
 #resume a:hover,
 #resume a:focus {
@@ -288,7 +288,7 @@ ul#nav li.current a {
   letter-spacing: 1px;
 }
 #resume h1 span {
-  border-bottom: 3px solid #11abb0;
+  border-bottom: 3px solid #00a5ff;
   padding-bottom: 6px;
 }
 #resume h3 {
@@ -587,7 +587,7 @@ ul#nav li.current a {
   color: black;
 }
 .portfolioItem:hover {
-  color: #11abb0;
+  color: #00a5ff;
 }
 .flexMeUp {
   display: flex;
@@ -937,7 +937,7 @@ call-to-action .button {
 
 #contact a,
 #contact a:visited {
-  color: #11abb0;
+  color: #00a5ff;
 }
 #contact a:hover,
 #contact a:focus {
@@ -1007,7 +1007,7 @@ call-to-action .button {
 #contact textarea:focus,
 #contact select:focus {
   color: #fff;
-  background-color: #11abb0;
+  background-color: #00a5ff;
 }
 #contact button.submit {
   text-transform: uppercase;
@@ -1026,7 +1026,7 @@ call-to-action .button {
   background: #fff;
 }
 #contact span.required {
-  color: #11abb0;
+  color: #00a5ff;
   font-size: 13px;
 }
 #message-warning,
@@ -1042,7 +1042,7 @@ call-to-action .button {
   color: #d72828;
 }
 #message-success {
-  color: #11abb0;
+  color: #00a5ff;
 }
 
 #message-warning i,
@@ -1114,7 +1114,7 @@ footer .copyright li:before {
   content: "\2022";
   padding-left: 10px;
   padding-right: 10px;
-  color: #095153;
+  color: #00a5ff;
 }
 footer .copyright li:first-child:before {
   display: none;
@@ -1131,7 +1131,7 @@ footer .social-links li {
   margin: 0;
   padding: 0;
   margin-left: 42px;
-  color: #095153;
+  color: #00a5ff;
 }
 
 footer .social-links li:first-child {
@@ -1165,5 +1165,5 @@ footer .social-links li:first-child {
   border-radius: 100%;
 }
 #go-top a:hover {
-  background-color: #0f9095;
+  background-color: #00a5ff;
 }

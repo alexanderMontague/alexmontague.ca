@@ -31,7 +31,18 @@ class Resume extends Component {
             {work.title}
             <span>&bull;</span> <em className="date">{work.years}</em>
           </p>
-          <p>{work.description}</p>
+          <p>
+            {work.description}{" "}
+            {work.company === "Coinsquare" ? (
+              <a
+                href="https://www.linkedin.com/pulse/my-time-coinsquare-alex-montague/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                HERE!
+              </a>
+            ) : null}
+          </p>
         </div>
       );
     });

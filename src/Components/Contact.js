@@ -99,6 +99,7 @@ class Contact extends Component {
                     Message <span className="required">*</span>
                   </label>
                   <textarea
+                    style={{ resize: "none" }}
                     cols="50"
                     rows="15"
                     id="contactMessage"
@@ -131,7 +132,7 @@ class Contact extends Component {
                 <br />
                 Toronto/Guelph/Oakville
                 <br />
-                me@alexmontague.ca
+                <a href={`mailto:me@alexmontague.ca`}>me@alexmontague.ca</a>
                 <br />
                 Currently the form is WIP, email me directly!
               </p>

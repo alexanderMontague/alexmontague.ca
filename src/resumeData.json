@@ -16,7 +16,7 @@
       "zip": ""
     },
     "website": "https://www.alexmontague.ca",
-    "resumedownload": "http://google.ca",
+    "resumedownload": "https://drive.google.com/file/d/1Fx8XEKsQmEngTwXdyTyyrH_ENcAS29Ce/view",
     "social": [
       {
         "name": "linkedin",
@@ -56,7 +56,7 @@
         "company": "Coinsquare",
         "title": "Student Web Developer ",
         "years": "May 2018 - Present",
-        "description": "Coinsquare is a 21st century financial institution specializing in trading and managing cryptocurrencies. Coinsquare was rated the 2nd most sought after startup in Canada by LinkedIn! I joined the team as a student web developer and have been working on our web application for both the front end and backend teams. As one of Coinsquare's first interns, I had the pleasure of participating and presenting in the first ever Coinsquare hackathon, as well as being able to be a full functioning and independant developer! This was an absolutely amazing placement and I have learned so much not just about web development, but also about blockchain technology, project management, leadership and communication in an agile team! Checkout an article I wrote about my experiences HERE!"
+        "description": "Coinsquare is a 21st century financial institution specializing in trading and managing cryptocurrencies. Coinsquare was rated the 2nd most sought after startup in Canada by LinkedIn! I joined the team as a student web developer and have been working on our web application for both the front end and backend teams. As one of Coinsquare's first interns, I had the pleasure of participating and presenting in the first ever Coinsquare hackathon, as well as being able to be a full functioning and independant developer! This was an absolutely amazing placement and I have learned so much not just about web development, but also about blockchain technology, project management, leadership and communication in an agile team! Checkout an article I wrote about my experiences "
       },
       {
         "company": "Oakville Golf Club",
@@ -138,7 +138,7 @@
     "projects": [
       {
         "title": "Cryptowatch",
-        "category": "An all in one web application to track and manage your crypto assets. No real money needed, just select the coin, the amount, and date bought and it will do the rest for you...",
+        "category": "An all in one web application to track and manage your crypto assets. No real money needed, just select the coin, the amount, and date bought and it will do the rest for you. This has been my first real web app that is constantly being developed.",
         "image": "cryptowatch.gif",
         "url": "https://github.com/alexanderMontague/CryptoWatch"
       },
@@ -156,7 +156,7 @@
       },
       {
         "title": "Greens Tracker",
-        "category": "This Java application was created to record and display data recorded during a hand watering shift at my previous Golf Course. This information was usually kept on paper and was an overall inefficient process I tried to make better.",
+        "category": "This Java application was created to record and display data recorded during a hand watering shift at my previous Golf Course. This information was usually kept on paper and was an overall inefficient process I wanted to make better.",
         "image": "greensTracker.gif",
         "url": "https://github.com/alexanderMontague/GreensTracker"
       },
@@ -172,7 +172,7 @@
     "testimonials": [
       {
         "text": "'One of the best programming skills you can have is knowing when to walk away for awhile.' - Oscar Godson.",
-        "user": "I love to program, but love interacting even more. I am excited to meet and work on new and exciting things, with new and exciting people!"
+        "user": "I love to program, but love interacting even more. I am ready to meet and work on new and exciting things, with new and exciting people!"
       }
     ]
   }
