@@ -7,7 +7,7 @@
     "image": "profilepic.jpg",
     "bio": "I am a software engineer. This doesn't just mean I like to program, but rather I am passionate about writing clean, smart, and efficient code! Over my schooling and work terms I have been exposed to many languages and frameworks, but some of my favourite languages are Javascript, C and Java. I have recently begun my dive into web development, more specifically using the ReactJS/NodeJS libraries. I hope to explore more full stack opportunities in the future!",
     "contactmessage": "Drop me a line:",
-    "email": "me@amontague.ca",
+    "email": "me@alexmontague.ca",
     "phone": "",
     "address": {
       "street": "(Your Street)",
@@ -143,16 +143,16 @@
         "url": "https://github.com/alexanderMontague/CryptoWatch"
       },
       {
-        "title": "Awesome Ancestors",
-        "category": "This program utilizes the GEDCOM file format (file format that reflects and displays ancestral data in a specific way. Used in sites like Ancestory.com), and was created for my 'Angel of Death' course. The program's main purpose is to read in a GEDCOM file, parse all information from the file, and manipulate the data to your liking. The program can create and edit new GEDCOM files, or modify existing files. The web client gives the user an interface to interact with and view the GEDCOM files.",
-        "image": "awesomeAncestors.gif",
-        "url": "https://github.com/alexanderMontague/Awesome-Ancestors"
-      },
-      {
         "title": "Coinsquare Dashboard",
         "category": "Dashboard application that was built in 4 hours for Coinsquare's first ever internal Hackathon. This dashboard allowed for constant monitoring of coinsquare's status, jira board, and Github PR data in a visualized way.",
         "image": "coinsquareDashboard.gif",
         "url": "https://alexandermontague.github.io/coinsquare-dashboard/"
+      },
+      {
+        "title": "Awesome Ancestors",
+        "category": "This program utilizes the GEDCOM file format (file format that reflects and displays ancestral data in a specific way. Used in sites like Ancestory.com), and was created for my 'Angel of Death' course. The program's main purpose is to read in a GEDCOM file, parse all information from the file, and manipulate the data to your liking. The program can create and edit new GEDCOM files, or modify existing files. The web client gives the user an interface to interact with and view the GEDCOM files.",
+        "image": "awesomeAncestors.gif",
+        "url": "https://github.com/alexanderMontague/Awesome-Ancestors"
       },
       {
         "title": "Greens Tracker",
