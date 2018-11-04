@@ -1,5 +1,5 @@
 # amontague.ca
-[Imgur](https://i.imgur.com/ay9R0pr.jpg)
+[](https://i.imgur.com/ay9R0pr.jpg)
 
 Repository for my personal website created using React. Check it out! www.amontague.ca
 
