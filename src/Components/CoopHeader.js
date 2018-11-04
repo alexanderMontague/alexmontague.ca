@@ -52,7 +52,7 @@ const StyledBackButton = styled(Link)`
   border-radius: 5px;
   cursor: pointer;
   transition: 300ms;
-  margin-right: 10px;
+  margin: 10px;
   z-index: 1;
 
   &:hover {
@@ -106,14 +106,14 @@ class CoopHeader extends Component {
 
   renderLinks = () => {
     return (
-      <ul>
+      <ul style={{ margin: 0, marginTop: "-5px" }}>
         <StyledItem onClick={() => this.updateTermHandler("coinsquare")}>
           <StyledText color="black">Coinsquare</StyledText>
         </StyledItem>
-        <StyledItem onClick={() => this.updateTermHandler("coinsquare")}>
+        <StyledItem onClick={() => this.updateTermHandler("landing")}>
           <StyledText color="black">Work Term 2</StyledText>
         </StyledItem>
-        <StyledItem onClick={() => this.updateTermHandler("coinsquare")}>
+        <StyledItem onClick={() => this.updateTermHandler("landing")}>
           <StyledText color="black">Work Term 3</StyledText>
         </StyledItem>
       </ul>
