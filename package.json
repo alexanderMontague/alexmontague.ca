@@ -9,7 +9,9 @@
     "react-dom": "^16.2.0",
     "react-ga": "^2.3.5",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.0.17"
+    "react-scripts": "1.0.17",
+    "react-slidedown": "^2.0.5",
+    "styled-components": "^4.0.3"
   },
   "scripts": {
     "start": "PORT=3003 react-scripts start",
