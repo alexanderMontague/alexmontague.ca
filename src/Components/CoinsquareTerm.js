@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import CoinsquareC from "../assets/Terms/Coinsquare/coinsquareC.jpg";
+import CoinsquarePic from "../assets/Terms/Coinsquare/coinsquarePic.jpg";
 
 const StyledWrapper = styled.div`
   display: ${props => props.display || "flex"};
@@ -39,7 +40,7 @@ const StyledArticleWrapper = styled.div`
   border: solid 2px white;
   border-radius: 5px;
   margin: 20px 20px 20px 10px;
-  margin-left: 29%;
+  margin-left: 28%;
   padding: 25px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 
@@ -75,7 +76,7 @@ const StyledText = styled.p`
   line-height: ${props => props.lineHeight || "25px"};
   z-index: 100;
   padding: ${props => props.padding};
-  margin: ${props => props.margin};
+  margin: ${props => props.margin || "0 0 20px 0"};
 
   @media (max-width: 835px) {
     font-size: 15px;
@@ -97,6 +98,7 @@ const CoinsquareTerm = () => {
           color="#00a5ff"
           fontSize="20px"
           fontFamily={"opensans-bold"}
+          margin="16px 0 20px 0"
         >
           Table of Contents
         </StyledText>
@@ -146,6 +148,7 @@ const CoinsquareTerm = () => {
             margin="0 0 0 15px"
           />
         </StyledWrapper>
+        <hr />
         <StyledText fontFamily="opensans-bold">
           Student Web Developer
         </StyledText>
@@ -153,44 +156,53 @@ const CoinsquareTerm = () => {
           Toronto, Ontario, Canada
         </StyledText>
         <StyledText fontFamily="opensans-bold">
-          Work Placement One: May 2018 - December 2018
+          May 2018 - December 2018
         </StyledText>
+        <StyledImage src={CoinsquarePic} />
         <hr />
         <StyledText>
           <span id="Intro">
             <span style={{ fontFamily: "opensans-bold" }}>Introduction: </span>
-            This is the Intro
+            Welcome to my first work term report! This has been my very first
+            work term placement, and it has been an absolutely amazing
+            experience. Throughout this report I will talk about the company I
+            had my placement with, some goals I set for myself, and what the
+            overall experience was like. I hope you enjoy, and for any other
+            information feel free to contact me!
             <br />
             <br />
           </span>
 
           <span id="Info">
-            <span style={{ fontFamily: "opensans-bold" }}>Information: </span>
-            This is the info section
+            <span style={{ fontFamily: "opensans-bold" }}>
+              Employer Information:{" "}
+            </span>
+            I was lucky enough to secure my first 8 month co-op placement at a
+            Toronto based company called Coinsquare. Coinsquare is aiming to be
+            a 21st century financial institution by managing, trading, and
+            marketing crypto assets. In other words, they are a cryptocurrency
+            trading platform! This was super cool as I am interested in
+            cryptocurrencies and blockchain technology, so this was a perfect
+            fit! The company was started in 2014 by Virgil Rostand who is now
+            CTO after joining forces with Cole Diamond(CEO). Coinsquare prides
+            itself on being the most trusted Canadian cryptocurrency exchange
+            through support, security, and service as they have never lost a
+            coin and are a financially recognized and registered MSB. This is
+            realy reflected in the company values, and it was cool to see people
+            prideful and caring about their work. I was a web developer on the
+            Solutions/Engineering team, so I was able to interact and work with
+            people from all over the company, which was an awesome experience!
+            At the time of writing Coinsquare is about 140 employees strong, and
+            I felt honoured to be one of them!
             <br />
             <br />
           </span>
 
           <span id="Goals">
-            <span style={{ fontFamily: "opensans-bold" }}>Goals: </span>
-            This is the goals section This spot of my site is where I record my
-            experiences and learnings from my university co-op placements. I
-            will have 3 work terms in the duration of my degree, two 8 month
-            placements and one 4 month placement. So far I have completed my
-            first 8 month placement and it has been awesome! To view each co-op
-            work term report, select the company from the dropdown hamburger
-            menu in the top left of the nav bar! As a viewer you should be able
-            to get a good understanding of each placement through my
-            experiences, as well as identify my goals and how I accomplished
-            them. This spot of my site is where I record my experiences and
-            learnings from my university co-op placements. I will have 3 work
-            terms in the duration of my degree, two 8 month placements and one 4
-            month placement. So far I have completed my first 8 month placement
-            and it has been awesome! To view each co-op work term report, select
-            the company from the dropdown hamburger menu in the top left of the
-            nav bar! As a viewer you should be able to get a good understanding
-            of each placement through my experiences, as well as identify my
-            goals and how I accomplished them.
+            <span style={{ fontFamily: "opensans-bold" }}>Goals: </span>I had
+            two sets of goals for myself for term one and term two of this
+            placement. For my first set of goals I managed to hit all three
+            goals within the first month!
             <br />
             <br />
           </span>
