@@ -199,10 +199,45 @@ const CoinsquareTerm = () => {
           </span>
 
           <span id="Goals">
-            <span style={{ fontFamily: "opensans-bold" }}>Goals: </span>I had
-            two sets of goals for myself for term one and term two of this
-            placement. For my first set of goals I managed to hit all three
-            goals within the first month!
+            <span style={{ fontFamily: "opensans-bold" }}>Goals: </span>
+            Before beginning this placement I had created two sets of goals for
+            myself. The first set of goals were for the first term, and the
+            second set was for the second term. I crafted these goals with no
+            prior knowledge of what exactly I would be doing, or how the
+            development process flowed, but I was motivated and committed to
+            learn, grow and work my hardest to meet these goals! The first set
+            of goals I set for myself were:
+            <ol>
+              <li>
+                Become familiar with advanced Javascript (ES6, asynchronous
+                actions and functional programming)
+              </li>
+              <li>
+                Research React, Redux and Coinsquare's codebase. Familiarize
+                myself with conventions, best practices and gitflow
+              </li>
+              <li>
+                Write, Commit, Push and Merge my first peice of code into
+                Coinsquare's codebase
+              </li>
+            </ol>
+            After some late nights, lots of caffiene, and support from my team,
+            I can say that I managed to accomplish all three of these goals
+            within the first two months of my placement! I chose these goals
+            specifically because I knew they would directly benefit me in my day
+            to day work, and help me hit the gound running at full force the
+            quicker I managed to complete them. The skills that these goals
+            reflect are also super in demand and useful to have even after this
+            placement. Learning Javascript and React were some web development
+            skills that I really wanted to learn, and practicing them directly
+            in a real world scenario were imparative to my success. The first
+            two goals were accomplished with the help of multiple resources
+            including udemy courses that were offered to me, side project
+            development (including this website!), and the always open for
+            questions mentality my co-workers had. The third goal came shortly
+            after the completion of the first two. Once I was confident in my
+            abilities, I asked for a few small tasks to complete and eventually
+            got my code merged into the product it is today!
             <br />
             <br />
           </span>
