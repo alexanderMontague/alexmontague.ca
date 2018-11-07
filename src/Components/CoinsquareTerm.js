@@ -23,7 +23,7 @@ const StyledTableOfContents = styled.div`
   border: solid 2px white;
   border-radius: 5px;
   margin: 20px 10px 20px 20px;
-  padding: 25px;
+  padding: 38px 25px 25px 25px;
   z-index: 1;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   position: fixed;
@@ -69,7 +69,7 @@ const StyledLink = styled.a`
   }
 `;
 
-const StyledText = styled.p`
+const StyledText = styled.span`
   color: ${props => props.color || "#b7b7b7"};
   font-size: ${props => props.fontSize || "1em"};
   font-family: ${props => props.fontFamily};
@@ -90,6 +90,14 @@ const StyledImage = styled.img`
   margin: ${props => props.margin};
 `;
 
+const StyledLine = styled.hr`
+  margin: ${props => props.margin || "10px 0px"};
+  border: solid #e3e3e3;
+  border-width: 1px 0 0;
+  clear: both;
+  height: 0;
+`;
+
 const CoinsquareTerm = () => {
   return (
     <StyledWrapper>
@@ -102,7 +110,7 @@ const CoinsquareTerm = () => {
         >
           Table of Contents
         </StyledText>
-        <hr />
+        <StyledLine margin="17px 0px" />
         <StyledList>
           <li>
             <StyledLink href="#Intro">Intro</StyledLink>
@@ -148,15 +156,18 @@ const CoinsquareTerm = () => {
             margin="0 0 0 15px"
           />
         </StyledWrapper>
-        <hr />
-        <StyledText fontFamily="opensans-bold">
+        <StyledLine margin="10px 0px" />
+        <StyledText lineHeight="50px" fontFamily="opensans-bold">
           Student Web Developer
+          <br />
         </StyledText>
-        <StyledText fontFamily="opensans-bold">
+        <StyledText lineHeight="50px" fontFamily="opensans-bold">
           Toronto, Ontario, Canada
+          <br />
         </StyledText>
-        <StyledText fontFamily="opensans-bold">
+        <StyledText lineHeight="50px" fontFamily="opensans-bold">
           May 2018 - December 2018
+          <br />
         </StyledText>
         <StyledImage src={CoinsquarePic} />
         <hr />
@@ -222,22 +233,59 @@ const CoinsquareTerm = () => {
               </li>
             </ol>
             After some late nights, lots of caffiene, and support from my team,
-            I can say that I managed to accomplish all three of these goals
-            within the first two months of my placement! I chose these goals
-            specifically because I knew they would directly benefit me in my day
-            to day work, and help me hit the gound running at full force the
-            quicker I managed to complete them. The skills that these goals
-            reflect are also super in demand and useful to have even after this
-            placement. Learning Javascript and React were some web development
-            skills that I really wanted to learn, and practicing them directly
-            in a real world scenario were imparative to my success. The first
-            two goals were accomplished with the help of multiple resources
-            including udemy courses that were offered to me, side project
-            development (including this website!), and the always open for
-            questions mentality my co-workers had. The third goal came shortly
-            after the completion of the first two. Once I was confident in my
-            abilities, I asked for a few small tasks to complete and eventually
-            got my code merged into the product it is today!
+            I can say pridefully that I managed to accomplish all three of these
+            goals within the first two months of my placement! I chose these
+            goals specifically because I knew they would directly benefit me in
+            my day to day work as a developer, and they would help me hit the
+            gound running at full force the quicker I managed to complete them.
+            The skills that these goals reflect are also super in demand and
+            useful to have even after this placement. Learning Javascript and
+            React were some web development skills that I really wanted to
+            learn, and practicing them directly in a real world scenario were
+            imparative to my success. The first two goals were accomplished with
+            the help of multiple resources including udemy courses that were
+            offered to me, side project development (including this website!),
+            and the always open for questions mentality my co-workers had. The
+            third goal was then completed shortly after the first two, as I saw
+            the previous goals as prequisites. Once I was confident in my
+            abilities, I was given a few small tasks to complete and eventually
+            got to contribute to the product that it is today!
+            <br />
+            After completing my first set of goals, I was gaining confidence,
+            and looking to take on more challenging work! I wanted to establish
+            and lay out my next milestones in order to start working on them as
+            soon as possible. With that mentality and motivation, I crafted my
+            second set of goals:
+            <ol>
+              <li>
+                Be a fully functioning team member (Take on real feature work,
+                become self sufficient, and take accountability)
+              </li>
+              <li>
+                Explore Backend Work (Ask to participate in back end tasks, and
+                start to explore the platform repositories)
+              </li>
+              <li>
+                Contribute to the Development Process (Find something that I can
+                either create or improve on in the development lifecycle at
+                Coinsquare)
+              </li>
+            </ol>
+            The item on the list would eventually come with more time and
+            experience. As I progressed as a developer, I was given more
+            in-depth and challending work that really helped me to learn and
+            grow in my role. Just before the halfway mark of my placement I was
+            really beginning to feel like a full time employee, and not just
+            "some intern". I was doing real work, that also came with real
+            responsibility! This was great as it gave me a glimpse of what real
+            software development looked like, and I was participating in
+            everything.
+            <br />
+            Also right around the halfway point of my placement, I was eager to
+            learn more, so I inquired about possibly taking on some backend work
+            just learn and to try and become more "Full Stack". I started
+            researching our backend code, and the technologies we used (Node,
+            Express, MySQL, Postgres, Knex)
             <br />
             <br />
           </span>
