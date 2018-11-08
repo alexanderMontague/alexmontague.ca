@@ -194,7 +194,7 @@ const CoinsquareTerm = () => {
             marketing crypto assets. In other words, they are a cryptocurrency
             trading platform! This was super cool as I am interested in
             cryptocurrencies and blockchain technology, so this was a perfect
-            fit! The company was started in 2014 by Virgil Rostand who is now
+            fit. The company was started in 2014 by Virgil Rostand who is now
             CTO after joining forces with Cole Diamond(CEO). Coinsquare prides
             itself on being the most trusted Canadian cryptocurrency exchange
             through support, security, and service as they have never lost a
@@ -202,7 +202,7 @@ const CoinsquareTerm = () => {
             realy reflected in the company values, and it was cool to see people
             prideful and caring about their work. I was a web developer on the
             Solutions/Engineering team, so I was able to interact and work with
-            people from all over the company, which was an awesome experience!
+            people from all over the company, which was an awesome experience.
             At the time of writing Coinsquare is about 140 employees strong, and
             I felt honoured to be one of them!
             <br />
@@ -262,30 +262,57 @@ const CoinsquareTerm = () => {
                 become self sufficient, and take accountability)
               </li>
               <li>
-                Explore Backend Work (Ask to participate in back end tasks, and
+                Explore Backend Work (Ask to participate in backend tasks, and
                 start to explore the platform repositories)
               </li>
               <li>
                 Contribute to the Development Process (Find something that I can
-                either create or improve on in the development lifecycle at
+                either create or improve in the development lifecycle at
                 Coinsquare)
               </li>
             </ol>
-            The item on the list would eventually come with more time and
+            The first item on the list would eventually come with more time and
             experience. As I progressed as a developer, I was given more
             in-depth and challending work that really helped me to learn and
             grow in my role. Just before the halfway mark of my placement I was
             really beginning to feel like a full time employee, and not just
-            "some intern". I was doing real work, that also came with real
-            responsibility! This was great as it gave me a glimpse of what real
-            software development looked like, and I was participating in
-            everything.
+            doing "intern" work. I was doing real work, that also came with real
+            responsibility! This was great as it gave me a glimpse of what
+            software development looked like in the industry, and I was
+            participating in everything.
             <br />
             Also right around the halfway point of my placement, I was eager to
-            learn more, so I inquired about possibly taking on some backend work
-            just learn and to try and become more "Full Stack". I started
-            researching our backend code, and the technologies we used (Node,
-            Express, MySQL, Postgres, Knex)
+            learn more so I inquired about possibly taking on some backend work.
+            I wanted to round out my web development skills and become more
+            "Full Stack". I started researching our backend code, and the
+            technologies we used (Node, Express, MySQL, Postgres, Knex) and with
+            the permission of my leads, I was able to start tackling some
+            backend tickets. This was not only amazing experience, but it also
+            resolved some blockers I would have when developing on the frontend.
+            I no longer needed to wait on or ping the platform team for
+            something we needed, I could go and do it myself!
+            <br />
+            Lastly, the final goal was something I was constantly observing to
+            see if there was anything I could improve. Turns out, this was
+            something simpler than I had imagined. Through the use of
+            Atlassian's Confluence, I was able to craft and share documentation
+            on a few pain points we had throughout the development/onboarding
+            process. I realized the need for good documentation when I was going
+            through setting up my backend environment. The process was
+            constantly changing, and I always had to keep bugging a more senior
+            backend developer for help configuring my environment. Once I was
+            all set up, I refined some of the backend documentation that was
+            already there for setting up an environment, and also created new
+            pages on setting up your backend environment from a frontend
+            developer's perspective. As this was the case for me, I created the
+            docs in hope they would be useful for other new frontend developers
+            later down the line!
+            <br />
+            Looking back on the goals I set for myself, I feel like they were
+            appropriate and challenged me in various ways. I believe setting
+            personal goals and striving to meet them not only help in personal
+            success, but makes whatever it is you are doing more worthwhile!
+            CHECK
             <br />
             <br />
           </span>
