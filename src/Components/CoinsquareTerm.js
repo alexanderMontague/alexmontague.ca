@@ -28,6 +28,10 @@ const StyledTableOfContents = styled.div`
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   position: fixed;
 
+  @media (max-width: 861px) {
+    font-size: 15px;
+  }
+
   @media (max-width: 761px) {
     position: relative;
     width: auto;
@@ -131,10 +135,13 @@ const CoinsquareTerm = () => {
             <StyledLink href="#Featured">Featured Aspect</StyledLink>
           </li>
           <li>
-            <StyledLink href="#Extras">Extras</StyledLink>
+            <StyledLink href="#Ack">Acknowledgments</StyledLink>
           </li>
           <li>
-            <StyledLink href="#Ack">Acknowledgments</StyledLink>
+            <StyledLink href="#Conclusion">Conclusion</StyledLink>
+          </li>
+          <li>
+            <StyledLink href="#Extras">Extras</StyledLink>
           </li>
         </StyledList>
       </StyledTableOfContents>
@@ -310,40 +317,84 @@ const CoinsquareTerm = () => {
             <br />
             Looking back on the goals I set for myself, I feel like they were
             appropriate and challenged me in various ways. I believe setting
-            personal goals and striving to meet them not only help in personal
+            personal goals and striving to meet them not only helps in personal
             success, but makes whatever it is you are doing more worthwhile!
-            CHECK
             <br />
             <br />
           </span>
 
           <span id="Description">
-            <span style={{ fontFamily: "opensans-bold" }}>Description: </span>
-            This is the desc section
+            <span style={{ fontFamily: "opensans-bold" }}>
+              Job Description:{" "}
+            </span>
+            For this placement at Coinsquare, I joined the team as a "Student
+            Web Developer". When I joined the team in May 2018, we had a
+            engineering structure that consisted of different teams. Some of
+            these teams were the blockchain team, platform team(backend),
+            advanced trade team, and the web team(my team!). On the web team, we
+            were tasked with contributing, maintaining and developing our web
+            application. We spent most of the time either developing features
+            that would deliver business value, or optimizations and bug fixes
+            that would better the user's experience. I personally got to work on
+            a wide range of tasks while I was at Coinsquare, and they ranged
+            from small things like css styling tweaks to full on features (new
+            components, functionality and logic). The range of available tasks
+            grew with my time and exposure to our product.
+            <br />
+            One thing that is interesting/unique to my job that I enjoyed is
+            that I was always working on or learning something new. This can
+            probably be generalized to most programming jobs, but with the fast
+            and hectic nature that is the crypto world, I think it especially
+            applies here. I think this is also amplified by the use of
+            Javascript. There are so many libraries and packages available that
+            make development better, you really need to build and expand your
+            knowledge on a lot of different extensions. I would also say that
+            just working in and around cryptocurrency and blockchain technology
+            is one of the most unique and interesting traits of this job on its
+            own!
+            <br />
+            Some of the skills I needed for this job were the web development
+            basics (HTML/CSS), advanced Javascript knowledge, some widely used
+            Javascript libraries(ReactJS, NodeJS), gitflow, and general computer
+            science terms and methodologies! Guelph CS actually had prepared me
+            fairly well for this job (mainly CIS*2750) as it not only introduced
+            Javascript, but taught me some very useful gitflow and workflow
+            strategies that I used in my everyday work. Software design classes
+            had also prepared me for agile and scrum team environments, so I
+            understood our practices and methodologies almost right off the bat!
+            Some skills that I learned while on the job were developing clean
+            code using React/Node, network architecture, how to actualy code
+            review, release cycles, design systems and product/project
+            management tools. Overall I have come a long way from where I
+            started, and it is really cool to reflect on what I have learned. In
+            the extras system I will include my learning timeline/notes list
+            that I kept throughout my placement.
             <br />
             <br />
           </span>
 
           <span id="Relation">
-            <span style={{ fontFamily: "opensans-bold" }}>Relation: </span>
-            This is the desc section This spot of my site is where I record my
-            experiences and learnings from my university co-op placements. I
-            will have 3 work terms in the duration of my degree, two 8 month
-            placements and one 4 month placement. So far I have completed my
-            first 8 month placement and it has been awesome! To view each co-op
-            work term report, select the company from the dropdown hamburger
-            menu in the top left of the nav bar! As a viewer you should be able
-            to get a good understanding of each placement through my
-            experiences, as well as identify my goals and how I accomplished
-            them. This spot of my site is where I record my experiences and
-            learnings from my university co-op placements. I will have 3 work
-            terms in the duration of my degree, two 8 month placements and one 4
-            month placement. So far I have completed my first 8 month placement
-            and it has been awesome! To view each co-op work term report, select
-            the company from the dropdown hamburger menu in the top left of the
-            nav bar! As a viewer you should be able to get a good understanding
-            of each placement through my experiences, as well as identify my
-            goals and how I accomplished them.
+            <span style={{ fontFamily: "opensans-bold" }}>
+              Academic Relation:{" "}
+            </span>
+            Relating this job back to my degree and studies, I feel both
+            positively impact eachother and enhance my learning greatly. There
+            were some experiences and concepts I had learned before this
+            placement that positively effected my work experience, and the same
+            can be said the other way around. I will take so much out of this
+            work term into not only into my degree, but throughout my software
+            engineering career. This was probably one of the best first
+            placements I could have possibly started at, and I will never forget
+            that. I would also say that learning in a real world environment as
+            opposed to a contained classroom is such a great new experience, and
+            is where the real value of a co-op placement lies. School will teach
+            you the fundamentals and how to learn, internships/placement will
+            show you how to put those skills to use. This placement has enhanced
+            my academic experience in too many ways to record, and I cannot
+            stress enough the importance of getting some other experience during
+            your degree. Whether that be internships, co-op placements,
+            freelancing or side projects, it all exposes new learning
+            opportunities you would not normally experience in school.
             <br />
             <br />
           </span>
@@ -372,6 +423,22 @@ const CoinsquareTerm = () => {
             <br />
           </span>
 
+          <span id="Ack">
+            <span style={{ fontFamily: "opensans-bold" }}>
+              Acknowledgments:{" "}
+            </span>
+            This is the ack section
+            <br />
+            <br />
+          </span>
+
+          <span id="Conclusion">
+            <span style={{ fontFamily: "opensans-bold" }}>Conclusion: </span>
+            This is the conclusion section
+            <br />
+            <br />
+          </span>
+
           <span id="Extras">
             <span style={{ fontFamily: "opensans-bold" }}>Extras: </span>
             This is the extras section This spot of my site is where I record my
@@ -392,15 +459,6 @@ const CoinsquareTerm = () => {
             nav bar! As a viewer you should be able to get a good understanding
             of each placement through my experiences, as well as identify my
             goals and how I accomplished them.
-            <br />
-            <br />
-          </span>
-
-          <span id="Ack">
-            <span style={{ fontFamily: "opensans-bold" }}>
-              Acknowledgments:{" "}
-            </span>
-            This is the ack section
             <br />
             <br />
           </span>
