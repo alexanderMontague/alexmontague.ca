@@ -388,37 +388,28 @@ const CoinsquareTerm = () => {
             that. I would also say that learning in a real world environment as
             opposed to a contained classroom is such a great new experience, and
             is where the real value of a co-op placement lies. School will teach
-            you the fundamentals and how to learn, internships/placement will
-            show you how to put those skills to use. This placement has enhanced
-            my academic experience in too many ways to record, and I cannot
-            stress enough the importance of getting some other experience during
-            your degree. Whether that be internships, co-op placements,
-            freelancing or side projects, it all exposes new learning
-            opportunities you would not normally experience in school.
+            you the fundamentals and how to learn, but internships/placements
+            will show you how to put those skills to use. This placement has
+            enhanced my academic experience in too many ways to record, and I
+            cannot reccommend enough the importance of getting some other
+            experience during your degree. Whether that be internships, co-op
+            placements, freelancing or side projects, it all exposes new
+            learning opportunities you would not normally experience in school.
             <br />
             <br />
           </span>
 
           <span id="Featured">
-            <span style={{ fontFamily: "opensans-bold" }}>Featured: </span>
-            This is the desc section This spot of my site is where I record my
-            experiences and learnings from my university co-op placements. I
-            will have 3 work terms in the duration of my degree, two 8 month
-            placements and one 4 month placement. So far I have completed my
-            first 8 month placement and it has been awesome! To view each co-op
-            work term report, select the company from the dropdown hamburger
-            menu in the top left of the nav bar! As a viewer you should be able
-            to get a good understanding of each placement through my
-            experiences, as well as identify my goals and how I accomplished
-            them. This spot of my site is where I record my experiences and
-            learnings from my university co-op placements. I will have 3 work
-            terms in the duration of my degree, two 8 month placements and one 4
-            month placement. So far I have completed my first 8 month placement
-            and it has been awesome! To view each co-op work term report, select
-            the company from the dropdown hamburger menu in the top left of the
-            nav bar! As a viewer you should be able to get a good understanding
-            of each placement through my experiences, as well as identify my
-            goals and how I accomplished them.
+            <span style={{ fontFamily: "opensans-bold" }}>
+              Featured Aspect:{" "}
+            </span>
+            One aspect of this work term that I would really like to focus on
+            and talk a little bit more about is the use of blockchain
+            technology, and what it can accomplish. Even though I was not a
+            blockchain developer, I still learned a lot about cryptocurrency and
+            the use of blockchain tech through the nature of the company. This
+            is something I would like to consider pursuing in a later work term,
+            or later in my career as I believe this will be the future.
             <br />
             <br />
           </span>
