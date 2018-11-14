@@ -408,8 +408,32 @@ const CoinsquareTerm = () => {
             technology, and what it can accomplish. Even though I was not a
             blockchain developer, I still learned a lot about cryptocurrency and
             the use of blockchain tech through the nature of the company. This
-            is something I would like to consider pursuing in a later work term,
-            or later in my career as I believe this will be the future.
+            is something I would like to consider pursuing in a future work
+            term, or later in my career, as I believe this technology has huge
+            potential and the abilitiy to change the world.
+            <br />A blockchain is basically a distributed and decentralized
+            datbase or spreadsheet. Blockchains can be used for almost any
+            application you would want, but there is some criteria that you
+            might look for when deciding when to use a blockcahin. You would
+            want to use a blockchain if you:
+            <ul>
+              <li>- Avoid needing to trust a single or central party</li>
+              <li>- Want to decentralize a system to maximize uptime</li>
+              <li>- Want an open API</li>
+              <li>- Want low or no fixed costs</li>
+              <li>
+                - Need transparent processes (everything is visible and open)
+              </li>
+            </ul>
+            When people think of blockchain tech, they usually think of
+            Cyrptocurrency. While this technology was pioneered from Satoshi's
+            Bitcoin, there have been multiple iterations (Ethereum and EC20
+            tokens) and advancements (sdfasdf) that make this a viable and
+            emerging solution. Blockchains have ultimately solved the "double
+            spending" problem in a decentralized way, which is one of the main
+            reasons we have huge centralized monopolies like banks and
+            corporations that require our payments/money/transactions to go
+            through them.
             <br />
             <br />
           </span>
