@@ -240,7 +240,7 @@ const CoinsquareTerm = () => {
               </li>
             </ol>
             After some late nights, lots of caffiene, and support from my team,
-            I can say pridefully that I managed to accomplish all three of these
+            I can pridefully say that I managed to accomplish all three of these
             goals within the first two months of my placement! I chose these
             goals specifically because I knew they would directly benefit me in
             my day to day work as a developer, and they would help me hit the
@@ -411,7 +411,7 @@ const CoinsquareTerm = () => {
             is something I would like to consider pursuing in a future work
             term, or later in my career, as I believe this technology has huge
             potential and the abilitiy to change the world.
-            <br />A blockchain is basically a distributed and decentralized
+            <br />A blockchain is basically a distributed or decentralized
             datbase or spreadsheet. Blockchains can be used for almost any
             application you would want, but there is some criteria that you
             might look for when deciding when to use a blockcahin. You would
@@ -427,13 +427,34 @@ const CoinsquareTerm = () => {
             </ul>
             When people think of blockchain tech, they usually think of
             Cyrptocurrency. While this technology was pioneered from Satoshi's
-            Bitcoin, there have been multiple iterations (Ethereum and EC20
-            tokens) and advancements (sdfasdf) that make this a viable and
-            emerging solution. Blockchains have ultimately solved the "double
-            spending" problem in a decentralized way, which is one of the main
-            reasons we have huge centralized monopolies like banks and
-            corporations that require our payments/money/transactions to go
-            through them.
+            Bitcoin, there have been multiple iterations (Ethereum and ERC20
+            tokens) and advancements (smart contracts/DApps) that make this a
+            viable and emerging solution. Blockchains have ultimately solved the
+            "double spending" problem in a decentralized way, that does not
+            depend on one single party. Lets investigate a real world example,
+            and then see how a distributed ledger could improve on the current
+            process. Lets say we have company A and company B. Both companies do
+            business with eachother, other companies, and have lots of
+            transactions coming in and out. Right now they both keep their own
+            seperate ledgers that contain all of their transactions, and depend
+            on a central party (say a bank) to process and track their
+            transactions. This bank also keeps their own ledger that both
+            companies trust to populate their own. Although it usually does not
+            happen, this current process allows for malicious actions from the
+            central party (incorrect transaction processing, wrong amounts,
+            withholdings) as well as the other two companies having out of date
+            ledgers until the single party confirms everything! With a
+            distributed ledger, everyone shares a single database. The source of
+            truth. Transactions are real time and confirmed on the basis that
+            they actually are legit and correct, thanks to the nodes on the
+            ledger that validate each transaction. Overall, using some form of
+            distribution or decentralization creates a sense of security and
+            transparency as each transaction on the ledger is 100% valid. All
+            transactions are visible on the ledger, but its up to how the ledger
+            was implemented to determine how much information is visible.
+            Generally most are configured in a way that allows visibility of a
+            transaction confirmed from anonymous person A to anonymous person B,
+            but no identifiable information.
             <br />
             <br />
           </span>

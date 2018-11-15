@@ -54,10 +54,10 @@ const CoopLanding = () => {
           Guelph studying Software Engineering, and I have just completed my
           first placement at Toronto based cryptocurrency trading platform,
           Coinsquare. I am experienced in object oriented, functional, and
-          imperative programming using technologies randing from Java to
+          imperative programming using technologies ranging from Java to
           Javascript to C. I am currently interested in full stack web
-          development, blockchain principles and architecture, and AI
-          technology.
+          development, blockchain principles/architecture, and AI/machine
+          learning technology.
           <br />
           <br />
           Go checkout my work term reports, or head back to the main site with
