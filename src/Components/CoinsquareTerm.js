@@ -135,9 +135,6 @@ const CoinsquareTerm = () => {
             <StyledLink href="#Featured">Featured Aspect</StyledLink>
           </li>
           <li>
-            <StyledLink href="#Ack">Acknowledgments</StyledLink>
-          </li>
-          <li>
             <StyledLink href="#Conclusion">Conclusion</StyledLink>
           </li>
           <li>
@@ -459,42 +456,55 @@ const CoinsquareTerm = () => {
             <br />
           </span>
 
-          <span id="Ack">
-            <span style={{ fontFamily: "opensans-bold" }}>
-              Acknowledgments:{" "}
-            </span>
-            This is the ack section
-            <br />
-            <br />
-          </span>
-
           <span id="Conclusion">
             <span style={{ fontFamily: "opensans-bold" }}>Conclusion: </span>
-            This is the conclusion section
+            This has been an absolutely amazing experience, and I could not have
+            picked a better company to work at, or better people to work with
+            for my very first placement. Just looking back at notes from when I
+            first started made me reflect on how much I had actually grown. I
+            have learned and experienced more in these short 8 months than I
+            could have ever imagined. I owe a lot to my team, and the people who
+            have mentored me throguh this placement. Even though my main role
+            was as a web developer, I have experienced and advanced in so many
+            more ways that just that. Working in an agile environment,
+            participating in extra curricular evcent, and growing as both a
+            person and developer has been something I will never forget. The
+            skills I have learned, and the people I have met at Coinsquare to
+            kick start my career in this field has been amazing. I have a couple
+            shout outs to give, as I would never have been able to succeed in
+            this job without them. Shawn/Phong for always being open to
+            questions and for teaching me some super valuable stuff, Mo for
+            being an awesome director and for giving me a chance, Jawwad for
+            being an awesome PM, Mike for interviewing me and last but not least
+            Jay for being my dude. You're hilarious and a great dev.
             <br />
             <br />
           </span>
 
           <span id="Extras">
             <span style={{ fontFamily: "opensans-bold" }}>Extras: </span>
-            This is the extras section This spot of my site is where I record my
-            experiences and learnings from my university co-op placements. I
-            will have 3 work terms in the duration of my degree, two 8 month
-            placements and one 4 month placement. So far I have completed my
-            first 8 month placement and it has been awesome! To view each co-op
-            work term report, select the company from the dropdown hamburger
-            menu in the top left of the nav bar! As a viewer you should be able
-            to get a good understanding of each placement through my
-            experiences, as well as identify my goals and how I accomplished
-            them. This spot of my site is where I record my experiences and
-            learnings from my university co-op placements. I will have 3 work
-            terms in the duration of my degree, two 8 month placements and one 4
-            month placement. So far I have completed my first 8 month placement
-            and it has been awesome! To view each co-op work term report, select
-            the company from the dropdown hamburger menu in the top left of the
-            nav bar! As a viewer you should be able to get a good understanding
-            of each placement through my experiences, as well as identify my
-            goals and how I accomplished them.
+            Here are just some extra things I took out of my placement that I
+            would like to share, and did not really fit into any of the other
+            categories. <br />- One very cool thing that I got to do at
+            Coinsquare was participate in our very innagural internal hackathon.
+            This functioned as a normal hackathon and we had half the day to
+            come up with something innovative to present to the business. My
+            idea that I worked on with one other teammate was the Coinsquare
+            dashboard. An all in one single page application to constantly
+            provide feedback to a specific team. This dashboard is meant to
+            display meta and valuable information to team members on a screen
+            somewhere in the workplace. In the example prototype we came up
+            with, we had things like website status, site latency, number of
+            pull requests and breakdown by team pulled from Github's API, number
+            and breakdown of Jira tickets from Atlassian's API and number of
+            active users. If you want to checkout a live demo, you can{" "}
+            <a href="https://alexandermontague.github.io/coinsquare-dashboard/">
+              here!
+            </a>
+            <br />- I also wrote an article on my time at Coinsquare from the
+            halfway mark of my placement. The article talks about my time there
+            from a more casual and personal level. If you want to check that
+            out, click <a>here!</a>
             <br />
             <br />
           </span>
