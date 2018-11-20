@@ -1,9 +1,9 @@
 import React, { Component } from "react";
+import { Route } from "react-router";
 import styled from "styled-components";
 
-import CoopHeader from "./CoopHeader";
 import bgImage from "../assets/coop-background.jpg";
-
+import CoopHeader from "./CoopHeader";
 import CoopLanding from "./CoopLanding";
 import CoinsquareTerm from "./CoinsquareTerm";
 
@@ -25,7 +25,7 @@ const StyledBody = styled.div`
 const StyledContent = styled.div`
   border: solid 3px #f7f9fb;
   border-radius: 10px;
-  background-color: #2b2b2b
+  background-color: #2b2b2b;
   min-height: 85%;
 `;
 
@@ -34,33 +34,37 @@ class WorkTermReports extends Component {
     selectedTerm: "landing"
   };
 
-  updateSelectedTerm = term => {
-    this.setState({ selectedTerm: term });
-  };
-
-  renderTerm = () => {
-    const { selectedTerm } = this.state;
-    const termMapping = {
-      landing: <CoopLanding />,
-      coinsquare: <CoinsquareTerm />
-    };
-
-    return termMapping[selectedTerm];
-  };
-
   render() {
     return (
       <StyledBackground>
         <StyledBody>
-          <CoopHeader
-            title="CO-OP Work Term Reports"
-            updateSelectedTerm={this.updateSelectedTerm}
-          />
-          <StyledContent>{this.renderTerm()}</StyledContent>
+          <CoopHeader title="CO-OP Work Term Reports" />
+          <StyledContent>
+            <Route
+              exact
+              path={`${this.props.match.url}`}
+              component={CoopLanding}
+            />
+            <Route
+              exact
+              path={`${this.props.match.url}/coinsquare`}
+              component={CoinsquareTerm}
+            />
+
+            {/* ADD NEW WRITE UPS HERE */}
+          </StyledContent>
         </StyledBody>
       </StyledBackground>
     );
   }
 }
+
+/**
+ * Process for writing new reports:
+ * - Copy CoinsquareTerm.js to a new term component
+ * - Add new route in render function above with the correct route and component
+ * - Go to CoopHeader.js and add company name and route to state to render drop down
+ * - write your report
+ */
 
 export default WorkTermReports;

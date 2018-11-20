@@ -1,13 +1,9 @@
 import React, { Component } from "react";
-import { Switch, Route } from "react-router";
 import { BrowserRouter } from "react-router-dom";
 import ReactGA from "react-ga";
 import { createGlobalStyle } from "styled-components";
-
+import Routes from "./routes";
 import "./App.css";
-
-import Home from "./Components/Home";
-import WorkTermReports from "./Components/WorkTermReports";
 
 const GlobalStyles = createGlobalStyle`
   html {
@@ -23,12 +19,7 @@ class App extends Component {
     return (
       <div className="App">
         <GlobalStyles />
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/co-op_workterm_reports" component={WorkTermReports} />
-          </Switch>
-        </BrowserRouter>
+        <BrowserRouter>{Routes}</BrowserRouter>
       </div>
     );
   }

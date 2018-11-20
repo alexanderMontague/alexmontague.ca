@@ -498,13 +498,24 @@ const CoinsquareTerm = () => {
             pull requests and breakdown by team pulled from Github's API, number
             and breakdown of Jira tickets from Atlassian's API and number of
             active users. If you want to checkout a live demo, you can{" "}
-            <a href="https://alexandermontague.github.io/coinsquare-dashboard/">
+            <StyledLink
+              href="https://alexandermontague.github.io/coinsquare-dashboard/"
+              color="#00a5ff"
+              hoverColor="#e3e3e3"
+            >
               here!
-            </a>
+            </StyledLink>
             <br />- I also wrote an article on my time at Coinsquare from the
             halfway mark of my placement. The article talks about my time there
             from a more casual and personal level. If you want to check that
-            out, click <a>here!</a>
+            out, click{" "}
+            <StyledLink
+              href="https://www.linkedin.com/pulse/my-time-coinsquare-alex-montague/"
+              color="#00a5ff"
+              hoverColor="#e3e3e3"
+            >
+              here!
+            </StyledLink>
             <br />
             <br />
           </span>

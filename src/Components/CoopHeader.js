@@ -75,7 +75,7 @@ const StyledText = styled.h5`
   }
 `;
 
-const StyledItem = styled.li`
+const StyledItem = styled(Link)`
   display: flex;
   justify-content: center;
   padding: 10px 0;
@@ -89,7 +89,13 @@ const StyledItem = styled.li`
 
 class CoopHeader extends Component {
   state = {
-    menuOpen: false
+    menuOpen: false,
+    baseURL: "/co-op_workterm_reports/",
+    coopTerms: [
+      { company: "Coinsquare", route: "coinsquare" },
+      { company: "Work Term 2", route: "" },
+      { company: "Work Term 3", route: "" }
+    ]
   };
 
   toggleMenu = () => {
@@ -105,17 +111,18 @@ class CoopHeader extends Component {
   };
 
   renderLinks = () => {
+    const { baseURL, coopTerms } = this.state;
     return (
       <ul style={{ margin: 0, marginTop: "-5px" }}>
-        <StyledItem onClick={() => this.updateTermHandler("coinsquare")}>
-          <StyledText color="black">Coinsquare</StyledText>
-        </StyledItem>
-        <StyledItem onClick={() => this.updateTermHandler("landing")}>
-          <StyledText color="black">Work Term 2</StyledText>
-        </StyledItem>
-        <StyledItem onClick={() => this.updateTermHandler("landing")}>
-          <StyledText color="black">Work Term 3</StyledText>
-        </StyledItem>
+        {coopTerms.map(term => (
+          <StyledItem
+            to={`${baseURL}${term.route}`}
+            onClick={this.toggleMenu}
+            key={term.company}
+          >
+            <StyledText color="black">{term.company}</StyledText>
+          </StyledItem>
+        ))}
       </ul>
     );
   };
