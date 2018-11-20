@@ -71,6 +71,11 @@ const StyledLink = styled.a`
   &:hover {
     color: ${props => props.hoverColor || "#00a5ff"} !important;
   }
+
+  &:target {
+    /* This is not working. TODO */
+    color: "#00a5ff" !important;
+  }
 `;
 
 const StyledText = styled.span`
@@ -476,7 +481,7 @@ const CoinsquareTerm = () => {
             questions and for teaching me some super valuable stuff, Mo for
             being an awesome director and for giving me a chance, Jawwad for
             being an awesome PM, Mike for interviewing me and last but not least
-            Jay for being my dude. You're hilarious and a great dev.
+            Jay for being my dude.
             <br />
             <br />
           </span>
