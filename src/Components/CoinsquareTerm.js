@@ -3,6 +3,9 @@ import styled from "styled-components";
 
 import CoinsquareC from "../assets/Terms/Coinsquare/coinsquareC.jpg";
 import CoinsquarePic from "../assets/Terms/Coinsquare/coinsquarePic.jpg";
+import DistributedLedger from "../assets/Terms/Coinsquare/distributedLedger.jpg";
+import CSDashboard from "../assets/Terms/Coinsquare/CSDashboard.png";
+import TechStack from "../assets/Terms/Coinsquare/techStack.png";
 
 const StyledWrapper = styled.div`
   display: ${props => props.display || "flex"};
@@ -108,6 +111,18 @@ const StyledLine = styled.hr`
 `;
 
 const CoinsquareTerm = () => {
+  const windowFragment = window.location.hash;
+  let linkMap = {
+    intro: windowFragment === "#Intro" ? "#00a5ff" : "#b7b7b7",
+    info: windowFragment === "#Info" ? "#00a5ff" : "#b7b7b7",
+    goals: windowFragment === "#Goals" ? "#00a5ff" : "#b7b7b7",
+    description: windowFragment === "#Description" ? "#00a5ff" : "#b7b7b7",
+    relation: windowFragment === "#Relation" ? "#00a5ff" : "#b7b7b7",
+    featured: windowFragment === "#Featured" ? "#00a5ff" : "#b7b7b7",
+    conclusion: windowFragment === "#Conclusion" ? "#00a5ff" : "#b7b7b7",
+    extras: windowFragment === "#Extras" ? "#00a5ff" : "#b7b7b7"
+  };
+
   return (
     <StyledWrapper>
       <StyledTableOfContents>
@@ -122,28 +137,45 @@ const CoinsquareTerm = () => {
         <StyledLine margin="17px 0px" />
         <StyledList>
           <li>
-            <StyledLink href="#Intro">Intro</StyledLink>
+            <StyledLink href="#Intro" color={linkMap.intro}>
+              Intro
+            </StyledLink>
           </li>
           <li>
-            <StyledLink href="#Info">Employer Info</StyledLink>
+            <StyledLink href="#Info" color={linkMap.info}>
+              Employer Info
+            </StyledLink>
           </li>
           <li>
-            <StyledLink href="#Goals">Goals</StyledLink>
+            <StyledLink href="#Goals" color={linkMap.goals}>
+              Goals
+            </StyledLink>
           </li>
           <li>
-            <StyledLink href="#Description">Job Description</StyledLink>
+            <StyledLink href="#Description" color={linkMap.description}>
+              Job Description
+            </StyledLink>
           </li>
           <li>
-            <StyledLink href="#Relation">Academic Relation</StyledLink>
+            <StyledLink href="#Relation" color={linkMap.relation}>
+              Academic Relation
+            </StyledLink>
           </li>
           <li>
-            <StyledLink href="#Featured">Featured Aspect</StyledLink>
+            <StyledLink href="#Featured" color={linkMap.featured}>
+              Featured Aspect
+            </StyledLink>
           </li>
           <li>
-            <StyledLink href="#Conclusion">Conclusion</StyledLink>
+            <StyledLink href="#Conclusion" color={linkMap.conclusion}>
+              Conclusion
+            </StyledLink>
           </li>
           <li>
-            <StyledLink href="#Extras">Extras</StyledLink>
+            <StyledLink href="#Extras" color={linkMap.extras}>
+              {" "}
+              Extras
+            </StyledLink>
           </li>
         </StyledList>
       </StyledTableOfContents>
@@ -372,6 +404,10 @@ const CoinsquareTerm = () => {
             the extras system I will include my learning timeline/notes list
             that I kept throughout my placement.
             <br />
+            ReactJS, Redux, NodeJS, Webpack:
+            <br />
+            <img src={TechStack} alt="ReactJS ReduxJS NodeJS Webpack" />
+            <br />
             <br />
           </span>
 
@@ -458,6 +494,9 @@ const CoinsquareTerm = () => {
             transaction confirmed from anonymous person A to anonymous person B,
             but no identifiable information.
             <br />
+            Here is a good basic visual of what a distributed ledger looks like:
+            <img src={DistributedLedger} alt="Distributed Ledger" />
+            <br />
             <br />
           </span>
 
@@ -510,6 +549,9 @@ const CoinsquareTerm = () => {
             >
               here!
             </StyledLink>
+            <br />
+            The Coinsquare Dashboard:
+            <img src={CSDashboard} alt="Coinsquare Dashboard" />
             <br />- I also wrote an article on my time at Coinsquare from the
             halfway mark of my placement. The article talks about my time there
             from a more casual and personal level. If you want to check that
