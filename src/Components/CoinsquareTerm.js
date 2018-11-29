@@ -273,27 +273,27 @@ const CoinsquareTerm = () => {
                 Coinsquare's codebase
               </li>
             </ol>
-            After some late nights, lots of caffiene, and support from my team,
-            I can pridefully say that I managed to accomplish all three of these
-            goals within the first two months of my placement! I chose these
-            goals specifically because I knew they would directly benefit me in
-            my day to day work as a developer, and they would help me hit the
-            gound running at full force the quicker I managed to complete them.
-            The skills that these goals reflect are also super in demand and
-            useful to have even after this placement. Learning Javascript and
-            React were some web development skills that I really wanted to
-            learn, and practicing them directly in a real world scenario were
-            imparative to my success. The first two goals were accomplished with
-            the help of multiple resources including udemy courses that were
-            offered to me, side project development (including this website!),
-            and the always open for questions mentality my co-workers had. The
-            third goal was then completed shortly after the first two, as I saw
-            the previous goals as prequisites. Once I was confident in my
-            abilities, I was given a few small tasks to complete and eventually
-            got to contribute to the product that it is today!
+            After some late nights and support from my team, I can pridefully
+            say that I managed to accomplish all three of these goals within the
+            first two months of my placement. I chose these goals specifically
+            because I knew they would directly benefit me in my day to day work
+            as a developer, and they would help me hit the gound running at full
+            force the quicker I managed to complete them. The skills that these
+            goals reflect are also super in demand and useful to have even after
+            this placement. Learning Javascript and React were some web
+            development skills that I really wanted to learn, and practicing
+            them directly in a real world scenario were imparative to my
+            success. The first two goals were accomplished with the help of
+            multiple resources including udemy courses that were offered to me,
+            side project development (including this website!), and the always
+            open for questions mentality my co-workers had. The third goal was
+            then completed shortly after the first two, as I saw the previous
+            goals as prequisites. Once I was confident in my abilities, I was
+            given a few small tasks to complete and eventually got to contribute
+            to the product that it is today!
             <br />
             After completing my first set of goals, I was gaining confidence,
-            and looking to take on more challenging work! I wanted to establish
+            and looking to take on more challenging work. I wanted to establish
             and lay out my next milestones in order to start working on them as
             soon as possible. With that mentality and motivation, I crafted my
             second set of goals:
@@ -316,9 +316,9 @@ const CoinsquareTerm = () => {
             experience. As I progressed as a developer, I was given more
             in-depth and challending work that really helped me to learn and
             grow in my role. Just before the halfway mark of my placement I was
-            really beginning to feel like a full time employee, and not just
-            doing "intern" work. I was doing real work, that also came with real
-            responsibility! This was great as it gave me a glimpse of what
+            really beginning to feel like a full time employee that was doing
+            full time employee work. I was doing real work, that also came with
+            real responsibility! This was great as it gave me a glimpse of what
             software development looked like in the industry, and I was
             participating in everything.
             <br />
