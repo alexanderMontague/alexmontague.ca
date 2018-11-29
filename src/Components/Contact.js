@@ -60,7 +60,7 @@ class Contact extends Component {
                   </label>
                   <input
                     type="text"
-                    defaultValue=""
+                    defaultValue="Form is WIP, email me directly!"
                     size="35"
                     id="contactName"
                     name="contactName"

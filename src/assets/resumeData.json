@@ -2,10 +2,10 @@
   "main": {
     "name": "Alex Montague",
     "occupation": "Software Engineering Student ",
-    "description": "I am in my third year of schooling, and I am always looking for ",
-    "description2": "Whether that be open source projects, internships, or new technologies, ",
+    "description": "I am always looking for ",
+    "description2": ", whether that be open source projects, internships, or new technologies, ",
     "image": "profilepic.jpg",
-    "bio": "I am a software engineer. This doesn't just mean I like to program, but rather I am passionate about writing clean, smart, and efficient code! Over my schooling and work terms I have been exposed to many languages and frameworks, but some of my favourite languages are Javascript, C and Java. I have recently begun my dive into web development, more specifically using the ReactJS/NodeJS libraries. I hope to explore more full stack opportunities in the future!",
+    "bio": "I am a software engineer. Not only do I like to program, but I am passionate about writing clean, smart, and efficient code! Over my schooling and work terms I have been exposed to many languages and frameworks, but some of my favourite languages are Javascript, C and Java. I recently started my dive into web development, more specifically using the ReactJS/NodeJS libraries. I hope to explore more full stack opportunities in the future!",
     "contactmessage": "Drop me a line:",
     "email": "me@alexmontague.ca",
     "phone": "",
@@ -36,19 +36,19 @@
     ]
   },
   "resume": {
-    "skillmessage": "Just some technology I am passionate about, and an overview of my skills",
+    "skillmessage": "Some technology I am passionate about, and an overview of my skills",
     "education": [
       {
         "school": "The University of Guelph",
         "degree": "Bachelors of Computing",
         "graduated": "Exp. April 2021",
-        "description": "Currently in my third year studying Software Engineering. Some of the most intesting/favourite courses I have taken so far have been Software Design I - IV, Data Structures, Algorithms, Operating Systems and the infamous 'Angel of Death' (Software Systems and Integrations). Currently on the Dean's List for maintaining an overall average of 80%. Currently looking forward to my databases and software design V class."
+        "description": "Currently in my third year studying Software Engineering. Some of the most interesting/favourite courses I have taken so far have been Software Design I - IV, Data Structures, Algorithms, Operating Systems and the infamous 'Angel of Death' (Software Systems and Integrations). Currently on the Dean's List for maintaining an overall average of 80%. I am looking forward to my databases and software design V class."
       },
       {
         "school": "Holy Trinity C.S.S",
         "degree": "O.S.S.D - Ontario Scholar",
         "graduated": "June 2016",
-        "description": "Highschool is where I was first introduced to programming and computer science. Started learning the fundamentals using the Turing and Java programming languages. Graduated as an Ontario Scholar and maintained an overall average of 95% in all CIS courses."
+        "description": "Highschool is where I was first introduced to programming and computer science. I started learning the fundamentals using the Turing and Java programming languages. I graduated as an Ontario Scholar and maintained an overall average of 95% in all CIS courses."
       }
     ],
     "work": [
@@ -56,7 +56,7 @@
         "company": "Coinsquare",
         "title": "Student Web Developer ",
         "years": "May 2018 - Present",
-        "description": "Coinsquare is a 21st century financial institution specializing in trading and managing cryptocurrencies. Coinsquare was rated the 2nd most sought after startup in Canada by LinkedIn! I joined the team as a student web developer and have been working on our web application for both the front end and backend teams. As one of Coinsquare's first interns, I had the pleasure of participating and presenting in the first ever Coinsquare hackathon, as well as being able to be a full functioning and independant developer! This was an absolutely amazing placement and I have learned so much not just about web development, but also about blockchain technology, project management, leadership and communication in an agile team! Checkout an article I wrote about my experiences "
+        "description": "Coinsquare is a 21st century financial institution specializing in trading and managing cryptocurrencies. Coinsquare was rated the 2nd most sought after startup in Canada by LinkedIn! I joined the team as a student web developer and have been working on our web application for both the front end and backend teams. As one of Coinsquare's first interns, I had the pleasure of participating and presenting in the first ever Coinsquare hackathon, as well as being able to be a fully functioning and independent developer! This was an absolutely amazing placement and I have learned so much not just about web development, but also about blockchain technology, project management, leadership and communication in an agile team! Check out an article I wrote about my experiences "
       },
       {
         "company": "Oakville Golf Club",
@@ -82,7 +82,7 @@
         {
           "imageSrc": "images/c.png",
           "header": "C",
-          "text": "The C Programming language is the main language taught at UofG, and probably my most strong language. I liked the low-levelness of this language, and my algorithms and data structures classes all utilized C. Learning this language made me appreciate dynamic languages, but also allowed me to understand how they work behind the scenes."
+          "text": "The C Programming language is the main language taught at UofG, and probably my strongest language. I liked the low-levelness of this language, and my algorithms and data structures classes all utilized C. Learning this language made me appreciate dynamic languages, but also allowed me to understand how they work behind the scenes."
         },
         {
           "imageSrc": "images/mysql.png",
