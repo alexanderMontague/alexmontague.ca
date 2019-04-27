@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import CoinsquareC from "../assets/Terms/Coinsquare/coinsquareC.jpg";
+import CoinsquareC from "../assets/coinsquare-icon.jpg";
 import CoinsquarePic from "../assets/Terms/Coinsquare/coinsquarePic.jpg";
 import DistributedLedger from "../assets/Terms/Coinsquare/distributedLedger.jpg";
 import CSDashboard from "../assets/Terms/Coinsquare/CSDashboard.png";

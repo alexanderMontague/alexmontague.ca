@@ -5,7 +5,7 @@
     "description": "I am always looking for ",
     "description2": ", whether that be open source projects, internships, or new technologies, ",
     "image": "profilepic.jpg",
-    "bio": "I am a software engineer. Not only do I like to program, but I am passionate about writing clean, smart, and efficient code! Over my schooling and work terms I have been exposed to many languages and frameworks, but some of my favourite languages are Javascript, C and Java. I recently started my dive into web development, more specifically using the ReactJS/NodeJS libraries. I hope to explore more full stack opportunities in the future!",
+    "bio": "I am a software engineer. Not only do I like to program, but I am passionate about writing clean, smart, and efficient code! Over my schooling and work terms I have been exposed to many languages and frameworks, but some of my favourite languages are Javascript, C and Python. I recently started my dive into web development, more specifically using the ReactJS/NodeJS libraries. I hope to explore more full stack opportunities in the future!",
     "contactmessage": "Drop me a line:",
     "email": "me@alexmontague.ca",
     "phone": "",
@@ -32,6 +32,11 @@
         "name": "stack overflow",
         "url": "https://stackoverflow.com/users/4372747/alex-montague",
         "className": "fa fa-stack-overflow"
+      },
+      {
+        "name": "youtube",
+        "url": "https://www.youtube.com/channel/UCHhHNZJcWDu5kH3FIPWwHEA",
+        "className": "fa fa-youtube"
       }
     ]
   },
@@ -42,27 +47,31 @@
         "school": "The University of Guelph",
         "degree": "Bachelors of Computing",
         "graduated": "Exp. April 2021",
-        "description": "Currently in my third year studying Software Engineering. Some of the most interesting/favourite courses I have taken so far have been Software Design I - IV, Data Structures, Algorithms, Operating Systems and the infamous 'Angel of Death' (Software Systems and Integrations). Currently on the Dean's List for maintaining an overall average of 80%. I am looking forward to my databases and software design V class."
+        "description": "Currently in my third year studying Software Engineering. Some of the most interesting/favourite courses I have taken so far have been Software Design I - IV, Data Structures, Algorithms, Operating Systems and the infamous 'Angel of Death' (Software Systems and Integrations). Currently on the Dean's List for maintaining an overall average of 80%. I am looking forward to my databases and software design V class.",
+        "icon": "guelph"
       },
       {
         "school": "Holy Trinity C.S.S",
         "degree": "O.S.S.D - Ontario Scholar",
         "graduated": "June 2016",
-        "description": "Highschool is where I was first introduced to programming and computer science. I started learning the fundamentals using the Turing and Java programming languages. I graduated as an Ontario Scholar and maintained an overall average of 95% in all CIS courses."
+        "description": "Highschool is where I was first introduced to programming and computer science. I started learning the fundamentals using the Turing and Java programming languages. I graduated as an Ontario Scholar and maintained an overall average of 95% in all CIS courses.",
+        "icon": "ht"
       }
     ],
     "work": [
       {
-        "company": "Coinsquare",
-        "title": "Student Web Developer ",
-        "years": "May 2018 - Present",
-        "description": "Coinsquare is a 21st century financial institution specializing in trading and managing cryptocurrencies. Coinsquare was rated the 2nd most sought after startup in Canada by LinkedIn! I joined the team as a student web developer and have been working on our web application for both the front end and backend teams. As one of Coinsquare's first interns, I had the pleasure of participating and presenting in the first ever Coinsquare hackathon, as well as being able to be a fully functioning and independent developer! This was an absolutely amazing placement and I have learned so much not just about web development, but also about blockchain technology, project management, leadership and communication in an agile team! Check out an article I wrote about my experiences "
+        "company": "League",
+        "title": "Full Stack Developer",
+        "years": "May 2019 - Present",
+        "description": "League is an all digital benefit providing platform that lets employees customize and tailor their benefits exactly how they want to. League was rated LinkedIn's 4th top startup in Canada, and I can really see why! I am currently working as a Full Stack developer writing ReactJS and Redux on the frontend, and Go on the backend which I absolutely love working with. I look forward to what comes in the coming months of this placement!",
+        "icon": "league"
       },
       {
-        "company": "Oakville Golf Club",
-        "title": "Senior Greenskeeper",
-        "years": "June 2014 - August 2017",
-        "description": "Managed and led a team of junior employees on daily projects around the golf club such as coordinating the mowing of a specific area, or systematically cleaning up after weather. I also Interacted with different team members every day, to maintain and keep course conditions pristine while having a golf member centered mentality."
+        "company": "Coinsquare",
+        "title": "Student Web Developer ",
+        "years": "May 2018 - December 2019",
+        "description": "Coinsquare is a 21st century financial institution specializing in trading and managing cryptocurrencies. Coinsquare was rated the 2nd most sought after startup in Canada by LinkedIn! I joined the team as a student web developer and have been working on our web application for both the front end and backend teams. As one of Coinsquare's first interns, I had the pleasure of participating and presenting in the first ever Coinsquare hackathon, as well as being able to be a fully functioning and independent developer! This was an absolutely amazing placement and I have learned so much not just about web development, but also about blockchain technology, project management, leadership and communication in an agile team! Check out an article I wrote about my experiences ",
+        "icon": "coinsquare"
       }
     ],
     "techSkills": {

@@ -1,5 +1,16 @@
 import React, { Component } from "react";
 import TechItem from "./TechItem";
+import coinsquareIcon from "../assets/coinsquare-icon.jpg";
+import leagueIcon from "../assets/league-icon.png";
+import htIcon from "../assets/ht-icon.jpg";
+import guelphIcon from "../assets/guelph-icon.png";
+
+const iconMap = {
+  coinsquare: coinsquareIcon,
+  league: leagueIcon,
+  ht: htIcon,
+  guelph: guelphIcon
+};
 
 class Resume extends Component {
   render() {
@@ -14,7 +25,10 @@ class Resume extends Component {
     const educationCollection = education.map(education => {
       return (
         <div key={education.school}>
-          <h3>{education.school}</h3>
+          <h3 style={{display: "flex", alignItems: "center"}}>
+            {education.school}
+            <img style={{height: 50, width: 50, borderRadius: "50%", marginLeft: "10px"}} alt="school icon" src={iconMap[education.icon]} />
+          </h3>
           <p className="info">
             {education.degree} <span>&bull;</span>
             <em className="date">{education.graduated}</em>
@@ -23,10 +37,14 @@ class Resume extends Component {
         </div>
       );
     });
+
     const workCollection = work.map(work => {
       return (
         <div key={work.company}>
-          <h3>{work.company}</h3>
+          <h3 style={{display: "flex", alignItems: "center"}}>
+            {work.company}
+            <img style={{height: 50, width: 50, borderRadius: "50%", marginLeft: "10px"}} alt="workplace icon" src={iconMap[work.icon]} />
+          </h3>
           <p className="info">
             {work.title}
             <span>&bull;</span> <em className="date">{work.years}</em>
