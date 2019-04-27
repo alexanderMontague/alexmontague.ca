@@ -1,7 +1,7 @@
 # amontague.ca
 ![](https://i.imgur.com/ay9R0pr.jpg)
 
-Repository for my personal website created using React. Check it out! www.amontague.ca
+Repository for my personal website created using React. Check it out! www.alexmontague.ca
 
 I also used this as a learning opportunity to explore some JS frameworks and design principles I would normally not have the chance to learn.
 
