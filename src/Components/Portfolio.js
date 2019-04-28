@@ -19,24 +19,59 @@ class Portfolio extends Component {
     // }
 
     return (
-      <img src={filePath} alt="portfolio item" className="portfolioImage" />
+      <img
+        src={filePath}
+        alt="portfolio item"
+        className="portfolioImage"
+        style={{ height: 250 }}
+      />
     );
   };
 
   render() {
     const projects = this.props.data.projects.map(project => {
-      const { title, category, url, image } = project;
+      const { title, category, links, tech, image } = project;
       return (
         <div key={title}>
-          <a href={url} target="_blank">
-            <div className="portfolioItem">
-              <h5>{title}</h5>
-              <span className="flexMeUp">
-                {this.renderMedia(image)}
-                {category}
-              </span>
-            </div>
-          </a>
+          <div className="portfolioItem">
+            <h5>{title}</h5>
+            <span className="flexMeUp">
+              {this.renderMedia(image)}
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <div
+                  style={{ display: "flex", justifyContent: "space-evenly" }}
+                >
+                  {tech.map(tech => (
+                    <img
+                      key={tech}
+                      src={`images/${tech}.png`}
+                      style={{ height: 40, width: 40 }}
+                      alt="tech item"
+                    />
+                  ))}
+                  {links.github && (
+                    <a
+                      href={links.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className={"fa fa-3x fa-github"} />
+                    </a>
+                  )}
+                  {links.hosted && (
+                    <a
+                      href={links.hosted}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className={"fa fa-3x fa-external-link"} />
+                    </a>
+                  )}
+                </div>
+                <div>{category}</div>
+              </div>
+            </span>
+          </div>
         </div>
       );
     });

@@ -586,9 +586,9 @@ ul#nav li.current a {
   margin: 40px;
   color: black;
 }
-.portfolioItem:hover {
+/* .portfolioItem:hover {
   color: #00a5ff;
-}
+} */
 .flexMeUp {
   display: flex;
   justify-content: space-between;
