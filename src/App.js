@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-ReactGA.initialize("UA-127386154-1");
+ReactGA.initialize("UA-139159281-1");
 ReactGA.pageview(window.location.pathname);
 
 class App extends Component {
@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <div className="App">
         <GlobalStyles />
-        <BrowserRouter >{Routes}</BrowserRouter>
+        <BrowserRouter>{Routes}</BrowserRouter>
       </div>
     );
   }
