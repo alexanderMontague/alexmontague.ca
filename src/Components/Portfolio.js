@@ -39,7 +39,12 @@ class Portfolio extends Component {
               {this.renderMedia(image)}
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <div
-                  style={{ display: "flex", justifyContent: "space-evenly" }}
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-evenly",
+                    paddingTop: 30,
+                    paddingBottom: 20
+                  }}
                 >
                   {tech.map(tech => (
                     <img

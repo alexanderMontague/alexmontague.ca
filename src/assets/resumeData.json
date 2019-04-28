@@ -161,7 +161,7 @@
         "image": "BookBuyLanding.png",
         "links": {
           "github": "https://github.com/alexanderMontague/BookBuy",
-          "hosted": "https://bookbuy.ca/"
+          "hosted": "https://www.bookbuy.ca/"
         },
         "tech": ["react", "firebase"]
       },

@@ -4,6 +4,8 @@ import coinsquareIcon from "../assets/coinsquare-icon.jpg";
 import leagueIcon from "../assets/league-icon.png";
 import htIcon from "../assets/ht-icon.jpg";
 import guelphIcon from "../assets/guelph-icon.png";
+import { drawContributions } from "github-contributions-canvas";
+import axios from "axios";
 
 const iconMap = {
   coinsquare: coinsquareIcon,
@@ -13,6 +15,16 @@ const iconMap = {
 };
 
 class Resume extends Component {
+  state = {
+    githubContributionsData: {}
+  };
+
+  componentDidMount() {
+    axios("https://github-contributions-api.now.sh/v1/alexandermontague").then(
+      res => this.setState({ githubContributionsData: res.data })
+    );
+  }
+
   render() {
     const {
       skillmessage,
@@ -25,9 +37,18 @@ class Resume extends Component {
     const educationCollection = education.map(education => {
       return (
         <div key={education.school}>
-          <h3 style={{display: "flex", alignItems: "center"}}>
+          <h3 style={{ display: "flex", alignItems: "center" }}>
             {education.school}
-            <img style={{height: 50, width: 50, borderRadius: "50%", marginLeft: "10px"}} alt="school icon" src={iconMap[education.icon]} />
+            <img
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: "50%",
+                marginLeft: "10px"
+              }}
+              alt="school icon"
+              src={iconMap[education.icon]}
+            />
           </h3>
           <p className="info">
             {education.degree} <span>&bull;</span>
@@ -41,9 +62,18 @@ class Resume extends Component {
     const workCollection = work.map(work => {
       return (
         <div key={work.company}>
-          <h3 style={{display: "flex", alignItems: "center"}}>
+          <h3 style={{ display: "flex", alignItems: "center" }}>
             {work.company}
-            <img style={{height: 50, width: 50, borderRadius: "50%", marginLeft: "10px"}} alt="workplace icon" src={iconMap[work.icon]} />
+            <img
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: "50%",
+                marginLeft: "10px"
+              }}
+              alt="workplace icon"
+              src={iconMap[work.icon]}
+            />
           </h3>
           <p className="info">
             {work.title}
@@ -151,6 +181,25 @@ class Resume extends Component {
               </div>
             </div>
           </div>
+
+          <div
+            style={{ textAlign: window.innerWidth > 425 ? "none" : "center" }}
+          >
+            <canvas
+              id="githubContributions"
+              style={{
+                width: window.innerWidth > 425 ? "70%" : "90%",
+                marginLeft: window.innerWidth > 425 ? "22%" : 0
+              }}
+            />
+          </div>
+
+          {Object.keys(this.state.githubContributionsData).length !== 0 &&
+            drawContributions(document.getElementById("githubContributions"), {
+              data: this.state.githubContributionsData,
+              username: "alexandermontague",
+              themeName: "blue"
+            })}
         </div>
       </section>
     );
