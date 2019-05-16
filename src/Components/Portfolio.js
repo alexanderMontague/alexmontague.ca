@@ -30,7 +30,7 @@ class Portfolio extends Component {
 
   render() {
     const projects = this.props.data.projects.map(project => {
-      const { title, category, links, tech, image } = project;
+      const { title, description, links, tech, image } = project;
       return (
         <div key={title}>
           <div className="portfolioItem">
@@ -73,7 +73,8 @@ class Portfolio extends Component {
                     </a>
                   )}
                 </div>
-                <div>{category}</div>
+                {/* Be careful with XSS if ever fetching */}
+                <div dangerouslySetInnerHTML={{ __html: description }} />
               </div>
             </span>
           </div>
