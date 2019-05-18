@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 class Contact extends Component {
   state = {
@@ -31,6 +32,27 @@ class Contact extends Component {
 
   sendEmail = e => {
     e.preventDefault();
+
+    const {
+      contactName,
+      contactEmail,
+      contactSubject,
+      contactMessage
+    } = this.state;
+
+    console.log("hello");
+
+    axios
+      .post("https://api.alexmontague.ca/email", {
+        toEmail: "me@alexmontague.ca",
+        fromEmail: contactEmail,
+        sender: contactName,
+        subject: contactSubject,
+        message: contactMessage
+      })
+      .then(res => {
+        console.log(res);
+      });
   };
 
   render() {
@@ -60,7 +82,6 @@ class Contact extends Component {
                   </label>
                   <input
                     type="text"
-                    defaultValue="Form is WIP, email me directly!"
                     size="35"
                     id="contactName"
                     name="contactName"
@@ -109,7 +130,9 @@ class Contact extends Component {
                 </div>
 
                 <div>
-                  <button className="submit">Submit</button>
+                  <button className="submit" type="submit">
+                    Submit
+                  </button>
                   <span id="image-loader">
                     <img alt="" src="images/loader.gif" />
                   </span>
@@ -134,7 +157,6 @@ class Contact extends Component {
                 <br />
                 <a href={`mailto:me@alexmontague.ca`}>me@alexmontague.ca</a>
                 <br />
-                Currently the form is WIP, email me directly!
               </p>
             </div>
           </aside>
