@@ -7,7 +7,8 @@ class Contact extends Component {
       contactName: "",
       contactEmail: "",
       contactSubject: "",
-      contactMessage: ""
+      contactMessage: "",
+      formFeedbackMsg: ""
     }
   };
 
@@ -21,7 +22,7 @@ class Contact extends Component {
       case "contactEmail":
         this.setState({ contactEmail: e.target.value });
         break;
-      case "contactsubject":
+      case "contactSubject":
         this.setState({ contactSubject: e.target.value });
         break;
       default:
@@ -40,7 +41,12 @@ class Contact extends Component {
       contactMessage
     } = this.state;
 
-    console.log("hello");
+    if (!contactName || !contactEmail || !contactMessage) {
+      this.setState({
+        formFeedbackMsg: "Required field missing!"
+      });
+      return;
+    }
 
     axios
       .post("https://api.alexmontague.ca/email", {
@@ -50,13 +56,26 @@ class Contact extends Component {
         subject: contactSubject,
         message: contactMessage
       })
-      .then(res => {
-        console.log(res);
+      .then(({ data }) => {
+        // if error
+        if (data.error) {
+          this.setState({ formFeedbackMsg: data.message });
+          return;
+        }
+
+        this.setState({
+          formFeedbackMsg: "Email Sent Successfully. Thanks!",
+          contactName: "",
+          contactEmail: "",
+          contactSubject: "",
+          contactMessage: ""
+        });
       });
   };
 
   render() {
     const message = this.props.data.contactmessage;
+    const { formFeedbackMsg } = this.state;
 
     return (
       <section id="contact">
@@ -74,6 +93,15 @@ class Contact extends Component {
 
         <div className="row">
           <div className="eight columns">
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                paddingLeft: "15%"
+              }}
+            >
+              <div style={{ color: "#ffffff" }}>{formFeedbackMsg}</div>
+            </div>
             <form onSubmit={this.sendEmail}>
               <fieldset>
                 <div>
@@ -85,6 +113,7 @@ class Contact extends Component {
                     size="35"
                     id="contactName"
                     name="contactName"
+                    value={this.state.contactName}
                     onChange={this.updateForm}
                   />
                 </div>
@@ -99,6 +128,7 @@ class Contact extends Component {
                     size="35"
                     id="contactEmail"
                     name="contactEmail"
+                    value={this.state.contactEmail}
                     onChange={this.updateForm}
                   />
                 </div>
@@ -111,6 +141,7 @@ class Contact extends Component {
                     size="35"
                     id="contactSubject"
                     name="contactSubject"
+                    value={this.state.contactSubject}
                     onChange={this.updateForm}
                   />
                 </div>
@@ -125,6 +156,7 @@ class Contact extends Component {
                     rows="15"
                     id="contactMessage"
                     name="contactMessage"
+                    value={this.state.contactMessage}
                     onChange={this.updateForm}
                   />
                 </div>
