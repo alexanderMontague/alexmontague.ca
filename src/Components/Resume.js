@@ -6,6 +6,8 @@ import htIcon from "../assets/ht-icon.jpg";
 import guelphIcon from "../assets/guelph-icon.png";
 import { drawContributions } from "github-contributions-canvas";
 import axios from "axios";
+import moment from "moment";
+import styled from "styled-components";
 
 const iconMap = {
   coinsquare: coinsquareIcon,
@@ -14,16 +16,69 @@ const iconMap = {
   guelph: guelphIcon
 };
 
+const ContribuitionContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+
+  @media (max-wdith: 768px) {
+    flex-direction: column;
+  }
+`;
+
 class Resume extends Component {
   state = {
-    githubContributionsData: {}
+    githubContributionsData: null,
+    totalContributions: "offline",
+    weeklyContributions: "offline",
+    dailyContributions: "offline",
+    dateToday: moment().format("YYYY-MM-DD"),
+    dateOneWeekAgo: moment()
+      .subtract(7, "d")
+      .format("YYYY-MM-DD")
   };
 
   componentDidMount() {
     axios("https://github-contributions-api.now.sh/v1/alexandermontague").then(
-      res => this.setState({ githubContributionsData: res.data })
+      res => {
+        this.parseCommitData(res.data);
+      }
     );
   }
+
+  parseCommitData = data => {
+    const { dateOneWeekAgo, dateToday } = this.state;
+
+    // total commits
+    const totalContributions = data.years.reduce((accumulator, year) => {
+      return accumulator + year.total;
+    }, 0);
+
+    // weekly commits
+    const weeklyContributions = data.contributions.reduce(
+      (accumulator, day) => {
+        if (
+          moment(dateOneWeekAgo).unix() <= moment(day.date).unix() &&
+          moment(day.date).unix() <= moment(dateToday).unix()
+        ) {
+          return accumulator + day.count;
+        }
+
+        return accumulator;
+      },
+      0
+    );
+
+    // daily commits
+    const dailyContributions = data.contributions.reduce((accumulator, day) => {
+      return day.date === dateToday ? accumulator + day.count : accumulator;
+    }, 0);
+
+    this.setState({
+      totalContributions,
+      weeklyContributions,
+      dailyContributions
+    });
+  };
 
   render() {
     const {
@@ -33,6 +88,12 @@ class Resume extends Component {
       barSkills,
       techSkills
     } = this.props.data;
+
+    const {
+      totalContributions,
+      weeklyContributions,
+      dailyContributions
+    } = this.state;
 
     const educationCollection = education.map(education => {
       return (
@@ -182,24 +243,45 @@ class Resume extends Component {
             </div>
           </div>
 
-          <div
-            style={{ textAlign: window.innerWidth > 425 ? "none" : "center" }}
-          >
-            <canvas
-              id="githubContributions"
+          <div className="nine columns main-col">
+            <div
               style={{
-                width: window.innerWidth > 425 ? "70%" : "90%",
-                marginLeft: window.innerWidth > 425 ? "22%" : 0
+                textAlign: "center",
+                fontSize: 15,
+                paddingLeft: "6%",
+                paddingBottom: "5%"
               }}
-            />
+            >
+              Git Activity &nbsp;
+              <div className={"fa fa-github"} />
+            </div>
+            <ContribuitionContainer>
+              <div>
+                <div style={{ fontSize: 30, textAlign: "center" }}>
+                  Total Contributions
+                </div>
+                <div style={{ textAlign: "center", color: "#00a5ff" }}>
+                  {totalContributions}
+                </div>
+              </div>
+              <div>
+                <div style={{ fontSize: 30, textAlign: "center" }}>
+                  Commits this Week
+                </div>
+                <div style={{ textAlign: "center", color: "#00a5ff" }}>
+                  {weeklyContributions}
+                </div>
+              </div>
+              <div>
+                <div style={{ fontSize: 30, textAlign: "center" }}>
+                  Commits Today
+                </div>
+                <div style={{ textAlign: "center", color: "#00a5ff" }}>
+                  {dailyContributions}
+                </div>
+              </div>
+            </ContribuitionContainer>
           </div>
-
-          {Object.keys(this.state.githubContributionsData).length !== 0 &&
-            drawContributions(document.getElementById("githubContributions"), {
-              data: this.state.githubContributionsData,
-              username: "alexandermontague",
-              themeName: "blue"
-            })}
         </div>
       </section>
     );
