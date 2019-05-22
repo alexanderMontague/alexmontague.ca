@@ -151,7 +151,7 @@
         "image": "cryptoWatch.png",
         "links": {
           "github": "https://github.com/alexanderMontague/CryptoWatch",
-          "hosted": "https://cryptowatch-d0d48.firebaseapp.com/"
+          "hosted": "https://cryptowatch.web.app/"
         },
         "tech": ["react", "node", "mongo"]
       },
