@@ -74,44 +74,39 @@
         "icon": "coinsquare"
       }
     ],
-    "techSkills": {
-      "row1": [
-        {
-          "imageSrc": "images/react.png",
-          "header": "ReactJS",
-          "text": "I have been doing a lot of frontend work with the react library, and I absolutely love it! It is so versatile and is my go to for frontend web development. Pairing React with some other very powerful libraries and frameworks that I like (redux, axios, styled components) makes for a super strong frontend stack!"
-        },
-        {
-          "imageSrc": "images/node.png",
-          "header": "NodeJS",
-          "text": "After recently branching out into backend web development, node, express and knex are some of the tools I am using to build my backend architecture. I am still learning lots about backend development!"
-        }
-      ],
-      "row2": [
-        {
-          "imageSrc": "images/c.png",
-          "header": "C",
-          "text": "The C Programming language is the main language taught at UofG, and probably my strongest language. I liked the low-levelness of this language, and my algorithms and data structures classes all utilized C. Learning this language made me appreciate dynamic languages, but also allowed me to understand how they work behind the scenes."
-        },
-        {
-          "imageSrc": "images/mysql.png",
-          "header": "SQL",
-          "text": "After learning SQL at school through projects, I was able use these skills at my current co-op where we utilized MySQL and PostgreSQL. I still have much to learn (and my upcoming databased course will help) in terms of relational databases, but I am also open and exploring non-relational databases such as MongoDB for personal use."
-        }
-      ],
-      "row3": [
-        {
-          "imageSrc": "images/java.png",
-          "header": "Java",
-          "text": "Java is my favourite OO language and I have been programming with Java since highschool. I made my first graphical application with Java while working at my previous job, check it out below!"
-        },
-        {
-          "imageSrc": "images/python.png",
-          "header": "Python",
-          "text": "Python is something I am still exploring/learning, but I am very interested in it as I would like to explore AI/Machine learning in the future. Not to mention no more curly braces and semicolons :)"
-        }
-      ]
-    },
+    "techSkills": [
+      {
+        "imageSrc": "images/react.png",
+        "header": "ReactJS",
+        "text": "I have been doing a lot of frontend work with the react library, and I absolutely love it! It is so versatile and is my go to for frontend web development. Pairing React with some other very powerful libraries and frameworks that I like (redux, axios, styled components) makes for a super strong frontend stack!"
+      },
+      {
+        "imageSrc": "images/node.png",
+        "header": "NodeJS",
+        "text": "After recently branching out into backend web development, node, express and knex are some of the tools I am using to build my backend architecture. I am still learning lots about backend development!"
+      },
+      {
+        "imageSrc": "images/c.png",
+        "header": "C",
+        "text": "The C Programming language is the main language taught at UofG, and probably my strongest language. I liked the low-levelness of this language, and my algorithms and data structures classes all utilized C. Learning this language made me appreciate dynamic languages, but also allowed me to understand how they work behind the scenes."
+      },
+      {
+        "imageSrc": "images/mysql.png",
+        "header": "SQL",
+        "text": "After learning SQL at school through projects, I was able use these skills at my current co-op where we utilized MySQL and PostgreSQL. I still have much to learn (and my upcoming databased course will help) in terms of relational databases, but I am also open and exploring non-relational databases such as MongoDB for personal use."
+      },
+
+      {
+        "imageSrc": "images/java.png",
+        "header": "Java",
+        "text": "Java is my favourite OO language and I have been programming with Java since highschool. I made my first graphical application with Java while working at my previous job, check it out below!"
+      },
+      {
+        "imageSrc": "images/python.png",
+        "header": "Python",
+        "text": "Python is something I am still exploring/learning, but I am very interested in it as I would like to explore AI/Machine learning in the future. Not to mention no more curly braces and semicolons :)"
+      }
+    ],
     "barSkills": [
       {
         "name": "ReactJS/Redux",

@@ -4,10 +4,12 @@ import coinsquareIcon from "../assets/coinsquare-icon.jpg";
 import leagueIcon from "../assets/league-icon.png";
 import htIcon from "../assets/ht-icon.jpg";
 import guelphIcon from "../assets/guelph-icon.png";
-import { drawContributions } from "github-contributions-canvas";
+// import { drawContributions } from "github-contributions-canvas";
 import axios from "axios";
 import moment from "moment";
 import styled from "styled-components";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 const iconMap = {
   coinsquare: coinsquareIcon,
@@ -155,6 +157,7 @@ class Resume extends Component {
         </div>
       );
     });
+
     const skillsCollection = barSkills.map(skills => {
       const className = "bar-expand " + skills.name.toLowerCase();
       return (
@@ -200,43 +203,17 @@ class Resume extends Component {
           </div>
 
           <div className="nine columns main-col">
+            <Carousel showThumbs={false}>
+              {techSkills.map(skill => (
+                <TechItem
+                  imageSrc={skill.imageSrc}
+                  header={skill.header}
+                  text={skill.text}
+                  key={skill.header}
+                />
+              ))}
+            </Carousel>
             <div className="techStackContainer">
-              <div className="techStack">
-                {techSkills.row1.map(skill => {
-                  return (
-                    <TechItem
-                      imageSrc={skill.imageSrc}
-                      header={skill.header}
-                      text={skill.text}
-                      key={skill.header}
-                    />
-                  );
-                })}
-              </div>
-              <div className="techStack">
-                {techSkills.row2.map(skill => {
-                  return (
-                    <TechItem
-                      imageSrc={skill.imageSrc}
-                      header={skill.header}
-                      text={skill.text}
-                      key={skill.header}
-                    />
-                  );
-                })}
-              </div>
-              <div className="techStack">
-                {techSkills.row3.map(skill => {
-                  return (
-                    <TechItem
-                      imageSrc={skill.imageSrc}
-                      header={skill.header}
-                      text={skill.text}
-                      key={skill.header}
-                    />
-                  );
-                })}
-              </div>
               <div className="bars">
                 <ul className="skills">{skillsCollection}</ul>
               </div>
