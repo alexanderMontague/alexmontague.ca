@@ -22,7 +22,7 @@ const ContribuitionContainer = styled.div`
   display: flex;
   justify-content: space-around;
 
-  @media (max-wdith: 768px) {
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 `;
