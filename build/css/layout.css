@@ -384,7 +384,6 @@ ul#nav li.current a {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 10px 30px 0 0;
 }
 .techIcon {
   height: 150px;

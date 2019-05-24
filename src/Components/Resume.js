@@ -203,17 +203,23 @@ class Resume extends Component {
           </div>
 
           <div className="nine columns main-col">
-            <Carousel showThumbs={false}>
+            <Carousel
+              showThumbs={false}
+              infiniteLoop={true}
+              useKeyboardArrows={true}
+            >
               {techSkills.map(skill => (
                 <TechItem
                   imageSrc={skill.imageSrc}
                   header={skill.header}
                   text={skill.text}
                   key={skill.header}
+                  swipeable={true}
                 />
               ))}
             </Carousel>
-            <div className="techStackContainer">
+
+            <div className="techStackContainer" style={{ paddingTop: 50 }}>
               <div className="bars">
                 <ul className="skills">{skillsCollection}</ul>
               </div>
