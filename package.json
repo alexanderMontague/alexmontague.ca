@@ -45,6 +45,7 @@
     "react-responsive-carousel": "^3.1.49",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
+    "react-router-hash-link": "^1.2.1",
     "react-slidedown": "^2.0.5",
     "style-loader": "0.19.0",
     "styled-components": "^4.0.3",
