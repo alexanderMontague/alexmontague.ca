@@ -21,22 +21,27 @@
       {
         "name": "linkedin",
         "url": "https://www.linkedin.com/in/alex-montague/",
-        "className": "fa fa-linkedin"
+        "className": "fab fa-linkedin"
       },
       {
         "name": "github",
         "url": "https://github.com/alexanderMontague",
-        "className": "fa fa-github"
+        "className": "fab fa-github"
       },
       {
         "name": "stack overflow",
         "url": "https://stackoverflow.com/users/4372747/alex-montague",
-        "className": "fa fa-stack-overflow"
+        "className": "fab fa-stack-overflow"
       },
       {
         "name": "youtube",
         "url": "https://www.youtube.com/channel/UCHhHNZJcWDu5kH3FIPWwHEA",
-        "className": "fa fa-youtube"
+        "className": "fab fa-youtube"
+      },
+      {
+        "name": "resume",
+        "url": "https://drive.google.com/file/d/1RCaepn_9uI9OXNXqzJVTT5xeYV4yroG6/view?usp=sharing",
+        "className": "fas fa-scroll"
       }
     ]
   },

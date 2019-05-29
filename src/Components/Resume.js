@@ -236,7 +236,7 @@ class Resume extends Component {
               }}
             >
               Git Activity &nbsp;
-              <div className={"fa fa-github"} />
+              <div className={"fab fa-github"} />
             </div>
             <ContribuitionContainer>
               <div>

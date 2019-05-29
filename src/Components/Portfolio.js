@@ -60,7 +60,7 @@ class Portfolio extends Component {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <div className={"fa fa-3x fa-github"} />
+                      <div className={"fab fa-github fa-2x"} />
                     </a>
                   )}
                   {links.hosted && (
@@ -69,7 +69,7 @@ class Portfolio extends Component {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <div className={"fa fa-3x fa-external-link"} />
+                      <div className={"fab fa-external-link-alt fa-2x"} />
                     </a>
                   )}
                 </div>

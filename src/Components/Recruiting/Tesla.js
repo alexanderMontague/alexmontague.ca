@@ -90,7 +90,7 @@ const TeslaLanding = props => {
                     rel="noopener noreferrer"
                     style={{ color: "#ffffff" }}
                   >
-                    <div className={"fa fa-3x fa-github"} />
+                    <div className={"fab fa-2x fa-github"} />
                   </a>
                 )}
                 {project.links.hosted && (
@@ -100,7 +100,7 @@ const TeslaLanding = props => {
                     rel="noopener noreferrer"
                     style={{ color: "#ffffff" }}
                   >
-                    <div className={"fa fa-3x fa-external-link"} />
+                    <div className={"fas fa-2x fa-external-link-alt"} />
                   </a>
                 )}
               </div>
@@ -156,6 +156,18 @@ const TeslaLanding = props => {
       </PhotoContainer>
 
       <div style={{ padding: "25px", width: "65%" }}>
+        <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+          {resume.main.social.map(item => (
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#ffffff" }}
+            >
+              <div className={item.className} />
+            </a>
+          ))}
+        </div>
         <hr style={{ color: "#ffffff", height: 1, width: "100%" }} />
         <Paragraph>
           Hey Tesla! My Name is Alex Montague and I am a Software Engineering
