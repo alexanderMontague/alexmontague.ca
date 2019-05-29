@@ -159,6 +159,7 @@ const TeslaLanding = props => {
         <div style={{ display: "flex", justifyContent: "space-evenly" }}>
           {resume.main.social.map(item => (
             <a
+              key={item.url}
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
@@ -180,10 +181,10 @@ const TeslaLanding = props => {
           I strive to work for innovative, fast moving and agile companies.
           Thats why I think an internship at Tesla would be such a great fit.
           Utilizing my past internships and side projects, I have been exposed
-          to full stack web development, AI and ML prototypes, and low level
-          systems + networking. I would be thrilled to work in any of these
-          areas that I have experience in, or up for the challenge working on
-          something new.
+          to tech ecosystems ranging from full stack web development and AI and
+          ML prototypes to low level systems + networking. I would be thrilled
+          to work in any area that I have experience in, or hungry for a
+          challenge working on something new.
         </Paragraph>
 
         <Paragraph>

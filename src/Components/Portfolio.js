@@ -69,7 +69,7 @@ class Portfolio extends Component {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <div className={"fab fa-external-link-alt fa-2x"} />
+                      <div className={"fas fa-external-link-alt fa-2x"} />
                     </a>
                   )}
                 </div>

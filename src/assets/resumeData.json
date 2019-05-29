@@ -5,12 +5,12 @@
     "description": "I am always looking for ",
     "description2": ", whether that be open source projects, internships, or new technologies, ",
     "image": "profilepic.jpg",
-    "bio": "I am a software engineer. Not only do I like to program, but I am passionate about writing clean, smart, and efficient code! Over my schooling and work terms I have been exposed to many languages and frameworks, but some of my favourite languages are Javascript, C and Python. I recently started my dive into web development, more specifically using the ReactJS/NodeJS libraries. I hope to explore more full stack opportunities in the future!",
+    "bio": "I am a software engineer. Not only do I like to program, but I am passionate about writing clean, smart, and efficient code! Over my schooling and work terms I have been exposed to many languages and frameworks, but some of my favourites are Javascript, C Go, and Python. I recently started my dive into web development, more specifically using the ReactJS/NodeJS libraries. I hope to explore more full stack opportunities in the future!",
     "contactmessage": "Drop me a line:",
     "email": "me@alexmontague.ca",
     "phone": "",
     "address": {
-      "street": "(Your Street)",
+      "street": "",
       "city": "Toronto",
       "state": "Ontario",
       "zip": ""
@@ -52,7 +52,7 @@
         "school": "The University of Guelph",
         "degree": "Bachelors of Computing",
         "graduated": "Exp. April 2021",
-        "description": "Currently in my third year studying Software Engineering. Some of the most interesting/favourite courses I have taken so far have been Software Design I - IV, Data Structures, Algorithms, Operating Systems and the infamous 'Angel of Death' (Software Systems and Integrations). Currently on the Dean's List for maintaining an overall average of 80%. I am looking forward to my databases and software design V class.",
+        "description": "Currently in my third year studying Software Engineering. Some interesting and favourite courses I have taken so far have been Software Design I - IV, Data Structures, Algorithms, Operating Systems and the infamous 'Angel of Death' (Software Systems and Integrations). Currently on the Dean's List for maintaining an overall average of 80%. I am looking forward to my databases and quantum computing classes.",
         "icon": "guelph"
       },
       {
@@ -68,7 +68,7 @@
         "company": "League",
         "title": "Full Stack Developer",
         "years": "May 2019 - Present",
-        "description": "League is an all digital benefit providing platform that lets employees customize and tailor their benefits exactly how they want to. League was rated LinkedIn's 4th top startup in Canada, and I can really see why! I am currently working as a Full Stack developer writing ReactJS and Redux on the frontend, and Go on the backend which I absolutely love working with. I look forward to what comes in the coming months of this placement!",
+        "description": "League is an all digital health and wellness platform specializing in employer benefits. The app gives employees the ability to customize and tailor their benefits exactly how they want to, while letting employers easily manage and track their employees benefits, spending, and accounts. League was rated LinkedIn's 4th top startup in Canada, and I can really see why! I am currently working as a Full Stack developer writing ReactJS and Redux on the frontend, and Go on the backend which is new to me, but I am enjoying. I look forward to what comes in the coming months of this placement!",
         "icon": "league"
       },
       {
