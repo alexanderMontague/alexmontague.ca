@@ -2,12 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { HashLink as Link } from "react-router-hash-link";
 import resume from "../../assets/resumeData.json";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 const GradientBackground = styled.div`
   background-image: linear-gradient(to bottom right, red, white);
-  height: ${window.innerHeight}px;
+  height: 100%;
   display: flex;
-  justify-content: center;
+  ${"" /* justify-content: center; */}
   align-items: center;
   flex-direction: column;
 `;
@@ -16,6 +18,7 @@ const PhotoContainer = styled.div`
   display: flex;
   width: 50%;
   justify-content: center;
+  padding-top: 30px;
 `;
 
 const BubbleImage = styled.img`
@@ -37,6 +40,84 @@ const Paragraph = styled.div`
 `;
 
 const TeslaLanding = props => {
+  const renderPortfolioItems = () => {
+    const showcasedProjects = resume.portfolio.projects.filter(project =>
+      ["Cryptowatch", "Book Buy", "am.ca Server"].includes(project.title)
+    );
+
+    return showcasedProjects.map(project => {
+      return (
+        <div
+          className="portfolioItem"
+          style={{ width: "65%", margin: "30px auto" }}
+          key={project.title}
+        >
+          <h5
+            style={{
+              textAlign: "center",
+              padding: "10px 0",
+              color: "darkslategrey"
+            }}
+          >
+            {project.title}
+          </h5>
+          <span className="flexMeUp" style={{ flexDirection: "column" }}>
+            <img
+              src={`images/portfolio/${project.image}`}
+              alt="portfolio item"
+              style={{ height: 250 }}
+            />
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-evenly",
+                  padding: "10px 0"
+                }}
+              >
+                {project.tech.map(tech => (
+                  <img
+                    key={tech}
+                    src={`images/${tech}.png`}
+                    style={{ height: 40, width: 40 }}
+                    alt="tech item"
+                  />
+                ))}
+                {project.links.github && (
+                  <a
+                    href={project.links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#ffffff" }}
+                  >
+                    <div className={"fa fa-3x fa-github"} />
+                  </a>
+                )}
+                {project.links.hosted && (
+                  <a
+                    href={project.links.hosted}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#ffffff" }}
+                  >
+                    <div className={"fa fa-3x fa-external-link"} />
+                  </a>
+                )}
+              </div>
+              {/* Be careful with XSS if ever fetching */}
+              <div
+                style={{ color: "darkslategrey" }}
+                dangerouslySetInnerHTML={{
+                  __html: project.description
+                }}
+              />
+            </div>
+          </span>
+        </div>
+      );
+    });
+  };
+
   return (
     <GradientBackground>
       <PhotoContainer>
@@ -96,58 +177,28 @@ const TeslaLanding = props => {
         <Paragraph>
           Some technology and frameworks that I am passionate about are
           React/Redux, NodeJS, Golang, C, Python, Blockchain, Neural Networks,
-          Relational and Document based Databases and Analytics. Here are a few
-          relevant projects that I think showcase my abilities.
-          <Link smooth to="/#portfolio">
-            here!
+          Relational and Document based Databases and Analytics. Below are a few
+          relevant projects that I think showcase my abilities. Feel free to
+          <Link smooth to="/#contact" style={{ color: "#ffffff" }}>
+            {" "}
+            contact me{" "}
           </Link>
+          or checkout the rest of my{" "}
+          <Link smooth to="/" style={{ color: "#ffffff" }}>
+            {" "}
+            site!{" "}
+          </Link>
+          Thank you for your time and I appreciate the opportunity!
         </Paragraph>
 
-        <div className="portfolioItem">
-          <h5>{resume.portfolio.projects[0].title}</h5>
-          <span className="flexMeUp">
-            <img
-              src={"images/portfolio/cryptoWatch.png"}
-              alt="portfolio item"
-              className="portfolioImage"
-              style={{ height: 250 }}
-            />
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-evenly",
-                  paddingTop: 30,
-                  paddingBottom: 20
-                }}
-              >
-                {resume.portfolio.projects[0].links.github && (
-                  <a
-                    href={resume.portfolio.projects[0].links.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className={"fa fa-3x fa-github"} />
-                  </a>
-                )}
-                {resume.portfolio.projects[0].links.hosted && (
-                  <a
-                    href={resume.portfolio.projects[0].links.hosted}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className={"fa fa-3x fa-external-link"} />
-                  </a>
-                )}
-              </div>
-              {/* Be careful with XSS if ever fetching */}
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: resume.portfolio.projects[0].description
-                }}
-              />
-            </div>
-          </span>
+        <div style={{ width: "75%", margin: "0 auto" }}>
+          <Carousel
+            showThumbs={false}
+            infiniteLoop={true}
+            useKeyboardArrows={true}
+          >
+            {renderPortfolioItems()}
+          </Carousel>
         </div>
       </div>
     </GradientBackground>

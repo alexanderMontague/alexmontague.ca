@@ -618,6 +618,14 @@ ul#nav li.current a {
   }
 }
 
+.slide {
+  background: inherit !important;
+}
+
+.selected {
+  background: inherit !important;
+}
+
 /* popup modal */
 .popup-modal {
   max-width: 550px;

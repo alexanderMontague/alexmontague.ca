@@ -3,7 +3,6 @@ import { BrowserRouter } from "react-router-dom";
 import ReactGA from "react-ga";
 import { createGlobalStyle } from "styled-components";
 import Routes from "./routes";
-import "./App.css";
 
 const GlobalStyles = createGlobalStyle`
   html {
