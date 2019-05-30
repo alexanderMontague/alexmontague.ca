@@ -384,11 +384,19 @@ ul#nav li.current a {
   display: flex;
   flex-direction: column;
   text-align: center;
+  background: #ffffff;
+  height: 100%;
+  padding: 50px 20px;
+  user-select: none;
+}
+.techIconContainer {
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
 }
 .techIcon {
-  height: 150px;
-  width: 150px;
-  margin: 0 auto;
+  height: 100%;
+  width: 100%;
 }
 /*
 .git {
@@ -608,6 +616,14 @@ ul#nav li.current a {
     height: 100%;
     padding-right: 0;
   }
+}
+
+.slide {
+  background: inherit !important;
+}
+
+.selected {
+  background: inherit !important;
 }
 
 /* popup modal */
