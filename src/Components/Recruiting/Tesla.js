@@ -39,6 +39,8 @@ const Paragraph = styled.div`
   color: darkslategrey;
 `;
 
+// Master company name
+const companyName = "Tesla";
 const TeslaLanding = props => {
   const renderPortfolioItems = () => {
     const showcasedProjects = resume.portfolio.projects.filter(project =>
@@ -150,8 +152,11 @@ const TeslaLanding = props => {
             width: "200px"
           }}
         >
-          <HeaderText>Tesla</HeaderText>
-          <BubbleImage src="images/recruiting/tesla.jpg" alt="tesla" />
+          <HeaderText>{companyName}</HeaderText>
+          <BubbleImage
+            src={`images/recruiting/${companyName.toLowerCase()}.jpg`}
+            alt={companyName}
+          />
         </div>
       </PhotoContainer>
 
@@ -171,20 +176,20 @@ const TeslaLanding = props => {
         </div>
         <hr style={{ color: "#ffffff", height: 1, width: "100%" }} />
         <Paragraph>
-          Hey Tesla! My Name is Alex Montague and I am a Software Engineering
+          {`Hey ${companyName}! My Name is Alex Montague and I am a Software Engineering
           student studying at the University of Guelph. I will be looking for my
           third internship starting in January 2020 for a 4 or 8 month
-          placement. I would love to experience everything Tesla has to offer.
+          placement. I would love to experience everything ${companyName} has to offer.`}
         </Paragraph>
 
         <Paragraph>
-          I strive to work for innovative, fast moving and agile companies.
-          Thats why I think an internship at Tesla would be such a great fit.
+          {`I strive to work for innovative, fast moving and agile companies.
+          Thats why I think an internship at ${companyName} would be such a great fit.
           Utilizing my past internships and side projects, I have been exposed
           to tech ecosystems ranging from full stack web development and AI and
           ML prototypes to low level systems + networking. I would be thrilled
           to work in any area that I have experience in, or hungry for a
-          challenge working on something new.
+          challenge working on something new.`}
         </Paragraph>
 
         <Paragraph>
