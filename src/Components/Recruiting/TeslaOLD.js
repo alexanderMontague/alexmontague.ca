@@ -6,10 +6,13 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 const GradientBackground = styled.div`
-  background-image: linear-gradient(to bottom right, red, white);
+  background-image: linear-gradient(
+    to bottom right,
+    ${props => props.companyColors[0]},
+    ${props => props.companyColors[1]}
+  );
   height: 100%;
   display: flex;
-  ${"" /* justify-content: center; */}
   align-items: center;
   flex-direction: column;
 `;
@@ -40,8 +43,7 @@ const Paragraph = styled.div`
 `;
 
 // Master company name
-const companyName = "Tesla";
-const TeslaLanding = props => {
+const TeslaLanding = ({ companyName, companyColors }) => {
   const renderPortfolioItems = () => {
     const showcasedProjects = resume.portfolio.projects.filter(project =>
       ["Cryptowatch", "Book Buy", "am.ca Server"].includes(project.title)
@@ -121,7 +123,7 @@ const TeslaLanding = props => {
   };
 
   return (
-    <GradientBackground>
+    <GradientBackground companyColors={companyColors}>
       <PhotoContainer>
         <div
           style={{
