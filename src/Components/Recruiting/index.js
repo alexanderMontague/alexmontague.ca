@@ -42,6 +42,27 @@ const Paragraph = styled.div`
   color: ${props => (props.textColor ? props.textColor : "darkslategrey")};
 `;
 
+const CarouselContainer = styled.div`
+  width: 55%;
+  margin: 0 auto;
+
+  @media (max-width: 1080px) {
+    width: 95%;
+  }
+`;
+
+const IndividualPic = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+
+  @media (max-width: 1080px) {
+    width: 90%;
+    justify-content: space-around;
+  }
+`;
+
 const RecruitingComponent = ({
   companyName,
   companyColors,
@@ -128,17 +149,10 @@ const RecruitingComponent = ({
   return (
     <GradientBackground companyColors={companyColors}>
       <PhotoContainer>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            width: "200px"
-          }}
-        >
+        <IndividualPic>
           <HeaderText>Alex Montague</HeaderText>
           <BubbleImage src="images/profilepic.jpg" alt="Headshot" />
-        </div>
+        </IndividualPic>
         <div
           style={{
             fontSize: 25,
@@ -149,20 +163,13 @@ const RecruitingComponent = ({
         >
           x
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            width: "200px"
-          }}
-        >
+        <IndividualPic>
           <HeaderText>{companyName}</HeaderText>
           <BubbleImage
             src={`images/recruiting/${companyName.toLowerCase()}.jpg`}
             alt={companyName}
           />
-        </div>
+        </IndividualPic>
       </PhotoContainer>
 
       <div style={{ padding: "25px", width: "65%" }}>
@@ -213,17 +220,16 @@ const RecruitingComponent = ({
           </Link>
           Thank you for your time and I appreciate the opportunity!
         </Paragraph>
-
-        <div style={{ width: "75%", margin: "0 auto" }}>
-          <Carousel
-            showThumbs={false}
-            infiniteLoop={true}
-            useKeyboardArrows={true}
-          >
-            {renderPortfolioItems()}
-          </Carousel>
-        </div>
       </div>
+      <CarouselContainer>
+        <Carousel
+          showThumbs={false}
+          infiniteLoop={true}
+          useKeyboardArrows={true}
+        >
+          {renderPortfolioItems()}
+        </Carousel>
+      </CarouselContainer>
     </GradientBackground>
   );
 };
