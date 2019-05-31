@@ -26,8 +26,32 @@ const routes = (
     <DefaultRecruitingComponent
       path="/facebook"
       companyName="Facebook"
-      companyColors={["#0027ff", "#ffffff"]}
-      // textColor="#ffffff"
+      companyColors={["#3172EA", "#ffffff"]}
+    />
+
+    <DefaultRecruitingComponent
+      path="/apple"
+      companyName="Apple"
+      companyColors={["#B3B3B3", "#ffffff"]}
+    />
+
+    <DefaultRecruitingComponent
+      path="/google"
+      companyName="Google"
+      companyColors={["#529F56", "#ffffff"]}
+    />
+
+    <DefaultRecruitingComponent
+      path="/lyft"
+      companyName="Lyft"
+      companyColors={["#D73081", "#ffffff"]}
+    />
+
+    <DefaultRecruitingComponent
+      path="/uber"
+      companyName="Uber"
+      companyColors={["#000000", "#ffffff"]}
+      textColor="#ffffff"
     />
   </Switch>
 );

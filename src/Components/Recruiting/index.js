@@ -63,6 +63,22 @@ const IndividualPic = styled.div`
   }
 `;
 
+const StyledLink = styled.a`
+  color: #ffffff !important;
+
+  :hover {
+    color: #000000 !important;
+  }
+`;
+
+const StyledRouterLink = styled(Link)`
+  color: #ffffff !important;
+
+  :hover {
+    color: #000000 !important;
+  }
+`;
+
 const RecruitingComponent = ({
   companyName,
   companyColors,
@@ -112,24 +128,22 @@ const RecruitingComponent = ({
                   />
                 ))}
                 {project.links.github && (
-                  <a
+                  <StyledLink
                     href={project.links.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ color: "#ffffff" }}
                   >
                     <div className={"fab fa-2x fa-github"} />
-                  </a>
+                  </StyledLink>
                 )}
                 {project.links.hosted && (
-                  <a
+                  <StyledLink
                     href={project.links.hosted}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ color: "#ffffff" }}
                   >
                     <div className={"fas fa-2x fa-external-link-alt"} />
-                  </a>
+                  </StyledLink>
                 )}
               </div>
               {/* Be careful with XSS if ever fetching */}
@@ -166,7 +180,7 @@ const RecruitingComponent = ({
         <IndividualPic>
           <HeaderText>{companyName}</HeaderText>
           <BubbleImage
-            src={`images/recruiting/${companyName.toLowerCase()}.jpg`}
+            src={`images/recruiting/${companyName.toLowerCase()}.png`}
             alt={companyName}
           />
         </IndividualPic>
@@ -175,15 +189,14 @@ const RecruitingComponent = ({
       <div style={{ padding: "25px", width: "65%" }}>
         <div style={{ display: "flex", justifyContent: "space-evenly" }}>
           {resume.main.social.map(item => (
-            <a
+            <StyledLink
               key={item.url}
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "#ffffff" }}
             >
               <div className={item.className} />
-            </a>
+            </StyledLink>
           ))}
         </div>
         <hr style={{ color: "#ffffff", height: 1, width: "100%" }} />
@@ -209,15 +222,15 @@ const RecruitingComponent = ({
           React/Redux, NodeJS, Golang, C, Python, Blockchain, Neural Networks,
           Relational and Document based Databases and Analytics. Below are a few
           relevant projects that I think showcase my abilities. Feel free to
-          <Link smooth to="/#contact" style={{ color: "#ffffff" }}>
+          <StyledRouterLink smooth to="/#contact" style={{ color: "#ffffff" }}>
             {" "}
             <span style={{ textDecoration: "underline" }}>contact me</span>{" "}
-          </Link>
+          </StyledRouterLink>
           or checkout the rest of my{" "}
-          <Link smooth to="/" style={{ color: "#ffffff" }}>
+          <StyledRouterLink smooth to="/" style={{ color: "#ffffff" }}>
             {" "}
             <span style={{ textDecoration: "underline" }}>site!</span>{" "}
-          </Link>
+          </StyledRouterLink>
           Thank you for your time and I appreciate the opportunity!
         </Paragraph>
       </div>
