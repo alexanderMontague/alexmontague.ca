@@ -53,6 +53,13 @@ const routes = (
       companyColors={["#000000", "#ffffff"]}
       textColor="#ffffff"
     />
+
+    <DefaultRecruitingComponent
+      path="/drop"
+      companyName="Drop"
+      companyColors={["#000000", "#ffffff"]}
+      textColor="#ffffff"
+    />
   </Switch>
 );
 

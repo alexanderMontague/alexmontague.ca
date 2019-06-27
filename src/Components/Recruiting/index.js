@@ -86,7 +86,9 @@ const RecruitingComponent = ({
 }) => {
   const renderPortfolioItems = () => {
     const showcasedProjects = resume.portfolio.projects.filter(project =>
-      ["Cryptowatch", "Book Buy", "am.ca Server"].includes(project.title)
+      ["Cryptowatch", "Book Buy", "am.ca Server", "Awesome Ancestors"].includes(
+        project.title
+      )
     );
 
     return showcasedProjects.map(project => {
