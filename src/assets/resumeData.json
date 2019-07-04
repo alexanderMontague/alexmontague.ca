@@ -101,9 +101,19 @@
         "text": "I am currently also exploring Go development for fast backend services, as well as networking. I like the C feel the language gives, but with modern features and strict typing."
       },
       {
+        "imageSrc": "images/mongo.png",
+        "header": "MongoDB",
+        "text": "Document based or non-relational databases are my go to for a quick and easy DB. I love the flexibility they provide and how easy they scale horizontally. I use Mongo for most of my personal projects."
+      },
+      {
         "imageSrc": "images/mysql.png",
         "header": "SQL",
-        "text": "After learning SQL at school through projects, I was able use these skills at previous co-ops where we utilized MySQL and PostgreSQL. I still have much to learn (and my upcoming database course will help) in terms of relational databases, but I am also open and exploring non-relational databases such as MongoDB for personal use."
+        "text": "After learning SQL at school through projects, I was able use these skills at previous co-ops where we utilized MySQL and PostgreSQL. I still have much to learn (and my upcoming database course will help) in terms of relational databases, but I am also exploring the use of heavy queries for data science and data analysis."
+      },
+      {
+        "imageSrc": "images/firebase.png",
+        "header": "Firebase",
+        "text": "After exploring the whole firebase ecosystem for a side project, I can say that I really enjoy using it. I utilized almost everything firebase had to offer including its firestore, cloud functions, storage buckets, authentication and hosting. I use firebase to quickly spin up a test DB, or for less extensive native or web apps."
       },
       {
         "imageSrc": "images/java.png",

@@ -17,11 +17,39 @@ const GradientBackground = styled.div`
   flex-direction: column;
 `;
 
+const MainContainer = styled.div`
+  padding: 25px;
+  width: 65%;
+
+  @media (max-width: 675px) {
+    width: 90%;
+  }
+`;
+
 const PhotoContainer = styled.div`
   display: flex;
   width: 50%;
   justify-content: center;
   padding-top: 30px;
+
+  @media (max-width: 675px) {
+    width: 75%;
+  }
+
+  @media (max-width: 450px) {
+    width: 90%;
+  }
+`;
+
+const PhotoDivider = styled.div`
+  font-size: 25px;
+  padding: 0 50px;
+  margin: auto 0;
+  color: #ffffff;
+
+  @media (max-width: 450px) {
+    padding: 0 25px;
+  }
 `;
 
 const BubbleImage = styled.img`
@@ -35,6 +63,7 @@ const BubbleImage = styled.img`
 const HeaderText = styled.div`
   font-size: 25px;
   color: #ffffff;
+  text-align: center;
 `;
 
 const Paragraph = styled.div`
@@ -169,16 +198,7 @@ const RecruitingComponent = ({
           <HeaderText>Alex Montague</HeaderText>
           <BubbleImage src="images/profilepic.jpg" alt="Headshot" />
         </IndividualPic>
-        <div
-          style={{
-            fontSize: 25,
-            padding: "0 50px",
-            margin: "auto 0",
-            color: "#ffffff"
-          }}
-        >
-          x
-        </div>
+        <PhotoDivider>x</PhotoDivider>
         <IndividualPic>
           <HeaderText>{companyName}</HeaderText>
           <BubbleImage
@@ -188,7 +208,7 @@ const RecruitingComponent = ({
         </IndividualPic>
       </PhotoContainer>
 
-      <div style={{ padding: "25px", width: "65%" }}>
+      <MainContainer>
         <div style={{ display: "flex", justifyContent: "space-evenly" }}>
           {resume.main.social.map(item => (
             <StyledLink
@@ -213,8 +233,8 @@ const RecruitingComponent = ({
           {`I strive to work for innovative, fast moving and agile companies.
           Thats why I think an internship at ${companyName} would be such a great fit.
           Utilizing my past internships and side projects, I have been exposed
-          to tech ecosystems ranging from full stack web development and AI and
-          ML prototypes to low level systems + networking. I would be thrilled
+          to tech ecosystems ranging from full stack web development and AI/ML 
+          prototypes, to low level systems + networking. I would be thrilled
           to work in any area that I have experience in, or hungry for a
           challenge working on something new.`}
         </Paragraph>
@@ -235,7 +255,7 @@ const RecruitingComponent = ({
           </StyledRouterLink>
           Thank you for your time and I appreciate the opportunity!
         </Paragraph>
-      </div>
+      </MainContainer>
       <CarouselContainer>
         <Carousel
           showThumbs={false}
