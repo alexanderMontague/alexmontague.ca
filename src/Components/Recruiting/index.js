@@ -243,7 +243,18 @@ const RecruitingComponent = ({
           Some technology and frameworks that I am passionate about are
           React/Redux, NodeJS, Golang, C, Python, Blockchain, Neural Networks,
           Relational and Document based Databases and Analytics. Below are a few
-          relevant projects that I think showcase my abilities. Feel free to
+          relevant projects that I think showcase my abilities. You can access
+          my{" "}
+          <StyledLink
+            style={{ textDecoration: "underline" }}
+            href="https://drive.google.com/file/d/1rP0VvccUZPj4K478CcTFH_Mpl9jZ-5nq/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            resume
+          </StyledLink>{" "}
+          by clicking here, or using the far right scroll icon on the top bar.
+          Feel free to
           <StyledRouterLink smooth to="/#contact" style={{ color: "#ffffff" }}>
             {" "}
             <span style={{ textDecoration: "underline" }}>contact me</span>{" "}
