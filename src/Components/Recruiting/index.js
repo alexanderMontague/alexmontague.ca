@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { HashLink as Link } from "react-router-hash-link";
-import resume from "../../assets/resumeData.json";
+import resume from "../../assets/resumeData.js";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
@@ -202,7 +202,10 @@ const RecruitingComponent = ({
         <IndividualPic>
           <HeaderText>{companyName}</HeaderText>
           <BubbleImage
-            src={`images/recruiting/${companyName.toLowerCase()}.png`}
+            src={`images/recruiting/${companyName
+              .toLowerCase()
+              .split(" ")
+              .join("_")}.png`}
             alt={companyName}
           />
         </IndividualPic>
@@ -233,7 +236,7 @@ const RecruitingComponent = ({
           {`I strive to work for innovative, fast moving and agile companies.
           Thats why I think an internship at ${companyName} would be such a great fit.
           Utilizing my past internships and side projects, I have been exposed
-          to tech ecosystems ranging from full stack web development and AI/ML 
+          to tech ecosystems ranging from full stack web development and AI/ML
           prototypes, to low level systems + networking. I would be thrilled
           to work in any area that I have experience in, or hungry for a
           challenge working on something new.`}
@@ -247,7 +250,7 @@ const RecruitingComponent = ({
           my{" "}
           <StyledLink
             style={{ textDecoration: "underline" }}
-            href="https://drive.google.com/file/d/1rP0VvccUZPj4K478CcTFH_Mpl9jZ-5nq/view?usp=sharing"
+            href={resume.main.resumedownload}
             target="_blank"
             rel="noopener noreferrer"
           >
