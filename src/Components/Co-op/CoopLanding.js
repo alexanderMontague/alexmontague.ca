@@ -41,23 +41,21 @@ const CoopLanding = () => {
           This spot of my site is where I record my experiences and learnings
           from my university co-op placements. I will have 3 work terms in the
           duration of my degree, two 8 month placements and one 4 month
-          placement. So far I have completed my first 8 month placement and it
-          has been awesome! To view each co-op work term report, select the
-          company from the dropdown hamburger menu in the top left of the nav
-          bar! As a viewer you should be able to get a good understanding of
-          each placement through my experiences, as well as identify my goals
-          and how I accomplished them.
+          placement. So far I have completed 2 of my placements and it has been
+          awesome. To view each co-op work term report, select the company from
+          the dropdown hamburger menu in the top left of the nav bar! As a
+          viewer you should be able to get a good understanding of each
+          placement through my experiences, as well as identify my goals and how
+          I accomplished them.
           <br />
           <br />
           If you did not read my bio on the main page of my site, lets get to
-          know eachother! I am currently in my third year at the University of
-          Guelph studying Software Engineering, and I have just completed my
-          first placement at Toronto based cryptocurrency trading platform,
-          Coinsquare. I am experienced in object oriented, functional, and
-          imperative programming using technologies ranging from Java to
-          Javascript to C. I am currently interested in full stack web
-          development, blockchain principles/architecture, and AI/machine
-          learning technology.
+          know eachother! I am currently in my fourth year at the University of
+          Guelph studying Software Engineering. I am experienced in object
+          oriented, functional, and imperative programming using technologies
+          ranging from Go to Javascript to C. I am currently interested in full
+          stack web development, blockchain principles/architecture, and
+          AI/machine learning technology.
           <br />
           <br />
           Go checkout my work term reports, or head back to the main site with

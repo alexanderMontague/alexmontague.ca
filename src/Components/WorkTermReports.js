@@ -3,9 +3,10 @@ import { Route } from "react-router";
 import styled from "styled-components";
 
 import bgImage from "../assets/coop-background.jpg";
-import CoopHeader from "./CoopHeader";
-import CoopLanding from "./CoopLanding";
-import CoinsquareTerm from "./CoinsquareTerm";
+import CoopHeader from "./Co-op/CoopHeader";
+import CoopLanding from "./Co-op/CoopLanding";
+import CoinsquareTerm from "./Co-op/CoinsquareTerm";
+import LeagueTerm from "./Co-op/LeagueTerm";
 
 const StyledBackground = styled.div`
   background-image: url(${bgImage});
@@ -49,6 +50,11 @@ class WorkTermReports extends Component {
               exact
               path={`${this.props.match.url}/coinsquare`}
               component={CoinsquareTerm}
+            />
+            <Route
+              exact
+              path={`${this.props.match.url}/league`}
+              component={LeagueTerm}
             />
 
             {/* ADD NEW WRITE UPS HERE */}

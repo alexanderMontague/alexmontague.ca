@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import CoinsquareC from "../assets/coinsquare-icon.jpg";
-import CoinsquarePic from "../assets/Terms/Coinsquare/coinsquarePic.jpg";
-import DistributedLedger from "../assets/Terms/Coinsquare/distributedLedger.jpg";
-import CSDashboard from "../assets/Terms/Coinsquare/CSDashboard.png";
-import TechStack from "../assets/Terms/Coinsquare/techStack.png";
+import CoinsquareC from "../../assets/coinsquare-icon.jpg";
+import CoinsquarePic from "../../assets/Terms/Coinsquare/coinsquarePic.jpg";
+import DistributedLedger from "../../assets/Terms/Coinsquare/distributedLedger.jpg";
+import CSDashboard from "../../assets/Terms/Coinsquare/CSDashboard.png";
+import TechStack from "../../assets/Terms/Coinsquare/techStack.png";
 
 const StyledWrapper = styled.div`
   display: ${props => props.display || "flex"};
@@ -123,6 +123,10 @@ const CoinsquareTerm = () => {
     extras: windowFragment === "#Extras" ? "#00a5ff" : "#b7b7b7"
   };
 
+  const TableOfContentsHashHandler = hash => {
+    window.location.hash = hash;
+  };
+
   return (
     <StyledWrapper>
       <StyledTableOfContents>
@@ -137,43 +141,66 @@ const CoinsquareTerm = () => {
         <StyledLine margin="17px 0px" />
         <StyledList>
           <li>
-            <StyledLink href="#Intro" color={linkMap.intro}>
+            <StyledLink
+              onClick={() => TableOfContentsHashHandler("#Intro")}
+              color={linkMap.intro}
+            >
               Intro
             </StyledLink>
           </li>
           <li>
-            <StyledLink href="#Info" color={linkMap.info}>
+            <StyledLink
+              onClick={() => TableOfContentsHashHandler("#Info")}
+              color={linkMap.info}
+            >
               Employer Info
             </StyledLink>
           </li>
           <li>
-            <StyledLink href="#Goals" color={linkMap.goals}>
+            <StyledLink
+              onClick={() => TableOfContentsHashHandler("#Goals")}
+              color={linkMap.goals}
+            >
               Goals
             </StyledLink>
           </li>
           <li>
-            <StyledLink href="#Description" color={linkMap.description}>
+            <StyledLink
+              onClick={() => TableOfContentsHashHandler("#Description")}
+              color={linkMap.description}
+            >
               Job Description
             </StyledLink>
           </li>
           <li>
-            <StyledLink href="#Relation" color={linkMap.relation}>
+            <StyledLink
+              onClick={() => TableOfContentsHashHandler("#Relation")}
+              color={linkMap.relation}
+            >
               Academic Relation
             </StyledLink>
           </li>
           <li>
-            <StyledLink href="#Featured" color={linkMap.featured}>
+            <StyledLink
+              onClick={() => TableOfContentsHashHandler("#Featured")}
+              color={linkMap.featured}
+            >
               Featured Aspect
             </StyledLink>
           </li>
           <li>
-            <StyledLink href="#Conclusion" color={linkMap.conclusion}>
+            <StyledLink
+              onClick={() => TableOfContentsHashHandler("#Conclusion")}
+              color={linkMap.conclusion}
+            >
               Conclusion
             </StyledLink>
           </li>
           <li>
-            <StyledLink href="#Extras" color={linkMap.extras}>
-              {" "}
+            <StyledLink
+              onClick={() => TableOfContentsHashHandler("#Extras")}
+              color={linkMap.extras}
+            >
               Extras
             </StyledLink>
           </li>

@@ -10,7 +10,7 @@ const routes = (
     <Route exact path="/" component={Home} />
 
     {/* Co-op Workterm Reports */}
-    <Route path="/co-op_workterm_reports" component={WorkTermReports} />
+    <Route path="/co-op" component={WorkTermReports} />
 
     {/* Recruiting Pages */}
     {recruitingRoutes}

@@ -57,7 +57,7 @@ class Header extends Component {
               </a>
             </li>
             <li>
-              <Link to="/co-op_workterm_reports">CO-OP Reports</Link>
+              <Link to="/co-op">CO-OP Reports</Link>
             </li>
           </ul>
         </nav>

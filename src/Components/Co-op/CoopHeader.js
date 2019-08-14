@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 import { SlideDown } from "react-slidedown";
 
-import hamburgerMenu from "../assets/hamburgerMenu.png";
+import hamburgerMenu from "../../assets/hamburgerMenu.png";
 import "react-slidedown/lib/slidedown.css";
 
 const StyledNavWrapper = styled.div`
@@ -90,10 +90,10 @@ const StyledItem = styled(Link)`
 class CoopHeader extends Component {
   state = {
     menuOpen: false,
-    baseURL: "/co-op_workterm_reports/",
+    baseURL: "/co-op/",
     coopTerms: [
       { company: "Coinsquare", route: "coinsquare" },
-      { company: "Work Term 2", route: "" },
+      { company: "League", route: "league" },
       { company: "Work Term 3", route: "" }
     ]
   };

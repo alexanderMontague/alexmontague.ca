@@ -11,30 +11,35 @@ const recruitingRoutes = [
     path="/tesla"
     companyName="Tesla"
     companyColors={["#ff0000", "#ffffff"]}
+    key="Tesla"
   />,
 
   <DefaultRecruitingComponent
     path="/facebook"
     companyName="Facebook"
     companyColors={["#3172EA", "#ffffff"]}
+    key="Facebook"
   />,
 
   <DefaultRecruitingComponent
     path="/apple"
     companyName="Apple"
     companyColors={["#B3B3B3", "#ffffff"]}
+    key="Apple"
   />,
 
   <DefaultRecruitingComponent
     path="/google"
     companyName="Google"
     companyColors={["#529F56", "#ffffff"]}
+    key="Google"
   />,
 
   <DefaultRecruitingComponent
     path="/lyft"
     companyName="Lyft"
     companyColors={["#D73081", "#ffffff"]}
+    key="Lyft"
   />,
 
   <DefaultRecruitingComponent
@@ -42,6 +47,7 @@ const recruitingRoutes = [
     companyName="Uber"
     companyColors={["#000000", "#ffffff"]}
     textColor="#ffffff"
+    key="Uber"
   />,
 
   <DefaultRecruitingComponent
@@ -49,6 +55,7 @@ const recruitingRoutes = [
     companyName="Drop"
     companyColors={["#000000", "#ffffff"]}
     textColor="#ffffff"
+    key="Drop"
   />,
 
   <DefaultRecruitingComponent
@@ -56,6 +63,7 @@ const recruitingRoutes = [
     companyName="Vivo"
     companyColors={["#497F93", "#ffffff"]}
     textColor="#ffffff"
+    key="Vivo"
   />,
 
   <DefaultRecruitingComponent
@@ -63,6 +71,7 @@ const recruitingRoutes = [
     companyName="RideOS"
     companyColors={["#3D92F7", "#ffffff"]}
     textColor="#ffffff"
+    key="RideOS"
   />,
 
   <DefaultRecruitingComponent
@@ -70,6 +79,7 @@ const recruitingRoutes = [
     companyName="YouTech"
     companyColors={["#001FF5", "#ffffff"]}
     textColor="#ffffff"
+    key="YouTech"
   />,
 
   <DefaultRecruitingComponent
@@ -77,12 +87,14 @@ const recruitingRoutes = [
     companyName="Belcan"
     companyColors={["#041F6E", "#ffffff"]}
     textColor="#ffffff"
+    key="Belcan"
   />,
 
   <DefaultRecruitingComponent
     path="/hellosign"
     companyName="HelloSign"
     companyColors={["#50B0E1", "#ffffff"]}
+    key="HelloSign"
   />,
 
   <DefaultRecruitingComponent
@@ -90,6 +102,7 @@ const recruitingRoutes = [
     companyName="Samsara"
     companyColors={["#000000", "#ffffff"]}
     textColor="#ffffff"
+    key="Samsara"
   />,
 
   <DefaultRecruitingComponent
@@ -97,6 +110,7 @@ const recruitingRoutes = [
     companyName="Box"
     companyColors={["#3580C0", "#3580C0"]}
     textColor="#ffffff"
+    key="Box"
   />,
 
   <DefaultRecruitingComponent
@@ -104,6 +118,7 @@ const recruitingRoutes = [
     companyName="Just Answer"
     companyColors={["#6Db8D2", "#6Db8D2"]}
     textColor="#ffffff"
+    key="Just Answer"
   />,
 
   <DefaultRecruitingComponent
@@ -111,6 +126,7 @@ const recruitingRoutes = [
     companyName="VSCO"
     companyColors={["#000000", "#ffffff"]}
     textColor="#ffffff"
+    key="VSCO"
   />,
 
   <DefaultRecruitingComponent
@@ -118,6 +134,7 @@ const recruitingRoutes = [
     companyName="Okta"
     companyColors={["#337CBB", "#5CABDF"]}
     textColor="#ffffff"
+    key="Okta"
   />,
 
   <DefaultRecruitingComponent
@@ -125,6 +142,7 @@ const recruitingRoutes = [
     companyName="Easy Post"
     companyColors={["#324199", "#324199"]}
     textColor="#ffffff"
+    key="Easy Post"
   />,
 
   <DefaultRecruitingComponent
@@ -132,6 +150,7 @@ const recruitingRoutes = [
     companyName="Udemy"
     companyColors={["#DB5D58", "#DB5D58"]}
     textColor="#ffffff"
+    key="Udemy"
   />,
 
   <DefaultRecruitingComponent
@@ -139,6 +158,7 @@ const recruitingRoutes = [
     companyName="Amazon"
     companyColors={["#ECA63F", "#ECA63F"]}
     textColor="#FFFFFF"
+    key="Amazon"
   />,
 
   <DefaultRecruitingComponent
@@ -146,6 +166,7 @@ const recruitingRoutes = [
     companyName="Airbnb"
     companyColors={["#ED6664", "#ED6664"]}
     textColor="#FFFFFF"
+    key="Airbnb"
   />,
 
   <DefaultRecruitingComponent
@@ -153,6 +174,7 @@ const recruitingRoutes = [
     companyName="Cohesity"
     companyColors={["#9FC756", "#9FC756"]}
     textColor="#FFFFFF"
+    key="Cohesity"
   />,
 
   <DefaultRecruitingComponent
@@ -160,6 +182,7 @@ const recruitingRoutes = [
     companyName="GitHub"
     companyColors={["#171515", "#171515"]}
     textColor="#FFFFFF"
+    key="GitHub"
   />,
 
   <DefaultRecruitingComponent
@@ -167,6 +190,7 @@ const recruitingRoutes = [
     companyName="Salesforce"
     companyColors={["#479BD2", "#479BD2"]}
     textColor="#FFFFFF"
+    key="Salesforce"
   />,
 
   <DefaultRecruitingComponent
@@ -174,6 +198,7 @@ const recruitingRoutes = [
     companyName="Roku"
     companyColors={["#4B327D", "#4B327D"]}
     textColor="#FFFFFF"
+    key="Roku"
   />,
 
   <DefaultRecruitingComponent
@@ -181,6 +206,7 @@ const recruitingRoutes = [
     companyName="LinkedIn"
     companyColors={["#3D82B7", "#3D82B7"]}
     textColor="#FFFFFF"
+    key="LinkedIn"
   />,
 
   <DefaultRecruitingComponent
@@ -188,6 +214,7 @@ const recruitingRoutes = [
     companyName="YouTube"
     companyColors={["#EB3232", "#EB3232"]}
     textColor="#FFFFFF"
+    key="YouTube"
   />,
 
   <DefaultRecruitingComponent
@@ -195,6 +222,7 @@ const recruitingRoutes = [
     companyName="Evernote"
     companyColors={["#4BA534", "#4BA534"]}
     textColor="#FFFFFF"
+    key="Evernote"
   />,
 
   <DefaultRecruitingComponent
@@ -202,6 +230,7 @@ const recruitingRoutes = [
     companyName="Rakuten"
     companyColors={["#AE2317", "#AE2317"]}
     textColor="#FFFFFF"
+    key="Rakuten"
   />,
 
   <DefaultRecruitingComponent
@@ -209,6 +238,7 @@ const recruitingRoutes = [
     companyName="MongoDB"
     companyColors={["#64A757", "#64A757"]}
     textColor="#FFFFFF"
+    key="MongoDB"
   />,
 
   <DefaultRecruitingComponent
@@ -216,6 +246,7 @@ const recruitingRoutes = [
     companyName="Stripe"
     companyColors={["#5F5AC8", "#5F5Ac8"]}
     textColor="#FFFFFF"
+    key="Stripe"
   />,
 
   <DefaultRecruitingComponent
@@ -223,6 +254,7 @@ const recruitingRoutes = [
     companyName="Square"
     companyColors={["#171515", "#171515"]}
     textColor="#FFFFFF"
+    key="Square"
   />,
 
   <DefaultRecruitingComponent
@@ -230,6 +262,7 @@ const recruitingRoutes = [
     companyName="Slack"
     companyColors={["#63C3EC", "#E3B34B"]}
     textColor="#FFFFFF"
+    key="Slack"
   />,
 
   <DefaultRecruitingComponent
@@ -237,6 +270,7 @@ const recruitingRoutes = [
     companyName="Twitter"
     companyColors={["#67AAEB", "#67AAEB"]}
     textColor="#FFFFFF"
+    key="Twitter"
   />,
 
   <DefaultRecruitingComponent
@@ -244,6 +278,7 @@ const recruitingRoutes = [
     companyName="Yelp"
     companyColors={["#AE2317", "#AE2317"]}
     textColor="#FFFFFF"
+    key="Yelp"
   />,
 
   <DefaultRecruitingComponent
@@ -251,6 +286,7 @@ const recruitingRoutes = [
     companyName="Intuit"
     companyColors={["#3777B8", "#6DB9E6"]}
     textColor="#FFFFFF"
+    key="Intuit"
   />,
 
   <DefaultRecruitingComponent
@@ -258,6 +294,7 @@ const recruitingRoutes = [
     companyName="Instacart"
     companyColors={["#F08933", "#F08933"]}
     textColor="#FFFFFF"
+    key="Instacart"
   />
 ];
 
