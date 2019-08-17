@@ -295,6 +295,30 @@ const recruitingRoutes = [
     companyColors={["#F08933", "#F08933"]}
     textColor="#FFFFFF"
     key="Instacart"
+  />,
+
+  <DefaultRecruitingComponent
+    path="/twitch.tv"
+    companyName="Twitch"
+    companyColors={["#5F459F", "#5F459F"]}
+    textColor="#FFFFFF"
+    key="twitch"
+  />,
+
+  <DefaultRecruitingComponent
+    path="/bird"
+    companyName="Bird"
+    companyColors={["#000000", "#ffffff"]}
+    textColor="#FFFFFF"
+    key="bird"
+  />,
+
+  <DefaultRecruitingComponent
+    path="/figma"
+    companyName="Figma"
+    companyColors={["#171515", "#171515"]}
+    textColor="#FFFFFF"
+    key="figma"
   />
 ];
 
