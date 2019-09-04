@@ -236,7 +236,7 @@ const CoinsquareTerm = () => {
         </StyledWrapper>
         <StyledLine margin="10px 0px" />
         <StyledText lineHeight="50px" fontFamily="opensans-bold">
-          Student Web Developer
+          Fullstack Developer
           <br />
         </StyledText>
         <StyledText lineHeight="50px" fontFamily="opensans-bold">
@@ -244,7 +244,7 @@ const CoinsquareTerm = () => {
           <br />
         </StyledText>
         <StyledText lineHeight="50px" fontFamily="opensans-bold">
-          May 2018 - December 2018
+          May 2019 - August 2019
           <br />
         </StyledText>
         <StyledImage src={LeaguePic} />
