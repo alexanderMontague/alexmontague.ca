@@ -8,8 +8,13 @@ import CoopLanding from "./Co-op/CoopLanding";
 import CoinsquareTerm from "./Co-op/CoinsquareTerm";
 import LeagueTerm from "./Co-op/LeagueTerm";
 
+const bgMap = {
+  landing: `url(${bgImage})`
+  // coinsquare: `linear-gradient(to bottom right, #4829CA, #291568)`
+};
+
 const StyledBackground = styled.div`
-  background-image: url(${bgImage});
+  background-image: ${bgMap["landing"]};
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -37,7 +42,7 @@ class WorkTermReports extends Component {
 
   render() {
     return (
-      <StyledBackground>
+      <StyledBackground bgColour={this.state.selectedTerm}>
         <StyledBody>
           <CoopHeader title="CO-OP Work Term Reports" />
           <StyledContent>

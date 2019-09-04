@@ -4,6 +4,10 @@ import ReactGA from "react-ga";
 import { createGlobalStyle } from "styled-components";
 import Routes from "./routes";
 
+import "prismjs";
+import "prismjs/themes/prism-twilight.css";
+import "prismjs/components/prism-go.js";
+
 const GlobalStyles = createGlobalStyle`
   html {
     scroll-behavior: smooth;
