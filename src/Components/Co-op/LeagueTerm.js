@@ -18,48 +18,49 @@ if (isDirectLink !== true) {
 
 window.onscroll = () => {
   const currPosition = window.pageYOffset;
+  if (window.location.pathname.includes("co-op")) {
+    const introHeight = document.getElementById("Intro").offsetTop;
+    const infoHeight = document.getElementById("Info").offsetTop;
+    const goalsHeight = document.getElementById("Goals").offsetTop;
+    const descriptionHeight = document.getElementById("Description").offsetTop;
+    const relationHeight = document.getElementById("Relation").offsetTop;
+    const featuredHeight = document.getElementById("Featured").offsetTop;
+    const conclusionHeight = document.getElementById("Conclusion").offsetTop;
+    const extrasHeight = document.getElementById("Extras").offsetTop;
 
-  const introHeight = document.getElementById("Intro").offsetTop;
-  const infoHeight = document.getElementById("Info").offsetTop;
-  const goalsHeight = document.getElementById("Goals").offsetTop;
-  const descriptionHeight = document.getElementById("Description").offsetTop;
-  const relationHeight = document.getElementById("Relation").offsetTop;
-  const featuredHeight = document.getElementById("Featured").offsetTop;
-  const conclusionHeight = document.getElementById("Conclusion").offsetTop;
-  const extrasHeight = document.getElementById("Extras").offsetTop;
-
-  if (!isDirectLink) {
-    if (currPosition >= introHeight && currPosition < infoHeight) {
-      window.location.hash = "#Intro";
-    } else if (currPosition >= infoHeight && currPosition < goalsHeight) {
-      window.location.hash = "#Info";
-    } else if (
-      currPosition >= goalsHeight &&
-      currPosition < descriptionHeight
-    ) {
-      window.location.hash = "#Goals";
-    } else if (
-      currPosition >= descriptionHeight &&
-      currPosition < relationHeight
-    ) {
-      window.location.hash = "#Description";
-    } else if (
-      currPosition >= relationHeight &&
-      currPosition < featuredHeight
-    ) {
-      window.location.hash = "#Relation";
-    } else if (
-      currPosition >= featuredHeight &&
-      currPosition < conclusionHeight
-    ) {
-      window.location.hash = "#Featured";
-    } else if (
-      currPosition >= conclusionHeight &&
-      currPosition < extrasHeight
-    ) {
-      window.location.hash = "#Conclusion";
-    } else if (currPosition >= extrasHeight) {
-      window.location.hash = "#Extras";
+    if (!isDirectLink) {
+      if (currPosition >= introHeight && currPosition < infoHeight) {
+        window.location.hash = "#Intro";
+      } else if (currPosition >= infoHeight && currPosition < goalsHeight) {
+        window.location.hash = "#Info";
+      } else if (
+        currPosition >= goalsHeight &&
+        currPosition < descriptionHeight
+      ) {
+        window.location.hash = "#Goals";
+      } else if (
+        currPosition >= descriptionHeight &&
+        currPosition < relationHeight
+      ) {
+        window.location.hash = "#Description";
+      } else if (
+        currPosition >= relationHeight &&
+        currPosition < featuredHeight
+      ) {
+        window.location.hash = "#Relation";
+      } else if (
+        currPosition >= featuredHeight &&
+        currPosition < conclusionHeight
+      ) {
+        window.location.hash = "#Featured";
+      } else if (
+        currPosition >= conclusionHeight &&
+        currPosition < extrasHeight
+      ) {
+        window.location.hash = "#Conclusion";
+      } else if (currPosition >= extrasHeight) {
+        window.location.hash = "#Extras";
+      }
     }
   }
 };

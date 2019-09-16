@@ -319,6 +319,14 @@ const recruitingRoutes = [
     companyColors={["#171515", "#171515"]}
     textColor="#FFFFFF"
     key="figma"
+  />,
+
+  <DefaultRecruitingComponent
+    path="/shopify"
+    companyName="Shopify"
+    companyColors={["#9DBC58", "#9DBC58"]}
+    textColor="#FFFFFF"
+    key="shopify"
   />
 ];
 
