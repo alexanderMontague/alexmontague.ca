@@ -327,6 +327,14 @@ const recruitingRoutes = [
     companyColors={["#9DBC58", "#9DBC58"]}
     textColor="#FFFFFF"
     key="shopify"
+  />,
+
+  <DefaultRecruitingComponent
+    path="/mozilla"
+    companyName="Mozilla"
+    companyColors={["#D23450", "#204FC4"]}
+    textColor="#FFFFFF"
+    key="mozilla"
   />
 ];
 
