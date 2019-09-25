@@ -335,6 +335,14 @@ const recruitingRoutes = [
     companyColors={["#D23450", "#204FC4"]}
     textColor="#FFFFFF"
     key="mozilla"
+  />,
+
+  <DefaultRecruitingComponent
+    path="/squarespace"
+    companyName="Squarespace"
+    companyColors={["#171515", "#FFFFFF"]}
+    textColor="#FFFFFF"
+    key="squarespace"
   />
 ];
 
