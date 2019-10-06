@@ -343,6 +343,22 @@ const recruitingRoutes = [
     companyColors={["#171515", "#FFFFFF"]}
     textColor="#FFFFFF"
     key="squarespace"
+  />,
+
+  <DefaultRecruitingComponent
+    path="/pagerduty"
+    companyName="Pagerduty"
+    companyColors={["#171515", "#4BA534"]}
+    textColor="#FFFFFF"
+    key="pagerduty"
+  />,
+
+  <DefaultRecruitingComponent
+    path="/doordash"
+    companyName="DoorDash"
+    companyColors={["#171515", "#AE2317"]}
+    textColor="#FFFFFF"
+    key="doordash"
   />
 ];
 
