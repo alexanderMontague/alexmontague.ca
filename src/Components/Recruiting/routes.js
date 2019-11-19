@@ -359,6 +359,14 @@ const recruitingRoutes = [
     companyColors={["#171515", "#AE2317"]}
     textColor="#FFFFFF"
     key="doordash"
+  />,
+
+  <DefaultRecruitingComponent
+    path="/dropbox"
+    companyName="Dropbox"
+    companyColors={["#3D82B7", "#3D82B7"]}
+    textColor="#FFFFFF"
+    key="Dropbox"
   />
 ];
 
