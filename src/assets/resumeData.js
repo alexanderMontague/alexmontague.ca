@@ -56,10 +56,10 @@ export default {
     education: [
       {
         school: "The University of Guelph",
-        degree: "Bachelors of Computing",
+        degree: "Software Engineering",
         graduated: "Exp. April 2021",
         description:
-          "Currently in my third year studying Software Engineering. Some interesting and favourite courses I have taken so far have been Software Design I - IV, Data Structures, Algorithms, Operating Systems and the infamous 'Angel of Death' (Software Systems and Integrations). Currently on the Dean's List for maintaining an overall average of 80%. I am looking forward to my databases and quantum computing classes.",
+          "Currently in my fourth year studying Software Engineering. Some interesting and favourite courses I have taken so far have been Software Design I - IV, Data Structures, Algorithms, Operating Systems and the infamous 'Angel of Death' (Software Systems and Integrations). Currently on the Dean's List for maintaining an overall average of 80%. I am looking forward to my databases and quantum computing classes.",
         icon: "guelph"
       },
       {
@@ -75,7 +75,7 @@ export default {
       {
         company: "League",
         title: "Full Stack Developer",
-        years: "May 2019 - Present",
+        years: "May 2019 - May 2019",
         description:
           "League is an all digital health and wellness platform specializing in employer benefits. The app gives employees the ability to customize and tailor their benefits exactly how they want to, while letting employers easily manage and track their employees benefits, spending, and accounts. League was rated LinkedIn's 4th top startup in Canada, and I can really see why! I am currently working as a Full Stack developer writing ReactJS and Redux on the frontend, and Go on the backend which is new to me, but I am enjoying. I look forward to what comes in the coming months of this placement!",
         icon: "league"

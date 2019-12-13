@@ -18,7 +18,7 @@ if (isDirectLink !== true) {
 
 window.onscroll = () => {
   const currPosition = window.pageYOffset;
-  if (window.location.pathname.includes("co-op")) {
+  if (window.location.pathname.includes("co-op/league")) {
     const introHeight = document.getElementById("Intro").offsetTop;
     const infoHeight = document.getElementById("Info").offsetTop;
     const goalsHeight = document.getElementById("Goals").offsetTop;

@@ -76,6 +76,7 @@ class Contact extends Component {
   render() {
     const message = this.props.data.contactmessage;
     const { formFeedbackMsg } = this.state;
+    const disableForm = true;
 
     return (
       <section id="contact">
@@ -102,13 +103,17 @@ class Contact extends Component {
             >
               <div style={{ color: "#ffffff" }}>{formFeedbackMsg}</div>
             </div>
-            <form onSubmit={this.sendEmail}>
+            <form onSubmit={this.sendEmail} disabled={true}>
+              <div style={{ textAlign: "center", color: "#ff0000" }}>
+                Form is currently offline, email me instead!
+              </div>
               <fieldset>
                 <div>
                   <label htmlFor="contactName">
                     Name <span className="required">*</span>
                   </label>
                   <input
+                    disabled={disableForm}
                     type="text"
                     size="35"
                     id="contactName"
@@ -123,6 +128,7 @@ class Contact extends Component {
                     Email <span className="required">*</span>
                   </label>
                   <input
+                    disabled={disableForm}
                     type="text"
                     defaultValue=""
                     size="35"
@@ -136,6 +142,7 @@ class Contact extends Component {
                 <div>
                   <label htmlFor="contactSubject">Subject</label>
                   <input
+                    disabled={disableForm}
                     type="text"
                     defaultValue=""
                     size="35"
@@ -151,6 +158,7 @@ class Contact extends Component {
                     Message <span className="required">*</span>
                   </label>
                   <textarea
+                    disabled={disableForm}
                     style={{ resize: "none" }}
                     cols="50"
                     rows="15"
@@ -162,7 +170,11 @@ class Contact extends Component {
                 </div>
 
                 <div>
-                  <button className="submit" type="submit">
+                  <button
+                    className="submit"
+                    type="submit"
+                    disabled={disableForm}
+                  >
                     Submit
                   </button>
                   <span id="image-loader">
