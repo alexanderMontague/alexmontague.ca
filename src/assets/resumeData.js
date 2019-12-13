@@ -1,5 +1,5 @@
 const resumeLink =
-  "https://drive.google.com/file/d/1PgwQxO2RjFl5-cG6A8zCAlaHuhTAvf6s/view?usp=sharing";
+  "https://drive.google.com/open?id=1V4JzX-GK8upqpSdcKO8DLT38PV5Yt6Q0";
 
 export default {
   main: {

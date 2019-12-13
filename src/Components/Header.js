@@ -67,7 +67,7 @@ class Header extends Component {
             <h1 className="responsive-headline">I'm {name}.</h1>
             <h3>
               Hey! I'm a <span>{city}</span> based <span>{occupation}</span>
-              currently in my third year studying at the{" "}
+              currently in my fourth year studying at the{" "}
               <span>University of Guelph</span>. {description}{" "}
               <span>new opportunities</span>
               {description2} <span>I am up for the challenge.</span>
