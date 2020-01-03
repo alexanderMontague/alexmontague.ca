@@ -38,7 +38,7 @@ class Home extends Component {
             );
           }
         });
-    }, 36e5);
+    }, 3600000);
   };
 
   render() {
