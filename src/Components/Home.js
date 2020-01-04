@@ -22,11 +22,13 @@ class Home extends Component {
     let ERROR = false;
     setInterval(() => {
       axios
-        .get("https://www.api.alexmontague.ca/resume")
+        .get("https://api.alexmontague.ca/resume")
         .then(() => {
           ERROR = false;
+          console.log("API UP");
         })
         .catch(async err => {
+          console.log("API DOWN");
           if (ERROR !== true) {
             ERROR = true;
             await axios.post(
