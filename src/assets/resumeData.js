@@ -1,5 +1,6 @@
 const resumeLink =
   "https://drive.google.com/open?id=1V4JzX-GK8upqpSdcKO8DLT38PV5Yt6Q0";
+const assetPath = "public";
 
 export default {
   main: {
@@ -91,55 +92,55 @@ export default {
     ],
     techSkills: [
       {
-        imageSrc: "images/react.png",
+        imageSrc: `${assetPath}/images/react.png`,
         header: "ReactJS",
         text:
           "I have been doing a lot of frontend work with the react library, and I absolutely love it! It is so versatile and is my go to for frontend web development. Pairing React with some other very powerful libraries and frameworks that I like (redux, redux sagas, axios, styled components) makes for a super strong frontend stack!"
       },
       {
-        imageSrc: "images/node.png",
+        imageSrc: `${assetPath}/images/node.png`,
         header: "NodeJS",
         text:
           "After recently branching out into backend web development, node, express and knex are some of the tools I am using to build my backend architecture. I enjoy writing Javascript, and this pairs well with a frontend Javascript framework."
       },
       {
-        imageSrc: "images/c.png",
+        imageSrc: `${assetPath}/images/c.png`,
         header: "C",
         text:
           "The C Programming language is the main language taught at UofG, and probably my strongest language. I liked the low-levelness of this language, and my algorithms and data structures classes all utilized C. Learning this language made me appreciate dynamic languages, but also allowed me to understand how they work behind the scenes."
       },
       {
-        imageSrc: "images/golang.png",
+        imageSrc: `${assetPath}/images/golang.png`,
         header: "Golang",
         text:
           "I am currently also exploring Go development for fast backend services, as well as networking. I like the C feel the language gives, but with modern features and strict typing."
       },
       {
-        imageSrc: "images/mongo.png",
+        imageSrc: `${assetPath}/images/mongo.png`,
         header: "MongoDB",
         text:
           "Document based or non-relational databases are my go to for a quick and easy DB. I love the flexibility they provide and how easy they scale horizontally. I use Mongo for most of my personal projects."
       },
       {
-        imageSrc: "images/mysql.png",
+        imageSrc: `${assetPath}/images/mysql.png`,
         header: "SQL",
         text:
           "After learning SQL at school through projects, I was able use these skills at previous co-ops where we utilized MySQL and PostgreSQL. I still have much to learn (and my upcoming database course will help) in terms of relational databases, but I am also exploring the use of heavy queries for data science and data analysis."
       },
       {
-        imageSrc: "images/firebase.png",
+        imageSrc: `${assetPath}/images/firebase.png`,
         header: "Firebase",
         text:
           "After exploring the whole firebase ecosystem for a side project, I can say that I really enjoy using it. I utilized almost everything firebase had to offer including its firestore, cloud functions, storage buckets, authentication and hosting. I use firebase to quickly spin up a test DB, or for less extensive native or web apps."
       },
       {
-        imageSrc: "images/java.png",
+        imageSrc: `${assetPath}/images/java.png`,
         header: "Java",
         text:
           "Java is my favourite OO language and I have been programming with Java since highschool. I made my first graphical application with Java while working at my fist job, check it out below!"
       },
       {
-        imageSrc: "images/python.png",
+        imageSrc: `${assetPath}/images/python.png`,
         header: "Python",
         text:
           "Python is something I am still exploring/learning, but I am very interested in it as I would like to explore AI/Machine learning in the future. Not to mention no more curly braces and semicolons :)"

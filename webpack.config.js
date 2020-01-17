@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = env => {
   return {
@@ -44,8 +45,9 @@ module.exports = env => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: "./public/index.html"
+        template: "src/index.html"
       }),
+      new CopyPlugin([{ from: "public", to: "public" }]),
       new webpack.DefinePlugin({})
     ]
   };

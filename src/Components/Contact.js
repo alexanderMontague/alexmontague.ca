@@ -177,9 +177,6 @@ class Contact extends Component {
                   >
                     Submit
                   </button>
-                  <span id="image-loader">
-                    <img alt="" src="images/loader.gif" />
-                  </span>
                 </div>
               </fieldset>
             </form>
