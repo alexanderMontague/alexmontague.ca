@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Portfolio extends Component {
   renderMedia = file => {
-    const filePath = `images/portfolio/${file}`;
+    const filePath = `public/images/portfolio/${file}`;
     // videos are messed up
     // if (file.includes(".mp4")) {
     //   // if a video
@@ -49,7 +49,7 @@ class Portfolio extends Component {
                   {tech.map(tech => (
                     <img
                       key={tech}
-                      src={`images/${tech}.png`}
+                      src={`public/images/tech/${tech}.png`}
                       style={{ height: 40, width: 40 }}
                       alt="tech item"
                     />

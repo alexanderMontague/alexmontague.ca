@@ -1,6 +1,7 @@
 const resumeLink =
   "https://drive.google.com/open?id=1V4JzX-GK8upqpSdcKO8DLT38PV5Yt6Q0";
-const assetPath = "public";
+const publicAssetPath = "public";
+const assetPath = "assets";
 
 export default {
   main: {
@@ -74,11 +75,19 @@ export default {
     ],
     work: [
       {
-        company: "League",
+        company: "Taplytics",
         title: "Full Stack Developer",
-        years: "May 2019 - May 2019",
+        years: "January 2020 - Present",
         description:
-          "League is an all digital health and wellness platform specializing in employer benefits. The app gives employees the ability to customize and tailor their benefits exactly how they want to, while letting employers easily manage and track their employees benefits, spending, and accounts. League was rated LinkedIn's 4th top startup in Canada, and I can really see why! I am currently working as a Full Stack developer writing ReactJS and Redux on the frontend, and Go on the backend which is new to me, but I am enjoying. I look forward to what comes in the coming months of this placement!",
+          "Taplytics provides companies a unique way to improve their marketing techniques. Utilizing A/B testing, Launch Control, and Push Notifications, clients can easily customize and create specific marketing journeys for different types of clients to experience. I am currently working with React/Redux for our web apps, Node/Express for our services, and Mongo/PSQL/Kafka/BigData for our data storage.",
+        icon: "taplytics"
+      },
+      {
+        company: "League Inc",
+        title: "Full Stack Developer",
+        years: "May 2019 - August 2019",
+        description:
+          "League is an all digital health and wellness platform specializing in employer benefits. The app gives employees the ability to customize and tailor their benefits exactly how they want to, while letting employers easily manage and track their employees benefits, spending, and accounts. League was rated LinkedIn's 4th top startup in Canada, and I can really see why! I am currently working as a Full Stack developer writing ReactJS and Redux on the frontend, and Go on the backend.",
         icon: "league"
       },
       {
@@ -92,55 +101,55 @@ export default {
     ],
     techSkills: [
       {
-        imageSrc: `${assetPath}/images/react.png`,
+        imageSrc: `${publicAssetPath}/images/tech/react.png`,
         header: "ReactJS",
         text:
           "I have been doing a lot of frontend work with the react library, and I absolutely love it! It is so versatile and is my go to for frontend web development. Pairing React with some other very powerful libraries and frameworks that I like (redux, redux sagas, axios, styled components) makes for a super strong frontend stack!"
       },
       {
-        imageSrc: `${assetPath}/images/node.png`,
+        imageSrc: `${publicAssetPath}/images/tech/node.png`,
         header: "NodeJS",
         text:
           "After recently branching out into backend web development, node, express and knex are some of the tools I am using to build my backend architecture. I enjoy writing Javascript, and this pairs well with a frontend Javascript framework."
       },
       {
-        imageSrc: `${assetPath}/images/c.png`,
+        imageSrc: `${publicAssetPath}/images/tech/c.png`,
         header: "C",
         text:
           "The C Programming language is the main language taught at UofG, and probably my strongest language. I liked the low-levelness of this language, and my algorithms and data structures classes all utilized C. Learning this language made me appreciate dynamic languages, but also allowed me to understand how they work behind the scenes."
       },
       {
-        imageSrc: `${assetPath}/images/golang.png`,
+        imageSrc: `${publicAssetPath}/images/tech/golang.png`,
         header: "Golang",
         text:
           "I am currently also exploring Go development for fast backend services, as well as networking. I like the C feel the language gives, but with modern features and strict typing."
       },
       {
-        imageSrc: `${assetPath}/images/mongo.png`,
+        imageSrc: `${publicAssetPath}/images/tech/mongo.png`,
         header: "MongoDB",
         text:
           "Document based or non-relational databases are my go to for a quick and easy DB. I love the flexibility they provide and how easy they scale horizontally. I use Mongo for most of my personal projects."
       },
       {
-        imageSrc: `${assetPath}/images/mysql.png`,
+        imageSrc: `${publicAssetPath}/images/tech/mysql.png`,
         header: "SQL",
         text:
           "After learning SQL at school through projects, I was able use these skills at previous co-ops where we utilized MySQL and PostgreSQL. I still have much to learn (and my upcoming database course will help) in terms of relational databases, but I am also exploring the use of heavy queries for data science and data analysis."
       },
       {
-        imageSrc: `${assetPath}/images/firebase.png`,
+        imageSrc: `${publicAssetPath}/images/tech/firebase.png`,
         header: "Firebase",
         text:
           "After exploring the whole firebase ecosystem for a side project, I can say that I really enjoy using it. I utilized almost everything firebase had to offer including its firestore, cloud functions, storage buckets, authentication and hosting. I use firebase to quickly spin up a test DB, or for less extensive native or web apps."
       },
       {
-        imageSrc: `${assetPath}/images/java.png`,
+        imageSrc: `${publicAssetPath}/images/tech/java.png`,
         header: "Java",
         text:
           "Java is my favourite OO language and I have been programming with Java since highschool. I made my first graphical application with Java while working at my fist job, check it out below!"
       },
       {
-        imageSrc: `${assetPath}/images/python.png`,
+        imageSrc: `${publicAssetPath}/images/tech/python.png`,
         header: "Python",
         text:
           "Python is something I am still exploring/learning, but I am very interested in it as I would like to explore AI/Machine learning in the future. Not to mention no more curly braces and semicolons :)"

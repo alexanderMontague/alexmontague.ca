@@ -9,8 +9,21 @@ class Contact extends Component {
       contactSubject: "",
       contactMessage: "",
       formFeedbackMsg: ""
-    }
+    },
+    isFormOnline: false
   };
+
+  async componentDidMount() {
+    console.log("mounted");
+    const formResponse = (await axios("https://www.api.alexmontague.ca/resume"))
+      .data;
+
+    console.log(formResponse);
+
+    if (formResponse) {
+      this.setState({ isFormOnline: true });
+    }
+  }
 
   updateForm = e => {
     e.preventDefault();
@@ -75,7 +88,7 @@ class Contact extends Component {
 
   render() {
     const message = this.props.data.contactmessage;
-    const { formFeedbackMsg } = this.state;
+    const { formFeedbackMsg, isFormOnline } = this.state;
     const disableForm = true;
 
     return (
@@ -103,10 +116,12 @@ class Contact extends Component {
             >
               <div style={{ color: "#ffffff" }}>{formFeedbackMsg}</div>
             </div>
-            <form onSubmit={this.sendEmail} disabled={true}>
-              <div style={{ textAlign: "center", color: "#ff0000" }}>
-                Form is currently offline, email me instead!
-              </div>
+            <form onSubmit={this.sendEmail} disabled={!isFormOnline}>
+              {!isFormOnline && (
+                <div style={{ textAlign: "center", color: "#ff0000" }}>
+                  Form is currently offline, email me instead!
+                </div>
+              )}
               <fieldset>
                 <div>
                   <label htmlFor="contactName">

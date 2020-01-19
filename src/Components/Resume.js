@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import TechItem from "./TechItem";
-import coinsquareIcon from "../assets/coinsquare-icon.jpg";
-import leagueIcon from "../assets/league-icon.png";
-import htIcon from "../assets/ht-icon.jpg";
-import guelphIcon from "../assets/guelph-icon.png";
-// import { drawContributions } from "github-contributions-canvas";
+import coinsquareIcon from "../assets/icons/coinsquare-icon.jpg";
+import leagueIcon from "../assets/icons/league-icon.png";
+import taplyticsIcon from "../assets/icons/taplytics-icon.jpg";
+import htIcon from "../assets/icons/ht-icon.jpg";
+import guelphIcon from "../assets/icons/guelph-icon.png";
 import axios from "axios";
 import moment from "moment";
 import styled from "styled-components";
@@ -14,6 +14,7 @@ import { Carousel } from "react-responsive-carousel";
 const iconMap = {
   coinsquare: coinsquareIcon,
   league: leagueIcon,
+  taplytics: taplyticsIcon,
   ht: htIcon,
   guelph: guelphIcon
 };

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Prism from "prismjs";
 import styled from "styled-components";
 
-import LeagueLogo from "../../assets/league-icon.png";
+import LeagueLogo from "../../assets/icons/league-icon.png";
 import LeaguePic from "../../assets/Terms/League/alex_league.png";
 
 import LeagueLobby from "../../assets/Terms/League/league_lobby.png";

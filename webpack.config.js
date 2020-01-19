@@ -24,11 +24,12 @@ module.exports = env => {
           use: ["style-loader", "css-loader"]
         },
         {
-          test: /\.(jpg|png)$/,
+          test: /\.(jpg|png|gif)$/,
           use: {
             loader: "url-loader",
             options: {
-              limit: 25000
+              limit: 25000,
+              name: "assets/[hash].[ext]"
             }
           }
         }

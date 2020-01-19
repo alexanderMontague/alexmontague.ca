@@ -1,5 +1,4 @@
 import React, { Fragment, Component } from "react";
-import axios from "axios";
 
 import resumeData from "../assets/resumeData.js";
 
@@ -17,30 +16,6 @@ class Home extends Component {
       window.location.hash = "#home";
       window.location.reload();
     }
-
-    // used to alert when my API goes down
-    let ERROR = false;
-    setInterval(() => {
-      axios
-        .get("https://api.alexmontague.ca/resume")
-        .then(() => {
-          ERROR = false;
-          console.log("API UP");
-        })
-        .catch(async err => {
-          console.log("API DOWN");
-          if (ERROR !== true) {
-            ERROR = true;
-            await axios.post(
-              "https://discordapp.com/api/webhooks/662714536025128981/Ftz7XCnjiGlto2bGDku4xquErE4Q8elD1H3raqeaDD0OrF5RcTSnnLq7UuEMJcYYKcNQ",
-              {
-                content:
-                  "@Monty api.alexmontague.ca is currently down: " + err.message
-              }
-            );
-          }
-        });
-    }, 3600000);
   };
 
   render() {
