@@ -14,11 +14,8 @@ class Contact extends Component {
   };
 
   async componentDidMount() {
-    console.log("mounted");
     const formResponse = (await axios("https://www.api.alexmontague.ca/resume"))
       .data;
-
-    console.log(formResponse);
 
     if (formResponse) {
       this.setState({ isFormOnline: true });
