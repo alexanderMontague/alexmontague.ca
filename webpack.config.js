@@ -2,6 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = env => {
   return {
@@ -48,8 +49,9 @@ module.exports = env => {
       new HtmlWebpackPlugin({
         template: "src/index.html"
       }),
-      new CopyPlugin([{ from: "public", to: "public" }]),
-      new webpack.DefinePlugin({})
+      new CopyPlugin([{ from: "public", to: "public" }]), // copies static files to build folder
+      new webpack.DefinePlugin({}),
+      new CleanWebpackPlugin()
     ]
   };
 };
