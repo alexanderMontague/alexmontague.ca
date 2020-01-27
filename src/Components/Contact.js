@@ -14,7 +14,7 @@ class Contact extends Component {
   };
 
   async componentDidMount() {
-    const formResponse = (await axios("https://www.api.alexmontague.ca/resume"))
+    const formResponse = (await axios("https://api.alexmontague.ca/resume"))
       .data;
 
     if (formResponse) {
