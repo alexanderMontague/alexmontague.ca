@@ -27,7 +27,7 @@ const StyledToggleButton = styled.img`
   width: 30px;
   cursor: pointer;
   transition: transform 300ms ease-in-out;
-  transform: ${props => props.open && css`rotate(90deg)`};
+  transform: ${(props) => props.open && css`rotate(90deg)`};
   z-index: 100;
 `;
 
@@ -65,8 +65,8 @@ const StyledBackButton = styled(Link)`
 `;
 
 const StyledText = styled.h5`
-  color: ${props => props.color || "#f7f9fb"};
-  font-size: ${props => props.fontSize || "20px"};
+  color: ${(props) => props.color || "#f7f9fb"};
+  font-size: ${(props) => props.fontSize || "20px"};
   line-height: 20px;
   z-index: 100;
 
@@ -93,18 +93,19 @@ class CoopHeader extends Component {
     baseURL: "/co-op/",
     coopTerms: [
       { company: "Coinsquare", route: "coinsquare" },
-      { company: "League", route: "league" },
-      { company: "Work Term 3", route: "" }
-    ]
+      { company: "League Inc", route: "league" },
+      { company: "Taplytics", route: "taplytics" },
+      { company: "Work Term 4", route: "" },
+    ],
   };
 
   toggleMenu = () => {
     this.setState({
-      menuOpen: !this.state.menuOpen
+      menuOpen: !this.state.menuOpen,
     });
   };
 
-  updateTermHandler = term => {
+  updateTermHandler = (term) => {
     const { updateSelectedTerm } = this.props;
     updateSelectedTerm(term);
     this.toggleMenu();
@@ -114,7 +115,7 @@ class CoopHeader extends Component {
     const { baseURL, coopTerms } = this.state;
     return (
       <ul style={{ margin: 0, marginTop: "-5px" }}>
-        {coopTerms.map(term => (
+        {coopTerms.map((term) => (
           <StyledItem
             to={`${baseURL}${term.route}`}
             onClick={this.toggleMenu}
@@ -144,7 +145,7 @@ class CoopHeader extends Component {
         <StyledBackButton
           to={{
             pathname: "/",
-            hash: "#reload"
+            hash: "#reload",
           }}
         >
           <StyledText>Back to Main Site</StyledText>

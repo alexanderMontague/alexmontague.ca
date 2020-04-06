@@ -8,8 +8,8 @@ import { Carousel } from "react-responsive-carousel";
 const GradientBackground = styled.div`
   background-image: linear-gradient(
     to bottom right,
-    ${props => props.companyColors[0]},
-    ${props => props.companyColors[1]}
+    ${(props) => props.companyColors[0]},
+    ${(props) => props.companyColors[1]}
   );
   height: 100%;
   display: flex;
@@ -68,7 +68,7 @@ const HeaderText = styled.div`
 
 const Paragraph = styled.div`
   padding-top: 30px;
-  color: ${props => (props.textColor ? props.textColor : "darkslategrey")};
+  color: ${(props) => (props.textColor ? props.textColor : "darkslategrey")};
 `;
 
 const CarouselContainer = styled.div`
@@ -111,16 +111,16 @@ const StyledRouterLink = styled(Link)`
 const RecruitingComponent = ({
   companyName,
   companyColors,
-  textColor = null
+  textColor = null,
 }) => {
   const renderPortfolioItems = () => {
-    const showcasedProjects = resume.portfolio.projects.filter(project =>
+    const showcasedProjects = resume.portfolio.projects.filter((project) =>
       ["Cryptowatch", "Book Buy", "am.ca Server", "Awesome Ancestors"].includes(
         project.title
       )
     );
 
-    return showcasedProjects.map(project => {
+    return showcasedProjects.map((project) => {
       return (
         <div
           className="portfolioItem"
@@ -131,14 +131,14 @@ const RecruitingComponent = ({
             style={{
               textAlign: "center",
               padding: "10px 0",
-              color: textColor ? textColor : "darkslategrey"
+              color: textColor ? textColor : "darkslategrey",
             }}
           >
             {project.title}
           </h5>
           <span className="flexMeUp" style={{ flexDirection: "column" }}>
             <img
-              src={`images/portfolio/${project.image}`}
+              src={`public/images/portfolio/${project.image}`}
               alt="portfolio item"
               style={{ height: 250 }}
             />
@@ -147,13 +147,13 @@ const RecruitingComponent = ({
                 style={{
                   display: "flex",
                   justifyContent: "space-evenly",
-                  padding: "10px 0"
+                  padding: "10px 0",
                 }}
               >
-                {project.tech.map(tech => (
+                {project.tech.map((tech) => (
                   <img
                     key={tech}
-                    src={`images/${tech}.png`}
+                    src={`public/images/tech/${tech}.png`}
                     style={{ height: 40, width: 40 }}
                     alt="tech item"
                   />
@@ -181,7 +181,7 @@ const RecruitingComponent = ({
               <div
                 style={{ color: textColor ? textColor : "darkslategrey" }}
                 dangerouslySetInnerHTML={{
-                  __html: project.description
+                  __html: project.description,
                 }}
               />
             </div>
@@ -196,13 +196,13 @@ const RecruitingComponent = ({
       <PhotoContainer>
         <IndividualPic>
           <HeaderText>Alex Montague</HeaderText>
-          <BubbleImage src="images/profilepic.jpg" alt="Headshot" />
+          <BubbleImage src="public/images/profilepic.jpg" alt="Headshot" />
         </IndividualPic>
         <PhotoDivider>x</PhotoDivider>
         <IndividualPic>
           <HeaderText>{companyName}</HeaderText>
           <BubbleImage
-            src={`images/recruiting/${companyName
+            src={`public/images/recruiting/${companyName
               .toLowerCase()
               .split(" ")
               .join("_")}.png`}
@@ -213,7 +213,7 @@ const RecruitingComponent = ({
 
       <MainContainer>
         <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-          {resume.main.social.map(item => (
+          {resume.main.social.map((item) => (
             <StyledLink
               key={item.url}
               href={item.url}

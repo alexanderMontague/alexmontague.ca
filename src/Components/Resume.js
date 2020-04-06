@@ -16,7 +16,7 @@ const iconMap = {
   league: leagueIcon,
   taplytics: taplyticsIcon,
   ht: htIcon,
-  guelph: guelphIcon
+  guelph: guelphIcon,
 };
 
 const ContribuitionContainer = styled.div`
@@ -35,20 +35,18 @@ class Resume extends Component {
     weeklyContributions: "offline",
     dailyContributions: "offline",
     dateToday: moment().format("YYYY-MM-DD"),
-    dateOneWeekAgo: moment()
-      .subtract(7, "d")
-      .format("YYYY-MM-DD")
+    dateOneWeekAgo: moment().subtract(7, "d").format("YYYY-MM-DD"),
   };
 
   componentDidMount() {
     axios("https://github-contributions-api.now.sh/v1/alexandermontague").then(
-      res => {
+      (res) => {
         this.parseCommitData(res.data);
       }
     );
   }
 
-  parseCommitData = data => {
+  parseCommitData = (data) => {
     const { dateOneWeekAgo, dateToday } = this.state;
 
     // total commits
@@ -79,7 +77,7 @@ class Resume extends Component {
     this.setState({
       totalContributions,
       weeklyContributions,
-      dailyContributions
+      dailyContributions,
     });
   };
 
@@ -89,16 +87,16 @@ class Resume extends Component {
       education,
       work,
       barSkills,
-      techSkills
+      techSkills,
     } = this.props.data;
 
     const {
       totalContributions,
       weeklyContributions,
-      dailyContributions
+      dailyContributions,
     } = this.state;
 
-    const educationCollection = education.map(education => {
+    const educationCollection = education.map((education) => {
       return (
         <div key={education.school}>
           <h3 style={{ display: "flex", alignItems: "center" }}>
@@ -108,7 +106,7 @@ class Resume extends Component {
                 height: 50,
                 width: 50,
                 borderRadius: "50%",
-                marginLeft: "10px"
+                marginLeft: "10px",
               }}
               alt="school icon"
               src={iconMap[education.icon]}
@@ -123,7 +121,7 @@ class Resume extends Component {
       );
     });
 
-    const workCollection = work.map(work => {
+    const workCollection = work.map((work) => {
       return (
         <div key={work.company}>
           <h3 style={{ display: "flex", alignItems: "center" }}>
@@ -133,7 +131,7 @@ class Resume extends Component {
                 height: 50,
                 width: 50,
                 borderRadius: "50%",
-                marginLeft: "10px"
+                marginLeft: "10px",
               }}
               alt="workplace icon"
               src={iconMap[work.icon]}
@@ -145,7 +143,7 @@ class Resume extends Component {
           </p>
           <p>
             {work.description}{" "}
-            {work.company === "Coinsquare" ? (
+            {work.company === "Coinsquare" && (
               <a
                 href="https://www.linkedin.com/pulse/my-time-coinsquare-alex-montague/"
                 target="_blank"
@@ -153,13 +151,22 @@ class Resume extends Component {
               >
                 HERE!
               </a>
-            ) : null}
+            )}
+            {work.company === "League Inc" && (
+              <a
+                href="https://medium.com/inside-league/the-student-series-meet-leagues-legendary-engineering-co-ops-9d2039c5b394"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                HERE!
+              </a>
+            )}
           </p>
         </div>
       );
     });
 
-    const skillsCollection = barSkills.map(skills => {
+    const skillsCollection = barSkills.map((skills) => {
       const className = "bar-expand " + skills.name.toLowerCase();
       return (
         <li key={skills.name}>
@@ -209,7 +216,7 @@ class Resume extends Component {
               infiniteLoop={true}
               useKeyboardArrows={true}
             >
-              {techSkills.map(skill => (
+              {techSkills.map((skill) => (
                 <TechItem
                   imageSrc={skill.imageSrc}
                   header={skill.header}
@@ -233,7 +240,7 @@ class Resume extends Component {
                 textAlign: "center",
                 fontSize: 15,
                 paddingLeft: "6%",
-                paddingBottom: "5%"
+                paddingBottom: "5%",
               }}
             >
               Git Activity &nbsp;

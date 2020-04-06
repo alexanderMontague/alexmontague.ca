@@ -7,10 +7,10 @@ import CoopHeader from "./Co-op/CoopHeader";
 import CoopLanding from "./Co-op/CoopLanding";
 import CoinsquareTerm from "./Co-op/CoinsquareTerm";
 import LeagueTerm from "./Co-op/LeagueTerm";
+import TaplyticsTerm from "./Co-op/TaplyticsTerm";
 
 const bgMap = {
-  landing: `url(${bgImage})`
-  // coinsquare: `linear-gradient(to bottom right, #4829CA, #291568)`
+  landing: `url(${bgImage})`,
 };
 
 const StyledBackground = styled.div`
@@ -37,7 +37,7 @@ const StyledContent = styled.div`
 
 class WorkTermReports extends Component {
   state = {
-    selectedTerm: "landing"
+    selectedTerm: "landing",
   };
 
   render() {
@@ -60,6 +60,11 @@ class WorkTermReports extends Component {
               exact
               path={`${this.props.match.url}/league`}
               component={LeagueTerm}
+            />
+            <Route
+              exact
+              path={`${this.props.match.url}/taplytics`}
+              component={TaplyticsTerm}
             />
 
             {/* ADD NEW WRITE UPS HERE */}
