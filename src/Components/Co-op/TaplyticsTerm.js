@@ -3,8 +3,8 @@ import Prism from "prismjs";
 import styled from "styled-components";
 
 import TaplyticsLogo from "../../assets/icons/taplytics-icon.jpg";
-import LeaguePic from "../../assets/Terms/League/alex_league.png";
 
+import TaplyticsPic from "../../assets/Terms/Taplytics/tl_me.png";
 import LeagueLobby from "../../assets/Terms/League/league_lobby.png";
 import LeagueCoops from "../../assets/Terms/League/co-ops.png";
 import LeagueTimeline from "../../assets/Terms/League/league_timeline.png";
@@ -306,7 +306,9 @@ const CoinsquareTerm = () => {
           January 2020 - April 2020
           <br />
         </StyledText>
-        <StyledImage src={LeaguePic} />
+
+        <StyledImage src={TaplyticsPic} />
+
         <hr />
         <StyledText>
           <span id="Intro">
@@ -316,8 +318,10 @@ const CoinsquareTerm = () => {
             and interact with some really great people, some of which I have
             worked with before! Throughout this report I will talk about the
             company I had my placement with, some goals I set for myself, and
-            what the overall experience was like. I hope you enjoy, and for any
-            other information feel free to contact me!
+            what the overall experience was like. I will also talk a little bit
+            about how working from home and going completely remote due to
+            COVID-19 has impacted this co-op experience. I hope you enjoy, and
+            for any other information feel free to contact me!
             <br />
             <br />
           </span>
@@ -326,23 +330,31 @@ const CoinsquareTerm = () => {
             <span style={{ fontFamily: "opensans-bold" }}>
               Employer Information:{" "}
             </span>
-            For my second placement I was able to work at another Toronto based
-            start-up called League Inc for a wonderful 4-month term. League is
-            transforming the way people use and interact with their benefits
-            through League’s intuitive platform. League is aiming to create the
-            best and healthiest platform to select, manage and interact with
-            your employer provided benefits. This was a super cool experience as
-            I never had previous exposure to benefits or any health-related
-            sectors, so this was a great opportunity. League was founded in 2014
-            by serial entrepreneur Mike Serbinis along with COO Dan Leibu and
-            CTO Dan Galperin. The trio previously worked together on Serbinis’
-            other venture Kobo, where they later left to start League. League
-            truly is all about creating a healthier future, and that is really
-            reflected in their values and culture. Whether it is League’s
-            in-house yoga to healthy snacks in the kitchen, I really enjoyed
-            learning and working inside such a positive company. I was located
-            in the Toronto office as a Full Stack Developer on the Integrations
-            Team, but League also has offices in Chicago, and the Philippines!
+            For this placement I was located in downtown Toronto, an area I have
+            become very famililar with these past co-op placements! I joined
+            Taplytics as a Full Stack Intern Developer, for a short but
+            absolutely rewarding 4 month term. In my previous experiences I
+            generally had a pretty good idea of what the company did and how
+            they did it. Taplytics was different as the information I uncovered
+            when applying was just scratching the surface. They are doing so
+            much more than I thought and it was really cool getting to
+            experience it all. Taplytics transforms data into universally
+            actionable campaigns and experiments where you can create unique
+            personalized digital experiences across apps and the web.
+            Simplifying that a bit, Taplytics offers a bunch of different
+            services (A/B testing, Launch Control, Email Marketing, Push
+            notifications) and lets clients wrap all of these features into a
+            single campaign, or journey. This lets clients make data driven
+            decisions and also provides unique online experiences that are
+            custom tailored and the best possible fit for each user! This
+            business concept was tough to wrap my head around, much less develop
+            for it! Taplytics gives clients the ability to know what’s going on
+            in the state of their website or app, and how users are behaving,
+            reacting and making decisions under certain conditions, that they
+            get to setup themselves! Taplytics was a part of Y Combinator and
+            founded by Cobi Druxerman, Aaron Glazer, and brothers Andrew Norris
+            and Jonathan Norris. This has been one of the most interesting and
+            exciting placements so far, and I hope to be back one day!
             <br />
             <br />
           </span>
