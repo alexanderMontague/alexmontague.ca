@@ -5,7 +5,10 @@ import styled from "styled-components";
 import TaplyticsLogo from "../../assets/icons/taplytics-icon.jpg";
 
 import TaplyticsPic from "../../assets/Terms/Taplytics/tl_me.png";
-import LeagueLobby from "../../assets/Terms/League/league_lobby.png";
+import TaplyticsCoffee from "../../assets/Terms/Taplytics/tl_coffee.png";
+import TaplyticsDesk from "../../assets/Terms/Taplytics/tl_desk.png";
+import TaplyticsJourney from "../../assets/Terms/Taplytics/tl_journey.png";
+import TaplyticsHome from "../../assets/Terms/Taplytics/tl_home_meeting.png";
 import LeagueCoops from "../../assets/Terms/League/co-ops.png";
 import LeagueTimeline from "../../assets/Terms/League/league_timeline.png";
 import WorkatoTool from "../../assets/Terms/League/league_workato_tool.png";
@@ -160,6 +163,7 @@ const StyledImage = styled.img`
   border-radius: ${(props) => props.borderRadius};
   margin: ${(props) => props.margin};
   background: #ffffff;
+  max-width: 80;
 `;
 
 const StyledLine = styled.hr`
@@ -170,7 +174,7 @@ const StyledLine = styled.hr`
   height: 0;
 `;
 
-const CoinsquareTerm = () => {
+const TaplyticsTerm = () => {
   useEffect(() => {
     Prism.highlightAll();
     return () => {};
@@ -325,7 +329,6 @@ const CoinsquareTerm = () => {
             <br />
             <br />
           </span>
-
           <span id="Info">
             <span style={{ fontFamily: "opensans-bold" }}>
               Employer Information:{" "}
@@ -335,13 +338,13 @@ const CoinsquareTerm = () => {
             Taplytics as a Full Stack Intern Developer, for a short but
             absolutely rewarding 4 month term. In my previous experiences I
             generally had a pretty good idea of what the company did and how
-            they did it. Taplytics was different as the information I uncovered
-            when applying was just scratching the surface. They are doing so
-            much more than I thought and it was really cool getting to
-            experience it all. Taplytics transforms data into universally
-            actionable campaigns and experiments where you can create unique
-            personalized digital experiences across apps and the web.
-            Simplifying that a bit, Taplytics offers a bunch of different
+            they did it, but this was different. The information I uncovered
+            when applying to Taplytics was just scratching the surface. They are
+            actively doing so much more than I initially thought, and it was
+            really cool getting to experience it all. Taplytics transforms data
+            into universally actionable campaigns and experiments where you can
+            create unique personalized digital experiences across apps and the
+            web. Simplifying that a bit, Taplytics offers a bunch of different
             services (A/B testing, Launch Control, Email Marketing, Push
             notifications) and lets clients wrap all of these features into a
             single campaign, or journey. This lets clients make data driven
@@ -350,129 +353,226 @@ const CoinsquareTerm = () => {
             business concept was tough to wrap my head around, much less develop
             for it! Taplytics gives clients the ability to know what’s going on
             in the state of their website or app, and how users are behaving,
-            reacting and making decisions under certain conditions, that they
-            get to setup themselves! Taplytics was a part of Y Combinator and
-            founded by Cobi Druxerman, Aaron Glazer, and brothers Andrew Norris
-            and Jonathan Norris. This has been one of the most interesting and
-            exciting placements so far, and I hope to be back one day!
+            reacting and making decisions under certain conditions. This is done
+            all through an easy to configure "Journey Builder" that requires no
+            development work, and allows clients to do everything themselves!
+            Taplytics was a part of Y Combinator and founded by Cobi Druxerman,
+            Aaron Glazer, and brothers Andrew Norris and Jonathan Norris. This
+            has been one of the most interesting and exciting placements so far,
+            and I hope to be back one day! If you want to see what Taplytics is
+            all about, check them out!{" "}
+            <StyledLink
+              href="https://www.taplytics.com"
+              color="#00a5ff"
+              target="_blank"
+            >
+              Taplytics' Website
+            </StyledLink>
             <br />
             <br />
           </span>
-
+          <StyledImage src={TaplyticsCoffee} />
+          <div style={{ fontSize: 15 }}>
+            <i>I unfortunately started after the office already had a sink</i>
+          </div>
+          <br />
           <span id="Goals">
             <span style={{ fontFamily: "opensans-bold" }}>Goals: </span>
-            For this placement I created 3 goals for myself to hopefully achieve
-            by the end of this placement. Two goals revolved around our tech
-            stack as that was what I was really interested in learning, but I
-            also left an open-ended goal pertaining to improving a current
-            process at League. I was uncertain of how exactly these goals would
-            play out, but I was motivated and committed to learn, grow and work
-            my hardest to achieve them!
+            For this placement I created 3 goals for myself to achieve by the
+            end of this placement. This term was interesting as I had my own
+            goals regulated by the co-op program and Experience Guelph, while I
+            also had goals and feedback setup through Canada's Information and
+            Communication Technology Council (ICTC). It was good to see that
+            there are other programs out there furthering Canada's digital
+            advantage in a global economy. My first goal surrounded a decently
+            complex technical implementation, my second related to UI/UX
+            personal design improvements, and my third was a testing piece. I
+            was uncertain of how exactly these goals would play out (especially
+            the second one!), but I was motivated and committed to learn, grow
+            and work my hardest to achieve them.
             <ol>
-              <li>
-                Create, PR, and Deploy my first “real” frontend ticket into the
-                League frontend repository
-              </li>
-              <li>
-                Write, Test, and Merge first Golang feature into the League
-                services repository
-              </li>
-              <li>
-                Identify some current process at League that could be made
-                better, and ultimately execute a plan to make that process
-                better than it was before
-              </li>
+              <li>Write or implement a substantial Backend Service</li>
+              <li>Improve my design skills (UI & UX)</li>
+              <li>Get better at Testing Things</li>
             </ol>
-            I was happy to report that at the end of the term I successfully
-            accomplished all of my set goals. The first two goals eventually
-            came with time and more exposure to the codebase, where the third
-            goal was definitely the most difficult to fulfil. For the first goal
-            I was able to develop and ship my first “real” frontend feature
-            within the first two weeks. My definition of “real” was not just
-            copy pasting existing code, but actually coming up with a solution
-            and implementation from scratch. I was lucky enough to have prior
-            knowledge and experience with production level React/Redux, so this
-            was not too difficult to implement. It was interesting to see how
-            League’s React conventions differed from my last company, and that
-            took some time to get used to but was also welcomed. For my second
-            goal, this was something I was very eager to achieve. I have never
-            written a single line of Go before my time at League, and honestly
-            did not even know what type of language it was, or how it worked.
-            The first few weeks were just spent learning the language and its
-            quirks, but within the first month I was able to ship my first piece
-            of Golang code. It was by no means anything special, but it was a
-            fantastic learning experience and great introduction to the
-            language. My last goal was difficult to implement as I had no idea
-            what process I would be improving on. As my time at League
-            progressed I recognized a possible pain point and eventually settled
-            on an improvement I felt was not only important, but also relevant
-            to the team I was on. The process I saw was in the way we integrated
-            employers onto our platform through an integration framework. We did
-            this by basically writing recipes that contained logic to onboard,
-            update and modify employees, but these recipes could get pretty long
-            and intricate. I found a way to run the process of creating and
-            updating these recipes through our Github repository, so we had a
-            formalized review process set in place and a way to keep track of
-            all of our changes through Git! I will talk about this a little bit
-            more in the Extras section if you are interested in learning more.
+            I'm happy to report that at the end of the term I believe I
+            sufficiently achieved all of my set goals. The first goal came with
+            the eventual familiarity of the code base, the second was due to
+            some much needed sitdown sessions with our product designer, and the
+            last was through almost every piece of code I wrote during this
+            placement.
+            <br />
+            Starting with the first goal, I was pretty well versed with
+            Javascript and full stack web development through past experiences
+            and my own experimentation, but I really wanted to get more
+            experience with backend code. At Taplytics we were using the
+            familiar NodeJS and Express for most of our APIs, but we also had a
+            bunch of other techologies that I have never worked with, so this
+            was a great learning experience. Some of these included Redis for
+            deduping/caching, Kafka for data interconnectivity, and MongoDB,
+            Postgres, Cassandra and Vertica for data storage. I was lucky enough
+            to interact and touch almost all of these technologies, during which
+            I was able to learn how they worked and also achieve my goal. One
+            task that stood out was being able to implement and test a new Redis
+            library that gave us the ability to connect to multiple different
+            Redis clusters, and also provided us a clean and concise interface
+            to interact through. Although I did not write the library, I still
+            learned the ins and outs of how it worked and how we utilized Redis
+            in our codebase. This was a neat challenge as it was something I
+            have never done before and was not directly writing code to solve a
+            problem. I was adapting legacy solutions to work with our new
+            system, and also learned about how we can adapt code for future
+            maintainability. I also wanted to mention how cool Kafka is and that
+            this is something I am definitely going to be working with in the
+            future. Through these experiences I feel that goal one was most
+            definitely accomplished.
+            <br />
+            The second goal was something I probably could have worked on
+            anywhere, but after seeing how our product designer pumped content
+            out left and right, I really wanted to pick his brain and learn
+            more. Being a web developer I have lots of experience on the
+            frontend, but I still don't have very strong design skills. Most of
+            the time you get a design handed to you to implement, so I do not
+            recognize what makes something a good UX vs a bad UX. The first
+            session was basically a design review, in which he reviewed a
+            feature I was implementing. This was much like a code review, but we
+            focused on the user and how they interact with the feature. This is
+            something that I would not have usually done, and incorporating
+            design review into development is incredibly useful. When asking how
+            I can come up with creative and elegant designs, he recommended the
+            use of a component library (which we use at Taplytics!) and also
+            sketching designs out first. Much like planning code, you need to
+            plan your design. Component libraries let you be consistent and
+            build on top of other component, while sketching things on paper and
+            actually interacting with them gives you a sense of how it "feels"
+            to use the design, and any obvious pain points. I have actually
+            learned about paper-prototyping in school, so this was a great
+            reminder to actually practice it. Most of my (personal) designs are
+            shoddily cobbled together, and I forgo actually thinking about how
+            the user will feel using these, so his advice was very welcomed.
+            Throughout these sessions I feel like my design capabilities have
+            definitely improved, and I am actively adhering to the advice I was
+            given when developing UI's. Goal #2 check!
+            <br />
+            My last goal relates to something that most developers agree is
+            absolutely necessary, but sometimes forgotten. I personally have
+            never been as involved in testing as I have been at Taplytics, so
+            this was a great experience. I have written tests for my code
+            before, but have never been absolutely comfortable with being able
+            to consistently test the functionality I was implementing. This
+            changed when I was able to gain experience with Jest, Enzyme, K6 and
+            Cypress. I have used Jest to write simple unit tests, but nothing
+            like the integration and end to end tests using Enzyme and Cypress I
+            was able to create here. I gained a lot of experience with Jest's
+            more advanced features including function and module mocking,
+            timers, asynchronous testing and utilizing the test output! I had
+            never worked with Enzyme or Cypress before this placement, so
+            gaining this experience was great. Enzyme allows you to render your
+            component(s) that will be used in your test, and lets you actually
+            interact with the DOM to simulate a real user. This was way more
+            involved than Jest's unit tests, and was really useful to be able to
+            write mini DOM integration tests. Lastly, learning about Cypress and
+            how this framework works really topped this testing goal off.
+            Cypress lets you write real end to end tests, that let you
+            programmatically interact with whatever you are testing, and
+            automatically assert conditions on the subject. Think of it as a
+            better and less flaky selenium. This was so cool to learn about, as
+            we setup helpers that would mimic functionality in our web app, and
+            we could lay out these Cypress "chainables" that would string
+            together actions in our test that would act as a real person
+            interacting with the app. I will talk more about Cypress + K6
+            testing in my featured aspect, but overall I'm really happy with the
+            amount of testing experience I was able to gain. 3 for 3!
             <br />
             <br />
           </span>
-
-          <StyledImage src={LeagueLobby} />
-
+          <StyledImage src={TaplyticsDesk} />
+          <div style={{ fontSize: 15 }}>
+            <i>My workstation</i>
+          </div>
+          <br />
           <span id="Description">
             <span style={{ fontFamily: "opensans-bold" }}>
               Job Description:{" "}
             </span>
-            For this placement at League I joined the team as a Fullstack
-            Developer on the Integrations team. I was excited to have the
-            “Fullstack” responsibility as I was able to get Frontend experience
-            at my last co-op, but only backend experience through my side
-            projects. I was looking forward to working with some production
-            level backend code, especially with a language I was unfamiliar
-            with! On the integrations team we were tasked with integrating into
-            employers’ Human Resources Integration Systems (like BambooHR or
-            ADP) and using that data to onboard employees onto our platform.
-            This works for us as it requires minimal effort on the employers’
-            side and provides us with up to date and valid information. Our day
-            to day duties consist of implementing features directly relating to
-            the integration of employees, and includes crafting integration
-            recipes, invoicing, reporting, and extending API capabilities. I
-            personally got to work on some awesome features like E2E integration
-            recipes, invoice redesigns, new admin tool functionality and some HR
-            API updates along with a bunch of bug fixes! Overall the range of
-            available tasks grew with my time and exposure to League’s product,
-            and I was happy to learn and work on everything I touched!
+            I joined Taplytics as a "Full Stack" developer, and that was pretty
+            true to what I was doing! I was touching all parts of the product
+            (frontent, backend, infra) and from what I have experienced so far,
+            I really enjoy being more of a fullstack developer that has
+            knowledge of how everything works together. I believe having a broad
+            understanding of the codebase really helps when developing features,
+            and gives you lots of valuable context. I was placed on team
+            Delissio (because we were the <i>delivery </i> team 🍕) where we
+            worked to deliver features to one of our main clients. This was
+            pretty cool as I got to work directly with the people utilizing our
+            software, and was able to see how we moved from product requests -->
+            development --> delivery on a regular cadence. My day to day
+            consisted of a daily standup where the team coordinated on what we
+            were doing for the day and if there were any blockers, meetings if
+            there were any, and development! We had a pretty solid agile process
+            in which we conducted 1 week sprints, with a grooming, planning and
+            retro per sprint. I have done the usual agile plan + retro but this
+            was nice to have a grooming considering our close involvement with
+            clients. The grooming would set us up for development right away and
+            we could discuss any unknowns or blockers that came up with our
+            definition of Ready.
             <br />
-            One thing that was interesting/unique about my job was that I was
-            directly involved with the integration process, and how it was such
-            an important portion of our business. I was responsible for a lot of
-            key components and it was an awesome experience to learn from. Being
-            around the benefits space and learning more about how benefits
-            actually worked was super cool as well. I can take that real-life
-            knowledge with me throughout my career!
+            One thing that was interesting/unique about my job was probably the
+            whole product, and the sheer scale at which we were working with.
+            This has been one of the coolest products I have been able to help
+            build, and the scale at which we operate was insane to see. Some
+            journeys that clients would run could have millions of users passing
+            through them, and everything needed to work exactly as specified
+            down to the minute. For a little more context on what these
+            "Journeys" are, a Journey is basically simulating some sort of
+            campaign or user journey through a website/app. You start by
+            selecting an audience (based on any user attribute that is available
+            in your data source), and then add other nodes for each user to pass
+            down. Check the Journey example below for how this might work, and
+            the power you can unlock by crafting Journeys based on any use case.
+            <StyledImage src={TaplyticsJourney} />
+            <div style={{ fontSize: 15 }}>
+              <i>
+                A simple journey that filters users based on state, adds a
+                delay, then sends and email OR A/B tests the other filtered
+                users, sends stream A an email, sends stream B a push and exits.
+                This is just a simple example of how you have complete control
+                over what your users see and recieve based on attributes clients
+                can configure themselves.
+              </i>
+            </div>
             <br />
-            Some of the skills that I needed for this job were definitely some
-            computer science basics, but also a passion to learn. I came in with
-            some prior knowledge of our Frontend stack and MongoDB which was
-            definitely a plus, but as for the rest of our Backend stack this was
-            completely new to me. I really love to learn new things and want to
-            do the very best I can at any job I’m placed in, so a motivation to
-            learn is the best skill you can have for any job, including this
-            one. Software design classes had also prepared me for agile and
-            scrum team environments, so I understood our practices and
-            methodologies almost right off the bat! Some skills that I learned
-            while on the job were developing clean and concise Go code, as well
-            as some higher-level platform and architecture things. When you are
-            involved heavily in the backend, you also start to learn why and how
-            we set our architecture up in the way we did.
+            Some of the skills that I needed to succeed at this job were
+            obviously some prior web dev/Javascript knowledge, but also a
+            passion to learn. I had already had practice with React/Redux and
+            Node/Express + Mongo/Postgres which was definitely a plus, but the
+            rest of our Backend stack was completely new to me. I really love to
+            learn new things and want to do the very best I can at any job I’m
+            placed in, so in my opinion a motivation to learn is one of the best
+            skills you can have for any job. Software design classes had also
+            prepared me for agile and scrum team environments, so I understood
+            our practices and methodologies almost right off the bat!
+            <br />
+            Some skills that I gained during this placement happened to align
+            pretty well with the goals that I set for myself. I learned about
+            more backend infrastructure and how to work at such big scale, I
+            improved on my design skills and I got way better at testing! I
+            contribute most of my success to the great resources I had available
+            at my disposal, and the tight-knitness of the team/company. I was
+            able to go an talk to any other developer when I had questions or
+            concerns, and I was really able to influence what I wanted to work
+            on. If I was interested in learning or getting more experience with
+            something, I could make that known and usually get to work on it!
             <br />
             <br />
           </span>
-
-          <StyledImage src={LeagueTimeline} />
-
+          <StyledImage src={TaplyticsHome} />
+          <div style={{ fontSize: 15 }}>
+            <i>
+              My <b>home</b> workstation!
+            </i>
+          </div>
+          <br />
           <span id="Relation">
             <span style={{ fontFamily: "opensans-bold" }}>
               Academic Relation:{" "}
@@ -497,7 +597,6 @@ const CoinsquareTerm = () => {
             <br />
             <br />
           </span>
-
           <span id="Featured">
             <span style={{ fontFamily: "opensans-bold" }}>
               Featured Aspect:{" "}
@@ -660,7 +759,6 @@ const CoinsquareTerm = () => {
             <br />
             <br />
           </span>
-
           <span id="Conclusion">
             <span style={{ fontFamily: "opensans-bold" }}>Conclusion: </span>
             League has been an unreal experience and I could not have asked for
@@ -681,7 +779,6 @@ const CoinsquareTerm = () => {
             <br />
             <br />
           </span>
-
           <span id="Extras">
             <span style={{ fontFamily: "opensans-bold" }}>Extras: </span>
             As mentioned, I have a few extra things to share here regarding my
@@ -759,4 +856,4 @@ const CoinsquareTerm = () => {
   );
 };
 
-export default CoinsquareTerm;
+export default TaplyticsTerm;

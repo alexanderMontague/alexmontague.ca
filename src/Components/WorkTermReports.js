@@ -26,6 +26,10 @@ const StyledBackground = styled.div`
 const StyledBody = styled.div`
   margin: 0 10%;
   min-height: 100vh;
+
+  @media (max-width: 675px) {
+    margin: 0;
+  }
 `;
 
 const StyledContent = styled.div`

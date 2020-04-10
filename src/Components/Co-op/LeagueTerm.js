@@ -66,15 +66,15 @@ window.onscroll = () => {
 };
 
 const StyledWrapper = styled.div`
-  display: ${props => props.display || "flex"};
-  flex-direction: ${props => props.flexDirection || "row"};
-  justify-content: ${props => props.justifyContent};
-  align-items: ${props => props.alignItems};
-  padding: ${props => props.padding};
-  margin: ${props => props.margin};
+  display: ${(props) => props.display || "flex"};
+  flex-direction: ${(props) => props.flexDirection || "row"};
+  justify-content: ${(props) => props.justifyContent};
+  align-items: ${(props) => props.alignItems};
+  padding: ${(props) => props.padding};
+  margin: ${(props) => props.margin};
 
   @media (max-width: 761px) {
-    flex-direction: ${props => props.mobileFlexDirection || "column"};
+    flex-direction: ${(props) => props.mobileFlexDirection || "column"};
   }
 `;
 
@@ -124,13 +124,13 @@ const StyledList = styled.ul`
 `;
 
 const StyledLink = styled.a`
-  color: ${props => props.color || "#b7b7b7"} !important;
-  font-size: ${props => props.fontSize || "1em"} !important;
-  font-family: ${props => props.fontFamily || "opensans-bold"} !important;
+  color: ${(props) => props.color || "#b7b7b7"} !important;
+  font-size: ${(props) => props.fontSize || "1em"} !important;
+  font-family: ${(props) => props.fontFamily || "opensans-bold"} !important;
   line-height: 25px;
 
   &:hover {
-    color: ${props => props.hoverColor || "#00a5ff"} !important;
+    color: ${(props) => props.hoverColor || "#00a5ff"} !important;
   }
 
   &:target {
@@ -140,14 +140,14 @@ const StyledLink = styled.a`
 `;
 
 const StyledText = styled.span`
-  color: ${props => props.color || "#b7b7b7"};
-  font-size: ${props => props.fontSize || "1em"};
-  font-family: ${props => props.fontFamily};
-  line-height: ${props => props.lineHeight || "25px"};
+  color: ${(props) => props.color || "#b7b7b7"};
+  font-size: ${(props) => props.fontSize || "1em"};
+  font-family: ${(props) => props.fontFamily};
+  line-height: ${(props) => props.lineHeight || "25px"};
   z-index: 100;
-  padding: ${props => props.padding};
-  margin: ${props => props.margin || "0 0 20px 0"};
-  font-weight: ${props => props.fontWeight || "normal"};
+  padding: ${(props) => props.padding};
+  margin: ${(props) => props.margin || "0 0 20px 0"};
+  font-weight: ${(props) => props.fontWeight || "normal"};
 
   @media (max-width: 835px) {
     font-size: 15px;
@@ -155,22 +155,22 @@ const StyledText = styled.span`
 `;
 
 const StyledImage = styled.img`
-  width: ${props => props.width};
-  height: ${props => props.height};
-  border-radius: ${props => props.borderRadius};
-  margin: ${props => props.margin};
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+  border-radius: ${(props) => props.borderRadius};
+  margin: ${(props) => props.margin};
   background: #ffffff;
 `;
 
 const StyledLine = styled.hr`
-  margin: ${props => props.margin || "10px 0px"};
+  margin: ${(props) => props.margin || "10px 0px"};
   border: solid #e3e3e3;
   border-width: 1px 0 0;
   clear: both;
   height: 0;
 `;
 
-const CoinsquareTerm = () => {
+const LeagueTerm = () => {
   useEffect(() => {
     Prism.highlightAll();
     return () => {};
@@ -185,10 +185,10 @@ const CoinsquareTerm = () => {
     relation: windowFragment === "#Relation" ? "#00a5ff" : "#b7b7b7",
     featured: windowFragment === "#Featured" ? "#00a5ff" : "#b7b7b7",
     conclusion: windowFragment === "#Conclusion" ? "#00a5ff" : "#b7b7b7",
-    extras: windowFragment === "#Extras" ? "#00a5ff" : "#b7b7b7"
+    extras: windowFragment === "#Extras" ? "#00a5ff" : "#b7b7b7",
   };
 
-  const TableOfContentsHashHandler = hash => {
+  const TableOfContentsHashHandler = (hash) => {
     isDirectLink = true;
     window.location.hash = hash;
     setTimeout(() => {
@@ -746,4 +746,4 @@ const CoinsquareTerm = () => {
   );
 };
 
-export default CoinsquareTerm;
+export default LeagueTerm;
