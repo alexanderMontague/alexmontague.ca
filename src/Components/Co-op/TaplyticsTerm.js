@@ -9,6 +9,8 @@ import TaplyticsCoffee from "../../assets/Terms/Taplytics/tl_coffee.png";
 import TaplyticsDesk from "../../assets/Terms/Taplytics/tl_desk.png";
 import TaplyticsJourney from "../../assets/Terms/Taplytics/tl_journey.png";
 import TaplyticsHome from "../../assets/Terms/Taplytics/tl_home_meeting.png";
+import TaplyticsE2E from "../../assets/Terms/Taplytics/tl_e2e_cypress.mp4";
+
 import LeagueCoops from "../../assets/Terms/League/co-ops.png";
 import LeagueTimeline from "../../assets/Terms/League/league_timeline.png";
 import WorkatoTool from "../../assets/Terms/League/league_workato_tool.png";
@@ -166,6 +168,14 @@ const StyledImage = styled.img`
   max-width: 80;
 `;
 
+const StyledVideo = styled.video`
+  width: ${(props) => props.width || "100%"};
+  height: ${(props) => props.height};
+  border-radius: ${(props) => props.borderRadius};
+  margin: ${(props) => props.margin};
+  max-width: 80;
+`;
+
 const StyledLine = styled.hr`
   margin: ${(props) => props.margin || "10px 0px"};
   border: solid #e3e3e3;
@@ -312,6 +322,9 @@ const TaplyticsTerm = () => {
         </StyledText>
 
         <StyledImage src={TaplyticsPic} />
+        <div style={{ fontSize: 15 }}>
+          <i>Gotta rep the Taplytics Swag</i>
+        </div>
 
         <hr />
         <StyledText>
@@ -519,12 +532,12 @@ const TaplyticsTerm = () => {
             <br />
             One thing that was interesting/unique about my job was probably the
             whole product, and the sheer scale at which we were working with.
-            This has been one of the coolest products I have been able to help
-            build, and the scale at which we operate was insane to see. Some
-            journeys that clients would run could have millions of users passing
-            through them, and everything needed to work exactly as specified
-            down to the minute. For a little more context on what these
-            "Journeys" are, a Journey is basically simulating some sort of
+            This has been one of the most interesting products I have been able
+            to help build, and the scale at which we operate was insane to see.
+            Some journeys that clients would run could have millions of users
+            passing through them, and everything needed to work exactly as
+            specified down to the minute. For a little more context on what
+            these "Journeys" are, a Journey is basically simulating some sort of
             campaign or user journey through a website/app. You start by
             selecting an audience (based on any user attribute that is available
             in your data source), and then add other nodes for each user to pass
@@ -534,11 +547,11 @@ const TaplyticsTerm = () => {
             <div style={{ fontSize: 15 }}>
               <i>
                 A simple journey that filters users based on state, adds a
-                delay, then sends and email OR A/B tests the other filtered
+                delay, then sends an email OR A/B tests the other filtered
                 users, sends stream A an email, sends stream B a push and exits.
-                This is just a simple example of how you have complete control
-                over what your users see and recieve based on attributes clients
-                can configure themselves.
+                This is just an example of how you have complete control over
+                what your users see and recieve based on attributes clients can
+                configure themselves.
               </i>
             </div>
             <br />
@@ -559,17 +572,21 @@ const TaplyticsTerm = () => {
             improved on my design skills and I got way better at testing! I
             contribute most of my success to the great resources I had available
             at my disposal, and the tight-knitness of the team/company. I was
-            able to go an talk to any other developer when I had questions or
+            able to go and talk to any other developer when I had questions or
             concerns, and I was really able to influence what I wanted to work
             on. If I was interested in learning or getting more experience with
-            something, I could make that known and usually get to work on it!
+            something, I could usually get to work on it!
             <br />
             <br />
           </span>
           <StyledImage src={TaplyticsHome} />
           <div style={{ fontSize: 15 }}>
             <i>
-              My <b>home</b> workstation!
+              My
+              <b>
+                <i> home </i>
+              </b>
+              workstation!
             </i>
           </div>
           <br />
@@ -582,18 +599,18 @@ const TaplyticsTerm = () => {
             were some experiences and concepts I had learned before this
             placement that positively affected my work experience, and what I
             have learned from this placement will also allow me to further
-            succeed in my next school term. League was a fantastic co-op
-            placement and League’s established student program was also so
-            useful to go through. Getting to meet other current co-ops and
-            engineers that were previously co-ops was super neat as I got to see
-            how they progressed through their careers. This insight alone was
-            invaluable, and I met some amazing people that gave me some amazing
-            advice. I think the degree in itself is definitely important, but
-            the experience is really what shapes and grows the student. After
-            only 2 placements I can say the real-world knowledge I have gained
-            throughout them has been exponentially more relevant than what we
-            learn in school. School teaches you “how to learn” and work lets you
-            put those learning skills to use.
+            succeed in my next co-op and school terms. Taplytics was a fantastic
+            co-op placement and I have learned a lot that I will take with me
+            throughout my career. I would also like to highlight the importance
+            of relationships, and how that is one thing that sometimes gets
+            missed in the academic portion. I was lucky enough to know a few
+            people here at Taplytics that I had worked with before, and that was
+            how I eventually got put in contact with recruiting, and eventually
+            landed the job. Without making (and keeping!) these connections, I
+            probably would not have been working here today. I think its
+            valuable to not only be a great developer as a co-op, but also be a
+            social and good person to stay connected with. You never know when
+            the connections you have made might help you out later!
             <br />
             <br />
           </span>
@@ -602,42 +619,28 @@ const TaplyticsTerm = () => {
               Featured Aspect:{" "}
             </span>
             One aspect of this work term that I would like to focus on and talk
-            a little bit more about is how Golang works and what it looks like!
-            Go was super new to me and coming from an “anything goes” language
-            like Javascript, this was quite the change. But a good change it
-            was! I fell in love with the strict + static typing and how definite
-            things were. The Syntax was pretty similar to C which I am also
-            pretty familiar with, so it was not too bad to pick up at all. Go is
-            like a nicer, dynamic, garbage collected and concurrent C! Let’s see
-            what a function that would add two numbers together and return the
-            sum looks like in Javascript, and then in Go.
-            <pre>
-              <code className="language-javascript">
-                {`
-                  // JS
-                  function addNums(x, y) {
-                    return x + y;
-                  }
-                `}
-              </code>
-            </pre>
-            <pre>
-              <code className="language-go">
-                {`
-                  // Go
-                  func addNums(x, y int) int {
-                    return x + y
-                  }
-                `}
-              </code>
-            </pre>
-            As you can see, Go defines the type of its arguments, and its return
-            type. This does not just apply to functions and methods though,
-            everything is statically typed when you define it! This was
-            frustrating at first, but super helpful when using a smart IDE like
-            Goland. It will show type errors before you even compile and lets
-            you click through to type definitions, which was immensely helpful.
-            Lets go back to our code example and see why I love strong types:
+            a little bit more about is the Javascript end to end testing
+            framework, Cypress. This was the first time I have ever used this
+            framework, but it will not be the last as I think this is immensely
+            useful. Cypress is an open source, front-end testing tool, built for
+            the modern web that allows interaction with the DOM in order to test
+            certain functionality with your frontend application.
+            <StyledVideo src={TaplyticsE2E} autoPlay controls />
+            <div style={{ fontSize: 15 }}>
+              <i>An example end to end journey simulation running in Cypress</i>
+            </div>
+            <br />
+            As you can see, this test actually interacts with the application,
+            and is a simulated user. It actually visits pages, clicks, interacts
+            with inputs and can send and wait for requests. It really is a cool
+            framework that allows some super in depth testing to be done. A lot
+            of the tests you would do with Cypress are smaller integration tests
+            that depend solely on the frontend. In the test above we have this
+            set up so it creates and runs a journey on our frontend web app, and
+            then polls our event database to check that the journey actually
+            runs and succeeds! This is something I was working on near the tail
+            end of my placement, and our goal is to have this run nightly and or
+            on every PR just so we have that extra level of confidence.
             <pre>
               <code className="language-javascript">
                 {`

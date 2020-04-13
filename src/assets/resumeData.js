@@ -57,7 +57,7 @@ export default {
       "Some technology I am passionate about, and an overview of my skills",
     education: [
       {
-        school: "The University of Guelph",
+        school: "University of Guelph",
         degree: "Software Engineering",
         graduated: "Exp. April 2021",
         description:

@@ -4,12 +4,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-module.exports = env => {
+module.exports = (env) => {
   return {
     entry: "./src/index.js",
     output: {
       path: path.join(__dirname, "/build"),
-      filename: "index_bundle.js"
+      filename: "index_bundle.js",
     },
     module: {
       rules: [
@@ -17,12 +17,12 @@ module.exports = env => {
           test: /\.js$/,
           exclude: /node_modules/,
           use: {
-            loader: "babel-loader"
-          }
+            loader: "babel-loader",
+          },
         },
         {
           test: /\.css$/i,
-          use: ["style-loader", "css-loader"]
+          use: ["style-loader", "css-loader"],
         },
         {
           test: /\.(jpg|png|gif)$/,
@@ -30,11 +30,15 @@ module.exports = env => {
             loader: "url-loader",
             options: {
               limit: 25000,
-              name: "assets/[hash].[ext]"
-            }
-          }
-        }
-      ]
+              name: "assets/[hash].[ext]",
+            },
+          },
+        },
+        {
+          test: /\.mp4$/,
+          use: "file-loader?name=videos/[name].[ext]",
+        },
+      ],
     },
     devServer: {
       open: true,
@@ -43,15 +47,15 @@ module.exports = env => {
       publicPath: "/",
       contentBase: "public",
       watchContentBase: true,
-      historyApiFallback: true
+      historyApiFallback: true,
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: "src/index.html"
+        template: "src/index.html",
       }),
       new CopyPlugin([{ from: "public", to: "public" }]), // copies static files to build folder
       new webpack.DefinePlugin({}),
-      new CleanWebpackPlugin()
-    ]
+      new CleanWebpackPlugin(),
+    ],
   };
 };
