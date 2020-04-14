@@ -621,10 +621,10 @@ const TaplyticsTerm = () => {
             One aspect of this work term that I would like to focus on and talk
             a little bit more about is the Javascript end to end testing
             framework, Cypress. This was the first time I have ever used this
-            framework, but it will not be the last as I think this is immensely
-            useful. Cypress is an open source, front-end testing tool, built for
-            the modern web that allows interaction with the DOM in order to test
-            certain functionality with your frontend application.
+            framework, but it will not be the last as I think this is an
+            immensely useful tool. Cypress is an open source, front-end testing
+            tool, built for the modern web that allows interaction with the DOM
+            in order to test certain functionality with your web application.
             <StyledVideo src={TaplyticsE2E} autoPlay controls />
             <div style={{ fontSize: 15 }}>
               <i>An example end to end journey simulation running in Cypress</i>
@@ -635,123 +635,131 @@ const TaplyticsTerm = () => {
             with inputs and can send and wait for requests. It really is a cool
             framework that allows some super in depth testing to be done. A lot
             of the tests you would do with Cypress are smaller integration tests
-            that depend solely on the frontend. In the test above we have this
-            set up so it creates and runs a journey on our frontend web app, and
-            then polls our event database to check that the journey actually
+            that depend solely on the frontend. In the test above, we have this
+            set up so it creates and runs a journey on our frontend web app and
+            also polls our event database to check that the journey actually
             runs and succeeds! This is something I was working on near the tail
             end of my placement, and our goal is to have this run nightly and or
-            on every PR just so we have that extra level of confidence.
+            on every PR just so we have that extra level of confidence. This is
+            just one usecase that we have for Cypress, but we use it in a
+            multitude of other ways as well. In the following code snippets,
+            I'll show you how to setup a super simple Cypress automated test!
             <pre>
-              <code className="language-javascript">
+              <code className="language-html">
                 {`
-                  // JS
-                  function addNums(x, y) {
-                    return x + y;
-                  }
+                  <!DOCTYPE html>
+                    <html>
+                      <body>
+                        <h1 data-test-id="title">Cypress Test!</h1>
 
-                  let returnNum = addNums("uh oh!", 5);
-                  console.log(returnNum);  // uh oh!5
-                  typeof returnNum;        // string
+                        <button
+                          type="button"
+                          onclick="document.getElementById('demo').innerHTML = 'This is a test!'"
+                        >
+                          Click me
+                        </button>
 
+                        <p id="demo"></p>
+                      </body>
+                    </html>
                 `}
               </code>
             </pre>
-            <pre>
-              <code className="language-go">
-                {`
-                  // Go
-                  func addNums(x, y int) int {
-                    return x + y
-                  }
-
-                  var returnNum = addNums("uh oh!", 5)
-                  // cannot use "uh oh" (type string) as type int in argument to addNums
-                `}
-              </code>
-            </pre>
-            As we can see, Go shuts this down pretty quick, whereas this is
-            perfectly legal in Javascript. Obviously there are some checks we
-            can do in JS to prevent things like this from happening, but a type
-            system prevents all this!
+            <div style={{ fontSize: 15 }}>
+              <i>
+                Say we have this super simple web page. This is what we will be
+                testing! As you can see we have a few different elements and
+                some attributes (like data-test-id) that will come in handy
+                later!
+              </i>
+            </div>
             <br />
-            One thing that I also really liked was that Go has built in
-            functionality and tooling. Go has a standard code format that
-            everyone must abide by (called Gofmt), which makes PR notes about
-            code styling irrelevant. Most people now use a JS library like
-            prettier to format their code for the same reason, but it was cool
-            to see that Go’s was internal and out of the box. One thing I also
-            liked was that Go has an internal testing framework for unit tests.
-            This also eliminates the need to search for multiple testing
-            frameworks as this is a standard. There is also just something
-            satisfying about creating components you know will never change, and
-            if they do, you catch the problem right away! I can’t tell how many
-            problems and bugs I have had due to weak and dynamic typing causing
-            unexpected behaviour. Take a look at this example of ingesting JSON.
+            Our Cypress Test:
             <pre>
               <code className="language-javascript">
                 {`
-                  // JS
-                  const response = \`  // mock JSON
-                    {
-                      "sex": "male",
-                      "eyeColour": "blue",
-                      "age": 21,
-                      "location": {
-                        "province": "Canada",
-                        "city": "Toronto",
-                        "address": "123 Street W."
-                      }
-                    }
-                  \`
+                  describe("Test Cypress Test", function () {
+                    it("should visit the test page and interact with it", function () {
+                      // visit the web page
+                      cy.visit("./cypress/pages/test.html");
 
-                  const newPerson = JSON.parse(response);  // parse/fetch data
-                  // What is the newPerson structure without knowing?
-                  // Extra data included in request would be passed along
+                      // check the title for the correct title
+                      cy.get("[data-test-id='title']").contains("Cypress Test!");
 
-                  // If address was not present, this would error out
-                  console.log(newPerson.location.address)
+                      // check our button and click it!
+                      cy.get(".main-button").then(($btn) => {
+                        cy.wrap($btn).should("not.be.disabled");
+                        cy.wrap($btn).click();
+                      });
 
-                  // We should always explicitly state when we want to deal with numbers in JS
-                  console.log(Number(newPerson.age))
+                      // check that our button did what it should have
+                      cy.get("#demo").contains("This is a test!");
+                    });
+                  });
                 `}
               </code>
             </pre>
+            We do a few things in this test, but it is all super simple. This is
+            just showcasing some of the features available to use within the
+            Cypress framework. Right off the bat we can notice that it is setup
+            very much like every other JS assertion library, and this was done
+            on purpose. They made it very understandable and use the familiar
+            testing language like "describes" and "it", as well as using some
+            own human readable methods that we will get into. The next thing
+            that is nice is that the test(s) will be layed out in a top to
+            bottom readable fashion, and this is largely because of Cypress'
+            chainables. They act very much like Javascript's native promises,
+            and will allow you to do asynchronous actions either by yourself, or
+            abstracted away through the framework with ease. The main basis of
+            these tests are grabbing DOM elements, and interacting with them.
+            Cypress lets you get elements in a multitude of ways, and we do so
+            here with the <code>cy.get()</code> command, that lets us use any
+            selector we choose (id, class, custom attribute), as demonstrated in
+            this test. Cypress asserts on all checks we have in the test, and
+            will fail if any one of these are not met. On a failure you can also
+            set retry intervals to try the test again, but that is usually not
+            needed if you write the tests to not be flakey.
+            <br />
+            Adding custom Cypress chainables:
             <pre>
-              <code className="language-go">
+              <code className="language-javascript">
                 {`
-                  // Go
-                  response := \`  // typing can be inferred!
-                    {
-                      "sex": "male",
-                      "eyeColour": "blue",
-                      "age": 21,
-                      "location": {
-                        "province": "Canada",
-                        "city": "Toronto",
-                        "address": "123 Street W."
-                      }
-                    }\`
-
-                  // use JSON tags to specify field names!
-                  type Person struct {
-                    Sex       string            \`json:"sex"\`
-                    EyeColour string            \`json:"eyeColour"\`
-                    Age       int               \`json:"age"\`
-                    Location  map[string]string \`json:"location"\`
+                  export const addDelayToJourney = (delay: number) => {
+                    // Create email
+                    cy.get(getDataTestIdSelector('delayJourneyNodeInList')).click()
+                    cy.wait(2000)
+                    cy.get(getDataTestIdSelector('delayJourneyNode'))
+                      .last()
+                      .trigger('mousedown', { force: true })
+                      .trigger('mouseup', { force: true })
+                    cy.get('.editButton').trigger('mousedown', { force: true })
+                    cy.get(getDataTestIdSelector('delayInput'))
+                      .clear()
+                      .type(\`\${delay}\`)
+                    cy.get(getDataTestIdSelector('delayDropdown'))
+                      .first()
+                      .click()
+                    cy.get(getDataTestIdSelector('dropdownOption'))
+                      .last()
+                      .click()
+                    cy.get(getDataTestIdSelector('modalFooterConfirmBtn'))
+                      .first()
+                      .click()
+                    return cy
                   }
 
-                  var newPerson Person
-                  json.Unmarshal([]byte(response), &newPerson) // parse data
-                  // We know exactly what is going to be in newPerson
+                  Cypress.Commands.add('tlAddDelayToJourney', addDelayToJourney)
 
-                  // We have confidence this is present and will not error unexpectedly
-                  fmt.Println(newPerson.Location["address"])
 
-                  // We know this is an integer!
-                  fmt.Println(newPerson.Age)
+                  it('should create a journey with a delay and start the journey', function() {
+                    cy.tlCreateJourneyWithUi(journey)
+                      .tlAddDelayToJourney(1)
+                      .tlStartJourney()
+                  });
                 `}
               </code>
             </pre>
+            <br />
             You really have no idea what your response is going to look like in
             JS but Go code self-documents. I really enjoyed that aspect and very
             rarely did I have to print something to stdout to see what the
