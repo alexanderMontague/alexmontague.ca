@@ -10,6 +10,7 @@ import TaplyticsDesk from "../../assets/Terms/Taplytics/tl_desk.png";
 import TaplyticsJourney from "../../assets/Terms/Taplytics/tl_journey.png";
 import TaplyticsHome from "../../assets/Terms/Taplytics/tl_home_meeting.png";
 import TaplyticsE2E from "../../assets/Terms/Taplytics/tl_e2e_cypress.mp4";
+import TaplyticsCustomCypressTest from "../../assets/Terms/Taplytics/tl_custom_cypress_test.png";
 
 import LeagueCoops from "../../assets/Terms/League/co-ops.png";
 import LeagueTimeline from "../../assets/Terms/League/league_timeline.png";
@@ -705,27 +706,34 @@ const TaplyticsTerm = () => {
             very much like every other JS assertion library, and this was done
             on purpose. They made it very understandable and use the familiar
             testing language like "describes" and "it", as well as using some
-            own human readable methods that we will get into. The next thing
-            that is nice is that the test(s) will be layed out in a top to
-            bottom readable fashion, and this is largely because of Cypress'
+            own human readable methods that we will get into. The next nice
+            thing is that the test(s) will be layed out in a top to bottom
+            readable fashion, and this is largely because of Cypress'
             chainables. They act very much like Javascript's native promises,
             and will allow you to do asynchronous actions either by yourself, or
             abstracted away through the framework with ease. The main basis of
             these tests are grabbing DOM elements, and interacting with them.
             Cypress lets you get elements in a multitude of ways, and we do so
             here with the <code>cy.get()</code> command, that lets us use any
-            selector we choose (id, class, custom attribute), as demonstrated in
+            selector we want (id, class, custom attribute), as demonstrated in
             this test. Cypress asserts on all checks we have in the test, and
             will fail if any one of these are not met. On a failure you can also
             set retry intervals to try the test again, but that is usually not
             needed if you write the tests to not be flakey.
             <br />
+            <br />
+            <StyledImage src={TaplyticsCustomCypressTest} />
+            <div style={{ fontSize: 15 }}>
+              <i>The Cypress output from the above test</i>
+            </div>
+            <br />
+            <br />
             Adding custom Cypress chainables:
             <pre>
               <code className="language-javascript">
                 {`
+                  // define the new cypress chainable
                   export const addDelayToJourney = (delay: number) => {
-                    // Create email
                     cy.get(getDataTestIdSelector('delayJourneyNodeInList')).click()
                     cy.wait(2000)
                     cy.get(getDataTestIdSelector('delayJourneyNode'))
@@ -748,6 +756,7 @@ const TaplyticsTerm = () => {
                     return cy
                   }
 
+                  // add the custom method to the Cypress global
                   Cypress.Commands.add('tlAddDelayToJourney', addDelayToJourney)
 
 
@@ -760,13 +769,28 @@ const TaplyticsTerm = () => {
               </code>
             </pre>
             <br />
-            You really have no idea what your response is going to look like in
-            JS but Go code self-documents. I really enjoyed that aspect and very
-            rarely did I have to print something to stdout to see what the
-            structure is going to look like, whereas debugging my JS usually
-            involves a lot of console.log’s. Because of working with Golang this
-            term, I have decided to switch to Typescript for all of my future
-            web projects, as I cannot live without typing anymore!
+            This is a slightly more complex example that we currently use in our
+            own Cypress journey tests! All it does is create a journey, add a
+            delay node to that journey, and start it. As you can see from the
+            test structure, we have abstracted all of the DOM interaction logic
+            into separate chainables that can be reused in other journey tests.
+            I have chosen to look into our custom chainable that adds a delay
+            node to our journey. All we do here in the method
+            <code>addDelayToJourney</code> is interact with a journey delay node
+            in our journey interface. Cypress provides us with some nice
+            features like clicking, clearing, inputting and selecting the
+            <i>nth</i> DOM element in a selection. A journey delay node allows
+            you to specify an amount of time to delay a user in a journey, and
+            this method takes an amount as a parameter. You can specify the
+            exact amount in the test (<code>delay</code>), and the custom method
+            will use what is passed in, just like any other function/method.
+            Just reading through the test we can see we open the node, input our
+            specified amount, and close the node again. It looks long, but is
+            actually really super easy. We have more complex tests, but this is
+            really all it boils down to. Cypress gives us the confidence and
+            ease to write end to end tests, with reusable and highly
+            configureable interactions. Overall this framework is fantastic and
+            I will definitely be using it more in the future!
             <br />
             <br />
           </span>
