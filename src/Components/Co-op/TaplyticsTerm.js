@@ -11,10 +11,7 @@ import TaplyticsJourney from "../../assets/Terms/Taplytics/tl_journey.png";
 import TaplyticsHome from "../../assets/Terms/Taplytics/tl_home_meeting.png";
 import TaplyticsE2E from "../../assets/Terms/Taplytics/tl_e2e_cypress.mp4";
 import TaplyticsCustomCypressTest from "../../assets/Terms/Taplytics/tl_custom_cypress_test.png";
-
-import LeagueCoops from "../../assets/Terms/League/co-ops.png";
-import LeagueTimeline from "../../assets/Terms/League/league_timeline.png";
-import WorkatoTool from "../../assets/Terms/League/league_workato_tool.png";
+import TaplyticsDragAndDrop from "../../assets/Terms/Taplytics/tl_drag_and_drop.gif";
 
 let isDirectLink;
 
@@ -796,92 +793,69 @@ const TaplyticsTerm = () => {
           </span>
           <span id="Conclusion">
             <span style={{ fontFamily: "opensans-bold" }}>Conclusion: </span>
-            League has been an unreal experience and I could not have asked for
-            a better placement. The work I was able to achieve over these 4
-            months was exciting, challenging and rewarding. I have learned so
-            much as both a person, and developer, I will take what I have
-            experienced this term throughout my career! Not to mention the work
-            I was doing, but the people I was able to interact with were
-            awesome. Not one person I asked for help would turn me away, and
-            everyone always wanted to see me succeed, no matter what. The
-            mentorship provided to me throughout this placement was remarkable.
-            Now I would just like to thank some people who have made this
-            placement unforgettable. Daniel for being my league mate and a great
-            knowledge base, Damien for being an amazing manager and leader, Anne
-            for running a fantastic student program and Connor for ultimately
-            giving me this opportunity! Thanks to everyone at League who made
-            this term really great. I hope to be back one day!
+            Taplytics has been a great placement and I could not have asked for
+            more. I will take the experiences and skills I have gained here
+            throughout my career, and would love to come back once day. The work
+            I was able to achieve over these 4 months was exciting, challenging
+            and rewarding, not to mention the people I was able to interact with
+            were also awesome. Not one person I asked for help would turn me
+            away, and everyone always wanted to see me succeed. I was really
+            blown away with the product and thought it was legitimately one of
+            the coolest things I have been able to work on, so this was a super
+            cool placement. Some of the companies that use our product everyday
+            are quite big, so I really enjoyed building a product that some
+            seriously influential companies utilize every day. I was really glad
+            that I was able to work with some old co-workers again, and I hope
+            to do it again with everyone I have met here once more! A big thank
+            you goes out to some special people who made this Term fantastic.
+            Jon for being a great manager and someone who I could ask about my
+            future as a developer, Dave for being awesome and teaching me some
+            really cool things throughout this term, the entire Delissio team
+            for creating an awesome environment to work in, and lastly Nik for
+            pestering me to come work here :). Thanks again to everyone at
+            Taplytics, it has been really fun.
             <br />
             <br />
           </span>
           <span id="Extras">
             <span style={{ fontFamily: "opensans-bold" }}>Extras: </span>
-            As mentioned, I have a few extra things to share here regarding my
-            term at League. I would like to talk a little bit more about my
-            custom League Integration Tool, as well as share a blog post written
-            about League’s engineering co-ops!
+            As mentioned, I have a few extra things to share including one of
+            the features I was worked on and how COVID-19 effected this term!
             <br />
             <br />
-            <StyledText fontWeight="bold">League Integration Tool</StyledText>
+            <div style={{ textAlign: "center" }}>
+              <StyledImage src={TaplyticsDragAndDrop} />
+            </div>
+            <div style={{ fontSize: 15, textAlign: "center" }}>
+              <i>The journey builder drag and drop feature I implemented</i>
+            </div>
             <br />
-            <StyledImage src={WorkatoTool} />
-            This tool was created as an attempt to improve our current
-            integration recipe creation and update process. As a quick recap, we
-            at League used an integration service that required integration
-            recipes to be written containing logic regarding how the integration
-            flow would go. We would write these recipes, save them and let the
-            integrations run continuously. We tested them the best we could
-            within the framework’s capabilities, but there was still room for
-            error. I wanted all of our recipe creation and updates to go through
-            a formal review process that would at least add one more step
-            between the development and deploy state. Above all else we would
-            also be able to capture everything in Git to use as a
-            backup/rollback, or to see exactly who made changes when. My
-            proposed solution to this would be to use a custom tool that wrapped
-            all of the backup and review process in an easy to use and intuitive
-            platform. Here is what the tool looked like: … The tool was built
-            using electron and react/redux, as well as utilizing isomorphic git
-            and Github’s + Integration platform’s APIs under the hood. As a
-            recipe developer, you have two flows to go down. The edit recipe
-            will allow you to edit a current recipe running in production. Once
-            the ID of the recipe you wish to edit is entered, the tool will
-            clone the current running recipe and switch all connectors over to
-            our test environment. The recipe will be developed and tested, and
-            then once the developer is confident in the recipe, they will ask
-            for a review from the tool. The tool creates a PR to our repository
-            and awaits a review. Once the recipe has been approved, you can go
-            ahead and merge the recipe from the tool. After requesting the merge
-            from the tool, the PR gets merged into the repo, and the dev recipe
-            with all of the new changes will seamlessly get merged back into the
-            currently running parent recipe. The same goes for the new recipe
-            flow, except the recipe is created and tested, but then once the
-            review passes the recipe is only added to git, as the recipe was
-            already created on our integration platform. There was still lots of
-            work to do when I left, but hopefully it was a step in the right
-            direction!
+            This feature was something that had been in our backlog for over a
+            year, and within the first 2 months of arriving at the company I was
+            determined to get this one to production. Our main product guy Vic
+            came to me at a social event and said "Hey I heard you found this
+            ticket, make it happen!" and the rest is history haha. It was a fun
+            challenge to work on as this made use of the DOM drag API, which was
+            interesting to work with. For some context as to what this feature
+            actually was, when crafting a Journey you can add nodes to the
+            journey canvas in order to position them as you wish. Beforehand you
+            could only click on the nodes in the left sidebar and they would be
+            randomly added to the canvas. This led to some frustrating UX as you
+            were constantly dragging nodes around in the actual journey builder,
+            but when actually adding a node, you would need to click. People
+            would instictively try to drag nodes from the sidebar over to the
+            canvas and that would not work as intended. Now it does! It was
+            fairly straightforward getting the drag and drop API working and
+            adding the ndoe to the canvas, but what was really not easy was
+            getting the node to be placed exactly where the user's mouse was
+            positioned. I will spare you the calculations, but it felt like I
+            was back in math class again!
             <br />
-            <StyledText fontWeight="bold">League Engineering Co-ops</StyledText>
+            <StyledText fontWeight="bold">
+              Working At Home - COVID-19
+            </StyledText>
             <br />
-            One other amazing thing that I got to participate in while at League
-            was the League Student Program. This program set us up to meet some
-            amazing people in League, learn how to grow our careers, make some
-            awesome connections and ultimately get more out of our placement.
-            You can learn some more about the student program and the other
-            engineering co-ops by checking out{" "}
-            <StyledLink
-              href="https://medium.com/inside-league/the-student-series-meet-leagues-legendary-engineering-co-ops-9d2039c5b394"
-              color="#00a5ff"
-              target="_blank"
-            >
-              THIS
-            </StyledLink>{" "}
-            article!
-            <StyledLink
-              href="https://medium.com/inside-league/the-student-series-meet-leagues-legendary-engineering-co-ops-9d2039c5b394"
-              target="_blank>"
-            >
-              <StyledImage src={LeagueCoops} />
-            </StyledLink>
+            covid
             <br />
             <br />
           </span>
