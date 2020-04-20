@@ -356,22 +356,22 @@ const TaplyticsTerm = () => {
             into universally actionable campaigns and experiments where you can
             create unique personalized digital experiences across apps and the
             web. Simplifying that a bit, Taplytics offers a bunch of different
-            services (A/B testing, Launch Control, Email Marketing, Push
-            notifications) and lets clients wrap all of these features into a
-            single campaign, or journey. This lets clients make data driven
-            decisions and also provides unique online experiences that are
-            custom tailored and the best possible fit for each user! This
-            business concept was tough to wrap my head around, much less develop
-            for it! Taplytics gives clients the ability to know what’s going on
-            in the state of their website or app, and how users are behaving,
-            reacting and making decisions under certain conditions. This is done
-            all through an easy to configure "Journey Builder" that requires no
-            development work, and allows clients to do everything themselves!
-            Taplytics was a part of Y Combinator and founded by Cobi Druxerman,
-            Aaron Glazer, and brothers Andrew Norris and Jonathan Norris. This
-            has been one of the most interesting and exciting placements so far,
-            and I hope to be back one day! If you want to see what Taplytics is
-            all about, check them out!{" "}
+            services (A/B testing, Launch Control or Feature Flags, Email
+            Marketing, Push notifications) and lets clients wrap all of these
+            features into a single campaign, or journey. This lets clients make
+            data driven decisions and also provides unique online experiences
+            that are custom tailored and the best possible fit for each user!
+            This business concept was tough to wrap my head around but even more
+            interesting to develop for it! Taplytics gives clients the ability
+            to know what’s going on in the state of their website or app, and
+            how users are behaving, reacting and making decisions under certain
+            conditions. This is done all through an easy to configure "Journey
+            Builder" that requires no development work, and allows clients to do
+            everything themselves! Taplytics was a part of Y Combinator and
+            founded by Cobi Druxerman, Aaron Glazer, and brothers Andrew Norris
+            and Jonathan Norris. This has been one of the most interesting and
+            exciting placements so far, and I hope to be back one day! If you
+            want to see what Taplytics is all about, check them out!{" "}
             <StyledLink
               href="https://www.taplytics.com"
               color="#00a5ff"
@@ -395,12 +395,12 @@ const TaplyticsTerm = () => {
             also had goals and feedback setup through Canada's Information and
             Communication Technology Council (ICTC). It was good to see that
             there are other programs out there furthering Canada's digital
-            advantage in a global economy. My first goal surrounded a decently
-            complex technical implementation, my second related to UI/UX
-            personal design improvements, and my third was a testing piece. I
-            was uncertain of how exactly these goals would play out (especially
-            the second one!), but I was motivated and committed to learn, grow
-            and work my hardest to achieve them.
+            advantage, especially for students. My first goal surrounded a
+            decently complex technical implementation, my second related to
+            UI/UX personal design improvements, and my third was a testing
+            piece. I was uncertain of how exactly these goals would play out
+            (especially the second one!), but I was motivated and committed to
+            learn, grow and work my hardest to achieve them.
             <ol>
               <li>Write or implement a substantial Backend Service</li>
               <li>Improve my design skills (UI & UX)</li>
@@ -433,9 +433,9 @@ const TaplyticsTerm = () => {
             have never done before and was not directly writing code to solve a
             problem. I was adapting legacy solutions to work with our new
             system, and also learned about how we can adapt code for future
-            maintainability. I also wanted to mention how cool Kafka is and that
-            this is something I am definitely going to be working with in the
-            future. Through these experiences I feel that goal one was most
+            maintainability. I also wanted to mention how cool Kafka is, and
+            that this is something I am definitely going to be working with in
+            the future. Through these experiences I feel that goal one was most
             definitely accomplished.
             <br />
             The second goal was something I probably could have worked on
@@ -443,7 +443,7 @@ const TaplyticsTerm = () => {
             out left and right, I really wanted to pick his brain and learn
             more. Being a web developer I have lots of experience on the
             frontend, but I still don't have very strong design skills. Most of
-            the time you get a design handed to you to implement, so I do not
+            the time you get a design handed to you to implement, so I did not
             recognize what makes something a good UX vs a bad UX. The first
             session was basically a design review, in which he reviewed a
             feature I was implementing. This was much like a code review, but we
@@ -454,16 +454,16 @@ const TaplyticsTerm = () => {
             use of a component library (which we use at Taplytics!) and also
             sketching designs out first. Much like planning code, you need to
             plan your design. Component libraries let you be consistent and
-            build on top of other component, while sketching things on paper and
-            actually interacting with them gives you a sense of how it "feels"
-            to use the design, and any obvious pain points. I have actually
-            learned about paper-prototyping in school, so this was a great
-            reminder to actually practice it. Most of my (personal) designs are
-            shoddily cobbled together, and I forgo actually thinking about how
-            the user will feel using these, so his advice was very welcomed.
-            Throughout these sessions I feel like my design capabilities have
-            definitely improved, and I am actively adhering to the advice I was
-            given when developing UI's. Goal #2 check!
+            build on top of other components, while sketching things on paper
+            and actually interacting with them gives you a sense of how it
+            "feels" to use the design, and any obvious pain points. I have
+            actually learned about paper-prototyping in school, so this was a
+            great reminder to actually practice it. Most of my (personal)
+            designs are shoddily cobbled together, and I forgo actually thinking
+            about how the user will feel using these, so his advice was very
+            welcomed. Throughout these sessions I feel like my design
+            capabilities have definitely improved, and I am actively adhering to
+            the advice I was given when developing UI's. Goal #2 check!
             <br />
             My last goal relates to something that most developers agree is
             absolutely necessary, but sometimes forgotten. I personally have
@@ -544,25 +544,25 @@ const TaplyticsTerm = () => {
             <StyledImage src={TaplyticsJourney} />
             <div style={{ fontSize: 15 }}>
               <i>
-                A simple journey that filters users based on state, adds a
-                delay, then sends an email OR A/B tests the other filtered
-                users, sends stream A an email, sends stream B a push and exits.
-                This is just an example of how you have complete control over
-                what your users see and recieve based on attributes clients can
-                configure themselves.
+                A simple journey that first filters users based on state. Down
+                one branch we add a delay, send stream A an email and exit. Down
+                stream B we A/B test users where we send 40% an email and 60% a
+                push notification, and then exit. This is just an example of how
+                you can tailor experiences for your users based on attributes
+                clients can configure themselves.
               </i>
             </div>
             <br />
             Some of the skills that I needed to succeed at this job were
             obviously some prior web dev/Javascript knowledge, but also a
-            passion to learn. I had already had practice with React/Redux and
+            passion to learn. I already had practice with React/Redux and
             Node/Express + Mongo/Postgres which was definitely a plus, but the
             rest of our Backend stack was completely new to me. I really love to
             learn new things and want to do the very best I can at any job I’m
             placed in, so in my opinion a motivation to learn is one of the best
             skills you can have for any job. Software design classes had also
             prepared me for agile and scrum team environments, so I understood
-            our practices and methodologies almost right off the bat!
+            our practices and methodologies right off the bat!
             <br />
             Some skills that I gained during this placement happened to align
             pretty well with the goals that I set for myself. I learned about
@@ -603,12 +603,12 @@ const TaplyticsTerm = () => {
             of relationships, and how that is one thing that sometimes gets
             missed in the academic portion. I was lucky enough to know a few
             people here at Taplytics that I had worked with before, and that was
-            how I eventually got put in contact with recruiting, and eventually
-            landed the job. Without making (and keeping!) these connections, I
-            probably would not have been working here today. I think its
-            valuable to not only be a great developer as a co-op, but also be a
-            social and good person to stay connected with. You never know when
-            the connections you have made might help you out later!
+            how I got put in contact with recruiting, and eventually landed the
+            job. Without making (and keeping!) these connections, I probably
+            would not have been working here today. I think its valuable to not
+            only be a great developer as a co-op, but also be a social and good
+            person to stay connected with. You never know when the connections
+            you have made might help you out later!
             <br />
             <br />
           </span>
@@ -628,9 +628,9 @@ const TaplyticsTerm = () => {
               <i>An example end to end journey simulation running in Cypress</i>
             </div>
             <br />
-            As you can see, this test actually interacts with the application,
-            and is a simulated user. It actually visits pages, clicks, interacts
-            with inputs and can send and wait for requests. It really is a cool
+            As you can see, this test actually interacts with the application as
+            a simulated user. It actually visits pages, clicks, interacts with
+            inputs and can send and wait for requests. It really is a cool
             framework that allows some super in depth testing to be done. A lot
             of the tests you would do with Cypress are smaller integration tests
             that depend solely on the frontend. In the test above, we have this
@@ -712,11 +712,11 @@ const TaplyticsTerm = () => {
             these tests are grabbing DOM elements, and interacting with them.
             Cypress lets you get elements in a multitude of ways, and we do so
             here with the <code>cy.get()</code> command, that lets us use any
-            selector we want (id, class, custom attribute), as demonstrated in
-            this test. Cypress asserts on all checks we have in the test, and
-            will fail if any one of these are not met. On a failure you can also
-            set retry intervals to try the test again, but that is usually not
-            needed if you write the tests to not be flakey.
+            selector we want (id, class, custom attribute). Cypress asserts on
+            all checks we have in the test, and will fail if any one of these
+            are not met. On a failure you can also set retry intervals to try
+            the test again, but that is usually not needed if you write the
+            tests to not be flakey.
             <br />
             <br />
             <StyledImage src={TaplyticsCustomCypressTest} />
@@ -772,7 +772,7 @@ const TaplyticsTerm = () => {
             test structure, we have abstracted all of the DOM interaction logic
             into separate chainables that can be reused in other journey tests.
             I have chosen to look into our custom chainable that adds a delay
-            node to our journey. All we do here in the method
+            node to our journey. All we do here in the method{" "}
             <code>addDelayToJourney</code> is interact with a journey delay node
             in our journey interface. Cypress provides us with some nice
             features like clicking, clearing, inputting and selecting the
@@ -783,11 +783,11 @@ const TaplyticsTerm = () => {
             will use what is passed in, just like any other function/method.
             Just reading through the test we can see we open the node, input our
             specified amount, and close the node again. It looks long, but is
-            actually really super easy. We have more complex tests, but this is
-            really all it boils down to. Cypress gives us the confidence and
-            ease to write end to end tests, with reusable and highly
-            configureable interactions. Overall this framework is fantastic and
-            I will definitely be using it more in the future!
+            actually super easy. We have more complex tests, but this is really
+            all it boils down to. Cypress gives us the confidence and ease to
+            write end to end tests, with reusable and highly configureable
+            interactions. Overall this framework is fantastic and I will
+            definitely be using it more in the future!
             <br />
             <br />
           </span>
@@ -801,9 +801,9 @@ const TaplyticsTerm = () => {
             were also awesome. Not one person I asked for help would turn me
             away, and everyone always wanted to see me succeed. I was really
             blown away with the product and thought it was legitimately one of
-            the coolest things I have been able to work on, so this was a super
-            cool placement. Some of the companies that use our product everyday
-            are quite big, so I really enjoyed building a product that some
+            the coolest things I have been able to work on, so this was a great
+            placement. Some of the companies that use our product everyday are
+            quite big, so I really enjoyed building a product that some
             seriously influential companies utilize every day. I was really glad
             that I was able to work with some old co-workers again, and I hope
             to do it again with everyone I have met here once more! A big thank
@@ -820,7 +820,8 @@ const TaplyticsTerm = () => {
           <span id="Extras">
             <span style={{ fontFamily: "opensans-bold" }}>Extras: </span>
             As mentioned, I have a few extra things to share including one of
-            the features I was worked on and how COVID-19 effected this term!
+            the features I worked on and how a looming pandemic affected this
+            co-op term.
             <br />
             <br />
             <div style={{ textAlign: "center" }}>
@@ -834,29 +835,48 @@ const TaplyticsTerm = () => {
             year, and within the first 2 months of arriving at the company I was
             determined to get this one to production. Our main product guy Vic
             came to me at a social event and said "Hey I heard you found this
-            ticket, make it happen!" and the rest is history haha. It was a fun
+            ticket, make it happen!" and the rest is history 😁. It was a fun
             challenge to work on as this made use of the DOM drag API, which was
             interesting to work with. For some context as to what this feature
             actually was, when crafting a Journey you can add nodes to the
-            journey canvas in order to position them as you wish. Beforehand you
-            could only click on the nodes in the left sidebar and they would be
-            randomly added to the canvas. This led to some frustrating UX as you
-            were constantly dragging nodes around in the actual journey builder,
-            but when actually adding a node, you would need to click. People
+            journey canvas in order to position them as you wish. Beforehand,
+            you could only click on the nodes in the left sidebar and they would
+            be randomly added to the canvas. This led to some frustrating UX as
+            you were constantly dragging nodes around in the actual journey
+            builder, but when adding a node, you would need to click. People
             would instictively try to drag nodes from the sidebar over to the
             canvas and that would not work as intended. Now it does! It was
             fairly straightforward getting the drag and drop API working and
-            adding the ndoe to the canvas, but what was really not easy was
+            adding the node to the canvas, but what was really not easy was
             getting the node to be placed exactly where the user's mouse was
             positioned. I will spare you the calculations, but it felt like I
             was back in math class again!
+            <br />
             <br />
             <StyledText fontWeight="bold">
               Working At Home - COVID-19
             </StyledText>
             <br />
-            covid
+            One other small thing I wanted to touch on was how COVID-19 affected
+            this co-op placement. I first wanted to say that I was very lucky to
+            be able to continue my placement and adapt to the current
+            precautions put in place. Many people (including some I know) have
+            lost jobs or internships becuase of this pandemic, so I was very
+            thankful to be able to stay with Taplytics and work pretty normally.
             <br />
+            Although this was a huge curveball, I have learned some valuable
+            things about working from home and communicating better with
+            teammates via mediums like slack and zoom. I was always one to
+            prefer coming into the office and working around others (and still
+            do!), but this was a good change as working from home is sometimes
+            needed and now lots of jobs in this sector are entirely remote. It
+            has also given me more time (no more commute!) which is always nice,
+            and I now get to spend that time with my family.
+            <br />
+            Although this is a tough time, I have definitely made the best of it
+            and want to thank everyone at Taplytics for making this a great
+            experience. I will surely never forget this placement and the crazy
+            time we are living in now!
             <br />
           </span>
         </StyledText>
