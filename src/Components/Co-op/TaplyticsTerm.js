@@ -820,8 +820,8 @@ const TaplyticsTerm = () => {
           <span id="Extras">
             <span style={{ fontFamily: "opensans-bold" }}>Extras: </span>
             As mentioned, I have a few extra things to share including one of
-            the features I worked on and how a looming pandemic affected this
-            co-op term.
+            the features I worked on and how a pandemic affected this co-op
+            term.
             <br />
             <br />
             <div style={{ textAlign: "center" }}>
@@ -861,22 +861,23 @@ const TaplyticsTerm = () => {
             this co-op placement. I first wanted to say that I was very lucky to
             be able to continue my placement and adapt to the current
             precautions put in place. Many people (including some I know) have
-            lost jobs or internships becuase of this pandemic, so I was very
-            thankful to be able to stay with Taplytics and work pretty normally.
+            lost jobs or internships because of this pandemic, so I was very
+            thankful to be able to stay with Taplytics and work normally.
             <br />
             Although this was a huge curveball, I have learned some valuable
             things about working from home and communicating better with
             teammates via mediums like slack and zoom. I was always one to
             prefer coming into the office and working around others (and still
-            do!), but this was a good change as working from home is sometimes
+            am!), but this was a good change as working from home is sometimes
             needed and now lots of jobs in this sector are entirely remote. It
-            has also given me more time (no more commute!) which is always nice,
-            and I now get to spend that time with my family.
+            has also given me more time (no more commute!), which is always nice
+            as I now get to spend that time with my family or working on other
+            interests.
             <br />
             Although this is a tough time, I have definitely made the best of it
             and want to thank everyone at Taplytics for making this a great
             experience. I will surely never forget this placement and the crazy
-            time we are living in now!
+            time this had been!
             <br />
           </span>
         </StyledText>
