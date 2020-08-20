@@ -12,7 +12,7 @@ export default {
       ", whether that be open source projects, internships, or new technologies, ",
     image: "profilepic.jpg",
     bio:
-      "I am a software engineer. Not only do I like to program, but I am passionate about writing clean, smart, and efficient code! Over my schooling and work terms I have been exposed to many languages and frameworks, but some of my favourites are Javascript, C Go, and Python. I recently started my dive into web development, more specifically using the ReactJS/NodeJS libraries. I hope to explore more full stack opportunities in the future!",
+      "I am a software engineer. Not only do I like to program, but I am passionate about writing clean, smart, and efficient code! Over my schooling and work terms I have been exposed to many languages and frameworks, but some of my favourites are Javascript, C, Go, and Ruby. I recently started my dive into web development, more specifically using the ReactJS/NodeJS libraries. I hope to explore more full stack opportunities in the future!",
     contactmessage: "Drop me a line:",
     email: "me@alexmontague.ca",
     phone: "",
@@ -75,9 +75,17 @@ export default {
     ],
     work: [
       {
+        company: "Shopify",
+        title: "Web Developer (Internship)",
+        years: "May 2020 - August 2020",
+        description:
+          "Shopify lets entrepreneurs create an ecommerce website that helps find customers, drive sales, and manage your day-to-day. I joined the App Management team where I was working as a Web Developer, working with React & Typescript, as well as Ruby + Rails. We were responsible for making sure Partners (app developers or creators) had the smoothest experience possible with Shopify and our App Ecosystem.",
+        icon: "shopify",
+      },
+      {
         company: "Taplytics",
-        title: "Full Stack Developer",
-        years: "January 2020 - Present",
+        title: "Full Stack Developer (Internship)",
+        years: "January 2020 - April 2020",
         description:
           "Taplytics provides companies a unique way to improve their marketing techniques. Utilizing A/B testing, Launch Control, and Push Notifications, clients can easily customize and create specific marketing journeys for different types of clients to experience. I am currently working with React/Redux for our web apps, Node/Express for our services, and Mongo, PSQL, Kafka and Redis for our data storage/transportation. Was a part of the delivery team, where I was able to uniquely impact our clients with journey features, end to end testing and new library implementation.",
         icon: "taplytics",
@@ -92,7 +100,7 @@ export default {
       },
       {
         company: "League Inc",
-        title: "Full Stack Developer",
+        title: "Full Stack Developer (Internship)",
         years: "May 2019 - August 2019",
         description:
           "League is an all digital health and wellness platform specializing in employer benefits. The app gives employees the ability to customize and choose their benefits to their needs, while letting employers easily manage and track their employees benefits, spending, and accounts. League was rated LinkedIn's 4th top startup in Canada, and it was a fantastic experience! I was working as a Full Stack developer writing ReactJS and Redux on the frontend, and Golang on the backend. My cohort of interns wrote a cool article about our time at League, check it out",
@@ -100,7 +108,7 @@ export default {
       },
       {
         company: "Coinsquare",
-        title: "Student Web Developer ",
+        title: "Student Web Developer (Internship)",
         years: "May 2018 - December 2019",
         description:
           "Coinsquare is a 21st century financial institution specializing in trading and managing cryptocurrencies. Coinsquare was rated the 2nd most sought after startup in Canada by LinkedIn! I joined the team as a student web developer and have been working on our web application for both the front end and backend teams. As one of Coinsquare's first interns, I had the pleasure of participating and presenting in the first ever Coinsquare hackathon, as well as being able to be a fully functioning and independent developer! This was an absolutely amazing placement and I have learned so much not just about web development, but also about blockchain technology, project management, leadership and communication in an agile team! Check out an article I wrote about my experiences ",
@@ -114,6 +122,13 @@ export default {
         text:
           "I have been doing a lot of frontend work with the react library, and I absolutely love it! It is so versatile and is my go to for frontend web development. Pairing React with some other very powerful libraries and frameworks that I like (redux, redux sagas, axios, styled components) makes for a super strong frontend stack!",
       },
+      {
+        imageSrc: `${publicAssetPath}/images/tech/typescript.png`,
+        header: "Typescript",
+        text:
+          "I have become very fond of using Typescript in web development, and I love strong typing. I don't think I will be using regular JS anytime soon anymore!",
+      },
+
       {
         imageSrc: `${publicAssetPath}/images/tech/node.png`,
         header: "NodeJS",
@@ -131,6 +146,12 @@ export default {
         header: "Golang",
         text:
           "I am currently also exploring Go development for fast backend services, as well as networking. I like the C feel the language gives, but with modern features and strict typing.",
+      },
+      {
+        imageSrc: `${publicAssetPath}/images/tech/ruby.png`,
+        header: "Ruby",
+        text:
+          "I have recently started working in Ruby/Rails, and I am enjoying the scriptyness of it so far!",
       },
       {
         imageSrc: `${publicAssetPath}/images/tech/mongo.png`,

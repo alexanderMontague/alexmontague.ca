@@ -8,8 +8,8 @@ import { Carousel } from "react-responsive-carousel";
 const GradientBackground = styled.div`
   background-image: linear-gradient(
     to bottom right,
-    ${(props) => props.companyColors[0]},
-    ${(props) => props.companyColors[1]}
+    ${props => props.companyColors[0]},
+    ${props => props.companyColors[1]}
   );
   height: 100%;
   display: flex;
@@ -68,7 +68,7 @@ const HeaderText = styled.div`
 
 const Paragraph = styled.div`
   padding-top: 30px;
-  color: ${(props) => (props.textColor ? props.textColor : "darkslategrey")};
+  color: ${props => (props.textColor ? props.textColor : "darkslategrey")};
 `;
 
 const CarouselContainer = styled.div`
@@ -114,13 +114,13 @@ const RecruitingComponent = ({
   textColor = null,
 }) => {
   const renderPortfolioItems = () => {
-    const showcasedProjects = resume.portfolio.projects.filter((project) =>
+    const showcasedProjects = resume.portfolio.projects.filter(project =>
       ["Cryptowatch", "Book Buy", "am.ca Server", "Awesome Ancestors"].includes(
         project.title
       )
     );
 
-    return showcasedProjects.map((project) => {
+    return showcasedProjects.map(project => {
       return (
         <div
           className="portfolioItem"
@@ -150,7 +150,7 @@ const RecruitingComponent = ({
                   padding: "10px 0",
                 }}
               >
-                {project.tech.map((tech) => (
+                {project.tech.map(tech => (
                   <img
                     key={tech}
                     src={`public/images/tech/${tech}.png`}
@@ -213,7 +213,7 @@ const RecruitingComponent = ({
 
       <MainContainer>
         <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-          {resume.main.social.map((item) => (
+          {resume.main.social.map(item => (
             <StyledLink
               key={item.url}
               href={item.url}

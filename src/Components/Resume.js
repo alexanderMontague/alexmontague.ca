@@ -3,6 +3,7 @@ import TechItem from "./TechItem";
 import coinsquareIcon from "../assets/icons/coinsquare-icon.jpg";
 import leagueIcon from "../assets/icons/league-icon.png";
 import taplyticsIcon from "../assets/icons/taplytics-icon.jpg";
+import shopifyIcon from "../assets/icons/shopify-icon.png";
 import htIcon from "../assets/icons/ht-icon.jpg";
 import guelphIcon from "../assets/icons/guelph-icon.png";
 import axios from "axios";
@@ -15,6 +16,7 @@ const iconMap = {
   coinsquare: coinsquareIcon,
   league: leagueIcon,
   taplytics: taplyticsIcon,
+  shopify: shopifyIcon,
   ht: htIcon,
   guelph: guelphIcon,
 };
@@ -40,13 +42,13 @@ class Resume extends Component {
 
   componentDidMount() {
     axios("https://github-contributions-api.now.sh/v1/alexandermontague").then(
-      (res) => {
+      res => {
         this.parseCommitData(res.data);
       }
     );
   }
 
-  parseCommitData = (data) => {
+  parseCommitData = data => {
     const { dateOneWeekAgo, dateToday } = this.state;
 
     // total commits
@@ -96,7 +98,7 @@ class Resume extends Component {
       dailyContributions,
     } = this.state;
 
-    const educationCollection = education.map((education) => {
+    const educationCollection = education.map(education => {
       return (
         <div key={education.school}>
           <h3 style={{ display: "flex", alignItems: "center" }}>
@@ -121,7 +123,7 @@ class Resume extends Component {
       );
     });
 
-    const workCollection = work.map((work) => {
+    const workCollection = work.map(work => {
       return (
         <div key={work.company}>
           <h3 style={{ display: "flex", alignItems: "center" }}>
@@ -166,7 +168,7 @@ class Resume extends Component {
       );
     });
 
-    const skillsCollection = barSkills.map((skills) => {
+    const skillsCollection = barSkills.map(skills => {
       const className = "bar-expand " + skills.name.toLowerCase();
       return (
         <li key={skills.name}>
@@ -178,6 +180,16 @@ class Resume extends Component {
 
     return (
       <section id="resume">
+        <div className="row work">
+          <div className="three columns header-col">
+            <h1>
+              <span>Work</span>
+            </h1>
+          </div>
+
+          <div className="nine columns main-col">{workCollection}</div>
+        </div>
+
         <div className="row education">
           <div className="three columns header-col">
             <h1>
@@ -190,16 +202,6 @@ class Resume extends Component {
               <div className="twelve columns">{educationCollection}</div>
             </div>
           </div>
-        </div>
-
-        <div className="row work">
-          <div className="three columns header-col">
-            <h1>
-              <span>Work</span>
-            </h1>
-          </div>
-
-          <div className="nine columns main-col">{workCollection}</div>
         </div>
 
         <div className="row skill">
@@ -216,7 +218,7 @@ class Resume extends Component {
               infiniteLoop={true}
               useKeyboardArrows={true}
             >
-              {techSkills.map((skill) => (
+              {techSkills.map(skill => (
                 <TechItem
                   imageSrc={skill.imageSrc}
                   header={skill.header}

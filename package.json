@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://alexmontague.ca",
   "dependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.11.0",
     "autoprefixer": "7.1.6",
     "axios": "^0.18.0",
     "dotenv": "4.0.0",

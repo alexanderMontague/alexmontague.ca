@@ -2,25 +2,30 @@ import React, { Component } from "react";
 import { Route } from "react-router";
 import styled from "styled-components";
 
-import bgImage from "../assets/coop-background.jpg";
 import CoopHeader from "./Co-op/CoopHeader";
 import CoopLanding from "./Co-op/CoopLanding";
 import CoinsquareTerm from "./Co-op/CoinsquareTerm";
 import LeagueTerm from "./Co-op/LeagueTerm";
 import TaplyticsTerm from "./Co-op/TaplyticsTerm";
-
-const bgMap = {
-  landing: `url(${bgImage})`,
-};
+import ShopifyTerm from "./Co-op/ShopifyTerm";
 
 const StyledBackground = styled.div`
-  background-image: ${bgMap["landing"]};
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  @media (max-width: 675px) {
-    background-repeat: repeat;
-  }
+  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(
+      #1d1d1d 25%,
+      #1a1a1a 25%,
+      #1a1a1a 50%,
+      transparent 50%,
+      transparent 75%,
+      #242424 75%,
+      #242424
+    );
+  background-color: #131313;
+  background-size: 20px 20px;
 `;
 
 const StyledBody = styled.div`
@@ -55,23 +60,30 @@ class WorkTermReports extends Component {
               path={`${this.props.match.url}`}
               component={CoopLanding}
             />
+
             <Route
               exact
               path={`${this.props.match.url}/coinsquare`}
               component={CoinsquareTerm}
             />
+
             <Route
               exact
               path={`${this.props.match.url}/league`}
               component={LeagueTerm}
             />
+
             <Route
               exact
               path={`${this.props.match.url}/taplytics`}
               component={TaplyticsTerm}
             />
 
-            {/* ADD NEW WRITE UPS HERE */}
+            <Route
+              exact
+              path={`${this.props.match.url}/shopify`}
+              component={ShopifyTerm}
+            />
           </StyledContent>
         </StyledBody>
       </StyledBackground>

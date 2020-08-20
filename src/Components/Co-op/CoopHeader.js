@@ -27,8 +27,12 @@ const StyledToggleButton = styled.img`
   width: 30px;
   cursor: pointer;
   transition: transform 300ms ease-in-out;
-  transform: ${(props) => props.open && css`rotate(90deg)`};
+  transform: ${props => props.open && css`rotate(90deg)`};
   z-index: 100;
+
+  @media (max-width: 835px) {
+    margin-left: 15px;
+  }
 `;
 
 const StyledSlideDown = styled(SlideDown)`
@@ -65,8 +69,8 @@ const StyledBackButton = styled(Link)`
 `;
 
 const StyledText = styled.h5`
-  color: ${(props) => props.color || "#f7f9fb"};
-  font-size: ${(props) => props.fontSize || "20px"};
+  color: ${props => props.color || "#f7f9fb"};
+  font-size: ${props => props.fontSize || "20px"};
   line-height: 20px;
   z-index: 100;
 
@@ -95,7 +99,7 @@ class CoopHeader extends Component {
       { company: "Coinsquare", route: "coinsquare" },
       { company: "League Inc", route: "league" },
       { company: "Taplytics", route: "taplytics" },
-      { company: "Work Term 4", route: "" },
+      { company: "Shopify", route: "shopify" },
     ],
   };
 
@@ -105,7 +109,7 @@ class CoopHeader extends Component {
     });
   };
 
-  updateTermHandler = (term) => {
+  updateTermHandler = term => {
     const { updateSelectedTerm } = this.props;
     updateSelectedTerm(term);
     this.toggleMenu();
@@ -115,7 +119,7 @@ class CoopHeader extends Component {
     const { baseURL, coopTerms } = this.state;
     return (
       <ul style={{ margin: 0, marginTop: "-5px" }}>
-        {coopTerms.map((term) => (
+        {coopTerms.map(term => (
           <StyledItem
             to={`${baseURL}${term.route}`}
             onClick={this.toggleMenu}
