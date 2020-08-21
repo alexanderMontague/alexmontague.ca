@@ -927,17 +927,43 @@ const ShopifyTerm = () => {
             resolver functions is definitely the most challenging part, but it
             gets easier with practice!
             <br />
-            {/* GraphiQL here */}
-            GRAPHIQL IFRAME GOES HERE!!!!!!!!!!! (WIP)
             <br />
-            <iframe src="https://api.alexmontague.ca/graphiql" />
+            <iframe
+              style={{
+                width: "100%",
+                height: 600,
+              }}
+              src={
+                process.env.NODE_ENV === "development"
+                  ? "http://192.168.0.178:8088/graphiql"
+                  : "https://api.alexmontague.ca/graphiql"
+              }
+            />
             <div style={{ fontSize: 15 }}>
               <i>
                 Play around with this example GraphiQL interface! It uses the
-                same schemas defined in the examples.
+                same schemas defined in the examples. Try copy, pasting and
+                running the below query!
               </i>
             </div>
+            <pre>
+              <code className="language-graphql">
+                {`
+    query getBooks{
+      getBooks {
+        id
+        title
+        isbn
+        authorID
+      }
+    }
+                `}
+              </code>
+            </pre>
+            Hopefully you get the feel of GQL, and can see how powerful this
+            framework really is!
           </span>
+          <br />
           <br />
           <span id="Conclusion">
             <span style={{ fontFamily: "opensans-bold" }}>Conclusion: </span>
