@@ -41,11 +41,11 @@ class Resume extends Component {
   };
 
   componentDidMount() {
-    axios("https://github-contributions-api.now.sh/v1/alexandermontague").then(
-      res => {
-        this.parseCommitData(res.data);
-      }
-    );
+    axios(
+      "https://cors-anywhere.herokuapp.com/https://github-contributions.now.sh/api/v1/alexanderMontague"
+    ).then(res => {
+      this.parseCommitData(res.data);
+    });
   }
 
   parseCommitData = data => {
