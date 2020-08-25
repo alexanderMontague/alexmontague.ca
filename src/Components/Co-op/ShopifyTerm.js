@@ -1036,7 +1036,7 @@ const ShopifyTerm = () => {
             If you want to read about my experiences working at a Digital by
             Default company and fully remote, check out{" "}
             <StyledLink
-              href="https://www.medium.com/TODO/WRITE/BLOG/FOR/AJ"
+              href="https://medium.com/@xturnermonty/shopify-internship-work-from-home-edition-a53db44d5db0"
               color="#00a5ff"
               target="_blank"
             >
