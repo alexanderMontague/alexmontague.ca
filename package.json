@@ -6,7 +6,7 @@
   "dependencies": {
     "@babel/plugin-proposal-optional-chaining": "^7.11.0",
     "autoprefixer": "7.1.6",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "dotenv": "4.0.0",
     "fs-extra": "3.0.1",
     "moment": "^2.24.0",
