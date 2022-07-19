@@ -119,7 +119,7 @@ class Resume extends Component {
 
     const workCollection = work.map(work => {
       return (
-        <div key={work.company}>
+        <div key={`${work.company}-${work.title}`}>
           <h3 style={{ display: "flex", alignItems: "center" }}>
             {work.company}
             <img
