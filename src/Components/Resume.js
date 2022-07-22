@@ -44,7 +44,7 @@ class Resume extends Component {
 
   componentDidMount() {
     axios(
-      "https://cors.bridged.cc/https://github-contributions.vercel.app/api/v1/alexanderMontague"
+      "https://api.alexmontague.ca/cors?url=https://github-contributions.vercel.app/api/v1/alexanderMontague"
     ).then(res => {
       this.parseCommitData(res.data);
     });

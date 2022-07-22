@@ -1,6 +1,10 @@
 const resumeLink =
   "https://drive.google.com/open?id=1V4JzX-GK8upqpSdcKO8DLT38PV5Yt6Q0";
-const publicAssetPath = "public";
+const baseURL =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:3010"
+    : "https://www.alexmontague.ca";
+const publicAssetPath = "public/images/portfolio";
 
 export default {
   main: {
@@ -9,7 +13,7 @@ export default {
     description: "I am always looking for ",
     description2: ". If you'd like to chat, drop me a line!",
     image: "profilepic.jpg",
-    bio: "I'm currently based in beautiful Toronto, Ontario, Canada where I probably code a little too much. When I'm not working my day job, I can be found jamming on Web3 projects, hitting the Gym, or hanging out in Trinity Bellwoods Park! I have a recent passion for engaging and learning about the Web3/Crypto/DeFi space. I have been a Crypto investor for 5+ years, but never had the opportunity to build software on these platforms!",
+    bio: "I'm currently based in beautiful Toronto, Ontario, Canada where I probably code a little too much. When I'm not working my day job, I can be found jamming on Web3 projects, hitting the Gym, or hanging out in Trinity Bellwoods Park! I have a recent passion for developing and learning about the Web3/Crypto/DeFi space. I have been a Crypto investor for 5+ years, but never had the opportunity to build software on these platforms. So lets go!",
     contactmessage: "Drop me a line:",
     email: "me@alexmontague.ca",
     phone: "",
@@ -84,7 +88,7 @@ export default {
         title: "Principal Engineer",
         years: "Nov 2021 - Present",
         description:
-          "Was the first primary Engineer on the Keys Token Engineering team. Helped in building the infrastructure around one of the most disruptive Web3 Luxury and Virtual Real-estate companies in the space. Built multiple Dapps, Landing Pages, and APIs for Keys Token. Generated $10 Million+ USD from MetaMansions NFT mint event. Keys Token, Meta Mansions, and Project Mercury are all Keys Token products that I have systematically helped engineer and build from the ground up.",
+          "Was the first primary Engineer on the Keys Token Engineering team. Helped build out the infrastructure for one of the most disruptive Web3 Luxury and Virtual Real-estate companies in the space today. Built multiple Dapps, Landing Pages, and APIs for Keys Token. Generated $10 Million+ USD from MetaMansions NFT mint event. Keys Token, Meta Mansions, and Project Mercury are all Keys Token products that I have systematically helped engineer and build from the ground up with proprietary Smart Contracts, Authentication systems, and Web2 --> Web3 solutions.",
         icon: "keys",
       },
       {
@@ -130,66 +134,66 @@ export default {
     ],
     techSkills: [
       {
-        imageSrc: `${publicAssetPath}/images/tech/react.png`,
+        imageSrc: `public/images/tech/react.png`,
         header: "ReactJS",
         text: "I have been doing a lot of frontend work with the react library, and I absolutely love it! It is so versatile and is my go to for frontend web development. Pairing React with some other very powerful libraries and frameworks that I like (redux, redux sagas, axios, styled components) makes for a super strong frontend stack!",
       },
       {
-        imageSrc: `${publicAssetPath}/images/tech/typescript.png`,
+        imageSrc: `public/images/tech/typescript.png`,
         header: "Typescript",
         text: "I have become very fond of using Typescript in web development, and I love strong typing. I don't think I will be using regular JS anytime soon anymore!",
       },
 
       {
-        imageSrc: `${publicAssetPath}/images/tech/node.png`,
+        imageSrc: `public/images/tech/node.png`,
         header: "NodeJS",
         text: "After recently branching out into backend web development, node, express and knex are some of the tools I am using to build my backend architecture. I enjoy writing Javascript, and this pairs well with a frontend Javascript framework.",
       },
       {
-        imageSrc: `${publicAssetPath}/images/tech/c.png`,
+        imageSrc: `public/images/tech/c.png`,
         header: "C",
         text: "The C Programming language is the main language taught at UofG, and probably my strongest language. I liked the low-levelness of this language, and my algorithms and data structures classes all utilized C. Learning this language made me appreciate dynamic languages, but also allowed me to understand how they work behind the scenes.",
       },
       {
-        imageSrc: `${publicAssetPath}/images/tech/golang.png`,
+        imageSrc: `public/images/tech/golang.png`,
         header: "Golang",
         text: "I am currently also exploring Go development for fast backend services, as well as networking. I like the C feel the language gives, but with modern features and strict typing.",
       },
       {
-        imageSrc: `${publicAssetPath}/images/tech/ruby.png`,
+        imageSrc: `public/images/tech/ruby.png`,
         header: "Ruby",
         text: "I have recently started working in Ruby/Rails, and I am enjoying the scriptyness of it so far!",
       },
       {
-        imageSrc: `${publicAssetPath}/images/tech/mongo.png`,
+        imageSrc: `public/images/tech/mongo.png`,
         header: "MongoDB",
         text: "Document based or non-relational databases are my go to for a quick and easy DB. I love the flexibility they provide and how easy they scale horizontally. I use Mongo for most of my personal projects.",
       },
       {
-        imageSrc: `${publicAssetPath}/images/tech/mysql.png`,
+        imageSrc: `public/images/tech/mysql.png`,
         header: "SQL",
         text: "After learning SQL at school through projects, I was able use these skills at previous co-ops where we utilized MySQL and PostgreSQL. I still have much to learn (and my upcoming database course will help) in terms of relational databases, but I am also exploring the use of heavy queries for data science and data analysis.",
       },
       {
-        imageSrc: `${publicAssetPath}/images/tech/firebase.png`,
+        imageSrc: `public/images/tech/firebase.png`,
         header: "Firebase",
         text: "After exploring the whole firebase ecosystem for a side project, I can say that I really enjoy using it. I utilized almost everything firebase had to offer including its firestore, cloud functions, storage buckets, authentication and hosting. I use firebase to quickly spin up a test DB, or for less extensive native or web apps.",
       },
       {
-        imageSrc: `${publicAssetPath}/images/tech/java.png`,
+        imageSrc: `public/images/tech/java.png`,
         header: "Java",
         text: "Java is my favourite OO language and I have been programming with Java since highschool. I made my first graphical application with Java while working at my fist job, check it out below!",
       },
       {
-        imageSrc: `${publicAssetPath}/images/tech/python.png`,
+        imageSrc: `public/images/tech/python.png`,
         header: "Python",
         text: "Python is something I am still exploring/learning, but I am very interested in it as I would like to explore AI/Machine learning in the future. Not to mention no more curly braces and semicolons :)",
       },
     ],
     barSkills: [
       {
-        name: "ReactJS/Redux",
-        level: "90%",
+        name: "ReactJS/Typescript/Redux",
+        level: "95%",
       },
       {
         name: "Git",
@@ -220,74 +224,85 @@ export default {
   portfolio: {
     projects: [
       {
-        title: "Cryptowatch",
+        title: "Meta Mansions",
+        description:
+          "Luxury NFT collection of 8,888 unique digital mansions built on Ethereum. Marketing landing page and Web3 Mint Page supporting over 10k concurrent requests. Built with vanilla HTML, SCSS, and TS to keep things lightweight. Check out the <a href='https://opensea.io/collection/metamansionsbykeys' target='_blank'>Opensea page</a> for more info! ",
+        asset: `${baseURL}/${publicAssetPath}/metamansions.mov`,
+        links: {
+          github: "https://github.com/Keys-Token",
+          hosted: "https://www.metamansionsbykeys.com",
+        },
+        tech: ["typescript", "scss", "node", "psql"],
+      },
+      {
+        title: "Keys Token",
         description:
           "An all in one web application to track and manage your crypto assets. No real money needed, just select the coin, the amount, and date bought and it will do the rest for you. This has been my first real web app that is constantly being developed.",
-        image: "cryptoWatch.png",
+        asset: `${baseURL}/${publicAssetPath}/keystoken.io.mov`,
         links: {
-          github: "https://github.com/alexanderMontague/CryptoWatch",
-          hosted: "https://cryptowatch.web.app/",
+          github: "https://github.com/Keys-Token",
+          hosted: "https://www.keystoken.io",
         },
-        tech: ["react", "node", "mongo"],
+        tech: ["typescript", "react", "redux", "node", "psql", "nginx"],
       },
       {
         title: "Book Buy",
         description:
           "Book Buy offers students a simple way of finding, buying and selling their textbooks. Book Buy instantly connects buyers and sellers for used textbooks that help students save money, time and effort. Created with a partner at The University of Guelph.",
-        image: "BookBuyLanding.png",
+        asset: `${baseURL}/${publicAssetPath}/BookBuyLanding.png`,
         links: {
           github: "https://github.com/alexanderMontague/BookBuy",
           hosted: "https://www.bookbuy.ca/",
         },
-        tech: ["react", "firebase"],
+        tech: ["react", "javascript", "firebase"],
       },
       {
         title: "am.ca Server",
         description:
-          "My personal server hosted on a raspberry pi that I use for alexmontague.ca. Try pinging <code><a href='http://api.alexmontague.ca/resume' target='_blank'>api.alexmontague.ca/resume</a></code> for a JSON representation of my resume! Written using Golang and configured using nginx. I used this as an opportunity to learn more about Go and Networking!",
-        image: "pi_server.png",
+          "My personal server hosted on a raspberry pi that I use for alexmontague.ca. Try pinging <code><a href='https://api.alexmontague.ca/resume' target='_blank'>api.alexmontague.ca/resume</a></code> for a JSON representation of my resume! Written using Golang and configured using nginx. I used this as an opportunity to learn more about Go and Networking!",
+        asset: `${baseURL}/${publicAssetPath}/pi_server.png`,
         links: {
           github: "https://github.com/alexanderMontague/am.ca-server",
           hosted: "https://api.alexmontague.ca",
         },
         tech: ["golang", "nginx", "pi"],
       },
-      {
-        title: "BubbleT",
-        description:
-          "BubbleT is an app that collects and displays salary records from Canada's public sector high earners. BubbleT was a team project for System Analysis and Design in Applications (CIS*3750, Winter 2019).",
-        image: "bubbleT.png",
-        links: {
-          github: "https://github.com/alexanderMontague/bubbleT",
-        },
-        tech: ["javascript", "node"],
-      },
-      {
-        title: "Coinsquare Dashboard",
-        description:
-          "Dashboard application that was built in 4 hours for Coinsquare's first ever internal Hackathon. This dashboard allowed for constant monitoring of coinsquare's status, jira board, and Github PR data in a visualized way.",
-        image: "CSDashboard.png",
-        links: {
-          github: "https://github.com/alexanderMontague/coinsquare-dashboard",
-          hosted: "https://alexandermontague.github.io/coinsquare-dashboard/",
-        },
-        tech: ["react"],
-      },
-      {
-        title: "Awesome Ancestors",
-        description:
-          "This program utilizes the GEDCOM file format (file format that reflects and displays ancestral data in a specific way. Used in sites like Ancestory.com), and was created for my 'Angel of Death' course. The program's main purpose is to read in a GEDCOM file, parse all information from the file, and manipulate the data to your liking. The program can create and edit new GEDCOM files, or modify existing files. The web client gives the user an interface to interact with and view the GEDCOM files.",
-        image: "awesomeAncestors.gif",
-        links: {
-          github: "https://github.com/alexanderMontague/Awesome-Ancestors",
-        },
-        tech: ["c", "javascript", "mysql"],
-      },
+      // {
+      //   title: "BubbleT",
+      //   description:
+      //     "BubbleT is an app that collects and displays salary records from Canada's public sector high earners. BubbleT was a team project for System Analysis and Design in Applications (CIS*3750, Winter 2019).",
+      //   asset: `${baseURL}/${publicAssetPath}/bubbleT.png`,
+      //   links: {
+      //     github: "https://github.com/alexanderMontague/bubbleT",
+      //   },
+      //   tech: ["javascript", "node"],
+      // },
+      // {
+      //   title: "Coinsquare Dashboard",
+      //   description:
+      //     "Dashboard application that was built in 4 hours for Coinsquare's first ever internal Hackathon. This dashboard allowed for constant monitoring of coinsquare's status, jira board, and Github PR data in a visualized way.",
+      //   asset: `${baseURL}/${publicAssetPath}/CSDashboard.png`,
+      //   links: {
+      //     github: "https://github.com/alexanderMontague/coinsquare-dashboard",
+      //     hosted: "https://alexandermontague.github.io/coinsquare-dashboard/",
+      //   },
+      //   tech: ["react"],
+      // },
+      // {
+      //   title: "Awesome Ancestors",
+      //   description:
+      //     "This program utilizes the GEDCOM file format (file format that reflects and displays ancestral data in a specific way. Used in sites like Ancestory.com), and was created for my 'Angel of Death' course. The program's main purpose is to read in a GEDCOM file, parse all information from the file, and manipulate the data to your liking. The program can create and edit new GEDCOM files, or modify existing files. The web client gives the user an interface to interact with and view the GEDCOM files.",
+      //   asset: `${baseURL}/${publicAssetPath}/awesomeAncestors.gif`,
+      //   links: {
+      //     github: "https://github.com/alexanderMontague/Awesome-Ancestors",
+      //   },
+      //   tech: ["c", "javascript", "mysql"],
+      // },
       {
         title: "Greens Tracker",
         description:
           "This Java application was created to record and display data recorded during a hand watering shift at my previous Golf Course. This information was usually kept on paper and was an overall inefficient process I wanted to make better.",
-        image: "greensTracker.gif",
+        asset: `${baseURL}/${publicAssetPath}/greensTracker.gif`,
         links: {
           github: "https://github.com/alexanderMontague/GreensTracker",
         },

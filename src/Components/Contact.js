@@ -8,63 +8,55 @@ class Contact extends Component {
       contactEmail: "",
       contactSubject: "",
       contactMessage: "",
-      formFeedbackMsg: ""
+      formFeedbackMsg: "",
     },
-    isFormOnline: false
+    isFormOnline: false,
   };
 
   async componentDidMount() {
-    const formResponse = (await axios("https://api.alexmontague.ca/resume"))
-      .data;
+    try {
+      const formResponse = (await axios("https://api.alexmontague.ca/resume"))
+        .data;
 
-    if (formResponse) {
-      this.setState({ isFormOnline: true });
+      if (formResponse) {
+        this.setState({ isFormOnline: true });
+      }
+    } catch (error) {
+      this.setState({ isFormOnline: false });
     }
   }
 
   updateForm = e => {
     e.preventDefault();
 
-    switch (e.target.name) {
-      case "contactName":
-        this.setState({ contactName: e.target.value });
-        break;
-      case "contactEmail":
-        this.setState({ contactEmail: e.target.value });
-        break;
-      case "contactSubject":
-        this.setState({ contactSubject: e.target.value });
-        break;
-      default:
-        this.setState({ contactMessage: e.target.value });
-        break;
-    }
+    this.setState({
+      ...this.state,
+      formData: {
+        ...this.state.formData,
+        [e.target.name]: e.target.value,
+      },
+    });
   };
 
   sendEmail = e => {
     e.preventDefault();
 
-    const {
-      contactName,
-      contactEmail,
-      contactSubject,
-      contactMessage
-    } = this.state;
+    const { contactName, contactEmail, contactSubject, contactMessage } =
+      this.state.formData;
 
     if (!contactName || !contactEmail || !contactMessage) {
       this.setState({
-        formFeedbackMsg: "Required field missing!"
+        formFeedbackMsg: "Required field missing!",
       });
       return;
     }
 
     axios
       .post("https://api.alexmontague.ca/email", {
-        toEmail: "me@alexmontague.ca",
         fromEmail: contactEmail,
         sender: contactName,
         subject: contactSubject,
-        message: contactMessage
+        message: contactMessage,
       })
       .then(({ data }) => {
         // if error
@@ -75,10 +67,12 @@ class Contact extends Component {
 
         this.setState({
           formFeedbackMsg: "Email Sent Successfully. Thanks!",
-          contactName: "",
-          contactEmail: "",
-          contactSubject: "",
-          contactMessage: ""
+          formData: {
+            contactName: "",
+            contactEmail: "",
+            contactSubject: "",
+            contactMessage: "",
+          },
         });
       });
   };
@@ -107,7 +101,7 @@ class Contact extends Component {
               style={{
                 display: "flex",
                 justifyContent: "center",
-                paddingLeft: "15%"
+                paddingLeft: "15%",
               }}
             >
               <div style={{ color: "#ffffff" }}>{formFeedbackMsg}</div>
@@ -116,6 +110,7 @@ class Contact extends Component {
               {!isFormOnline && (
                 <div style={{ textAlign: "center", color: "#ff0000" }}>
                   Form is currently offline, email me instead!
+                  me@alexmontague.ca
                 </div>
               )}
               <fieldset>
@@ -129,7 +124,7 @@ class Contact extends Component {
                     size="35"
                     id="contactName"
                     name="contactName"
-                    value={this.state.contactName}
+                    value={this.state.formData.contactName}
                     onChange={this.updateForm}
                   />
                 </div>
@@ -145,7 +140,7 @@ class Contact extends Component {
                     size="35"
                     id="contactEmail"
                     name="contactEmail"
-                    value={this.state.contactEmail}
+                    value={this.state.formData.contactEmail}
                     onChange={this.updateForm}
                   />
                 </div>
@@ -159,7 +154,7 @@ class Contact extends Component {
                     size="35"
                     id="contactSubject"
                     name="contactSubject"
-                    value={this.state.contactSubject}
+                    value={this.state.formData.contactSubject}
                     onChange={this.updateForm}
                   />
                 </div>
@@ -175,7 +170,7 @@ class Contact extends Component {
                     rows="15"
                     id="contactMessage"
                     name="contactMessage"
-                    value={this.state.contactMessage}
+                    value={this.state.formData.contactMessage}
                     onChange={this.updateForm}
                   />
                 </div>

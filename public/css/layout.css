@@ -606,8 +606,7 @@ ul#nav li.current a {
   }
 }
 .portfolioImage {
-  width: 55%;
-  height: 50%;
+  max-width: 520px;
   padding-right: 50px;
 }
 @media (max-width: 767px) {
