@@ -1,21 +1,19 @@
 import React from "react";
+import cn from "classnames";
 
 export function ProjectItem({
   project: { title, description, links, tech, asset },
+  vertical = false,
 }) {
   const renderMedia = () => {
-    // const filePath = `public/images/portfolio/${asset}`;
-    // videos are messed up
-
     if (asset.includes(".mov")) {
       // if a video
-      console.log("video", asset);
       return (
         <video
           autoPlay
           loop
           muted
-          playsInLine
+          playsInline
           className="portfolioImage"
           src={asset}
         />
@@ -26,16 +24,16 @@ export function ProjectItem({
   };
 
   return (
-    <div className="portfolioItem">
+    <div className={cn("portfolioItem", vertical && "no-m")}>
       <h5>{title}</h5>
-      <div className="flexMeUp">
+      <div className={cn("flexMeUp", vertical && "verticalFlexMeUp")}>
         {renderMedia()}
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div
             style={{
               display: "flex",
               justifyContent: "space-evenly",
-              paddingTop: 30,
+              paddingTop: 10,
               paddingBottom: 20,
             }}
           >

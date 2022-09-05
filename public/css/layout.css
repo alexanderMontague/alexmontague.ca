@@ -593,13 +593,24 @@ ul#nav li.current a {
   margin: 40px;
   color: black;
 }
+
+.no-m {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 /* .portfolioItem:hover {
   color: #00a5ff;
 } */
 .flexMeUp {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
+.verticalFlexMeUp {
+  flex-direction: column;
+}
+
 @media (max-width: 767px) {
   .flexMeUp {
     flex-direction: column;

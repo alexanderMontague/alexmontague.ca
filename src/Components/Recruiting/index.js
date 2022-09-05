@@ -4,6 +4,7 @@ import { HashLink as Link } from "react-router-hash-link";
 import resume from "../../assets/resumeData.js";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import { ProjectItem } from "../ProjectItem.js";
 
 const GradientBackground = styled.div`
   background-image: linear-gradient(
@@ -11,7 +12,7 @@ const GradientBackground = styled.div`
     ${props => props.companyColors[0]},
     ${props => props.companyColors[1]}
   );
-  height: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -19,10 +20,10 @@ const GradientBackground = styled.div`
 
 const MainContainer = styled.div`
   padding: 25px;
-  width: 65%;
+  max-width: 900px;
 
   @media (max-width: 675px) {
-    width: 90%;
+    max-width: 90%;
   }
 `;
 
@@ -113,81 +114,15 @@ const RecruitingComponent = ({
   companyColors,
   textColor = null,
 }) => {
+  const currCompany = resume.resume.work[0].company;
+
   const renderPortfolioItems = () => {
-    const showcasedProjects = resume.portfolio.projects.filter(project =>
-      ["Cryptowatch", "Book Buy", "am.ca Server", "Awesome Ancestors"].includes(
-        project.title
-      )
+    const showcasedProjects = resume.portfolio.projects.filter(
+      project => !["Greens Tracker"].includes(project.title)
     );
 
     return showcasedProjects.map(project => {
-      return (
-        <div
-          className="portfolioItem"
-          style={{ width: "65%", margin: "30px auto" }}
-          key={project.title}
-        >
-          <h5
-            style={{
-              textAlign: "center",
-              padding: "10px 0",
-              color: textColor ? textColor : "darkslategrey",
-            }}
-          >
-            {project.title}
-          </h5>
-          <span className="flexMeUp" style={{ flexDirection: "column" }}>
-            <img
-              src={`public/images/portfolio/${project.image}`}
-              alt="portfolio item"
-              style={{ height: 250 }}
-            />
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-evenly",
-                  padding: "10px 0",
-                }}
-              >
-                {project.tech.map(tech => (
-                  <img
-                    key={tech}
-                    src={`public/images/tech/${tech}.png`}
-                    style={{ height: 40, width: 40 }}
-                    alt="tech item"
-                  />
-                ))}
-                {project.links.github && (
-                  <StyledLink
-                    href={project.links.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className={"fab fa-2x fa-github"} />
-                  </StyledLink>
-                )}
-                {project.links.hosted && (
-                  <StyledLink
-                    href={project.links.hosted}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className={"fas fa-2x fa-external-link-alt"} />
-                  </StyledLink>
-                )}
-              </div>
-              {/* Be careful with XSS if ever fetching */}
-              <div
-                style={{ color: textColor ? textColor : "darkslategrey" }}
-                dangerouslySetInnerHTML={{
-                  __html: project.description,
-                }}
-              />
-            </div>
-          </span>
-        </div>
-      );
+      return <ProjectItem key={project.title} project={project} vertical />;
     });
   };
 
@@ -226,17 +161,14 @@ const RecruitingComponent = ({
         </div>
         <hr style={{ color: "#ffffff", height: 1, width: "100%" }} />
         <Paragraph textColor={textColor}>
-          {`Hey ${companyName}! My Name is Alex Montague and I am a Software Engineering
-          student studying at the University of Guelph. I will be looking for my
-          third internship starting in January 2020 for a 4 or 8 month
-          placement. I would love to experience everything ${companyName} has to offer.`}
+          {`Hey ${companyName}! I'm Alex Montague and I am a Full Stack Software Engineer currently working at ${currCompany}. I love all things Web2 and Web3, with lots of experience in both. I'm looking to build the next best thing, and I'm interested in all of what ${companyName} has to offer.`}
         </Paragraph>
 
         <Paragraph textColor={textColor}>
           {`I strive to work for innovative, fast moving and agile companies.
-          Thats why I think an internship at ${companyName} would be such a great fit.
-          Utilizing my past internships and side projects, I have been exposed
-          to tech ecosystems ranging from full stack web development and AI/ML
+          Thats why I think ${companyName} would be such a great fit.
+          Utilizing my past work experiences, I have been exposed
+          to tech ecosystems ranging from full stack web development, Web3 and Blockchain development and AI/ML
           prototypes, to low level systems + networking. I would be thrilled
           to work in any area that I have experience in, or hungry for a
           challenge working on something new.`}
@@ -244,10 +176,10 @@ const RecruitingComponent = ({
 
         <Paragraph textColor={textColor}>
           Some technology and frameworks that I am passionate about are
-          React/Redux, NodeJS, Golang, C, Python, Blockchain, Neural Networks,
-          Relational and Document based Databases and Analytics. Below are a few
-          relevant projects that I think showcase my abilities. You can access
-          my{" "}
+          React/Redux, NodeJS/Typescript, Golang, C, Python, Blockchain, Neural
+          Networks, Relational and Document based Databases and Analytics. Below
+          are a few relevant projects that I think showcase my abilities. You
+          can access my{" "}
           <StyledLink
             style={{ textDecoration: "underline" }}
             href={resume.main.resumedownload}
@@ -267,7 +199,9 @@ const RecruitingComponent = ({
             {" "}
             <span style={{ textDecoration: "underline" }}>site!</span>{" "}
           </StyledRouterLink>
-          Thank you for your time and I appreciate the opportunity!
+          <br />
+          <br />
+          Thank you for your time, and I look forward to meeting!
         </Paragraph>
       </MainContainer>
       <CarouselContainer>

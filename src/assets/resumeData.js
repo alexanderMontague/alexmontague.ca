@@ -200,7 +200,7 @@ export default {
         level: "80%",
       },
       {
-        name: "NodeJS/Express",
+        name: "NodeJS/Koa/Express",
         level: "85%",
       },
       {
@@ -226,7 +226,7 @@ export default {
       {
         title: "Meta Mansions",
         description:
-          "Luxury NFT collection of 8,888 unique digital mansions built on Ethereum. Marketing landing page and Web3 Mint Page supporting over 10k concurrent requests. Built with vanilla HTML, SCSS, and TS to keep things lightweight. Check out the <a href='https://opensea.io/collection/metamansionsbykeys' target='_blank'>Opensea page</a> for more info! ",
+          "Luxury NFT collection of 8,888 unique digital mansions built on Ethereum. Marketing landing page and Web3 Mint Page supporting over 10k concurrent requests. Raised $10.8 Million USD on Mint. Built with vanilla HTML, SCSS, and TS to keep things lightweight. Check out the <a href='https://opensea.io/collection/metamansionsbykeys' target='_blank'>Opensea page</a> for more info! ",
         asset: `${baseURL}/${publicAssetPath}/metamansions.mov`,
         links: {
           github: "https://github.com/Keys-Token",
@@ -237,13 +237,24 @@ export default {
       {
         title: "Keys Token",
         description:
-          "An all in one web application to track and manage your crypto assets. No real money needed, just select the coin, the amount, and date bought and it will do the rest for you. This has been my first real web app that is constantly being developed.",
+          "The hub for Keys Token. Includes marketing landing pages, active analytics and email captures, client to server encryption for public routes, and a Web3 Keys Dashboard that a user authenticates with their wallet to see statistics and metrics based on their personal holdings.",
         asset: `${baseURL}/${publicAssetPath}/keystoken.io.mov`,
         links: {
           github: "https://github.com/Keys-Token",
           hosted: "https://www.keystoken.io",
         },
         tech: ["typescript", "react", "redux", "node", "psql", "nginx"],
+      },
+      {
+        title: "Cryptowatch",
+        description:
+          "An all in one web application to track and manage your crypto assets. No real money needed, just select the coin, the amount, and date bought and it will do the rest for you. This has been my first real web app that is constantly being developed.",
+        asset: `${baseURL}/${publicAssetPath}/cryptoWatch.png`,
+        links: {
+          github: "https://github.com/alexanderMontague/CryptoWatch",
+          hosted: "https://cryptowatch.web.app/",
+        },
+        tech: ["react", "redux", "node", "mongo"],
       },
       {
         title: "Book Buy",
@@ -257,7 +268,7 @@ export default {
         tech: ["react", "javascript", "firebase"],
       },
       {
-        title: "am.ca Server",
+        title: "api.alexmontague.ca",
         description:
           "My personal server hosted on a raspberry pi that I use for alexmontague.ca. Try pinging <code><a href='https://api.alexmontague.ca/resume' target='_blank'>api.alexmontague.ca/resume</a></code> for a JSON representation of my resume! Written using Golang and configured using nginx. I used this as an opportunity to learn more about Go and Networking!",
         asset: `${baseURL}/${publicAssetPath}/pi_server.png`,
