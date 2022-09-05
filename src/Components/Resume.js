@@ -6,6 +6,7 @@ import taplyticsIcon from "../assets/icons/taplytics-icon.jpg";
 import shopifyIcon from "../assets/icons/shopify-icon.png";
 import htIcon from "../assets/icons/ht-icon.jpg";
 import guelphIcon from "../assets/icons/guelph-icon.png";
+import keysIcon from "../assets/icons/keys-icon.jpg";
 import axios from "axios";
 import moment from "moment";
 import styled from "styled-components";
@@ -19,6 +20,7 @@ const iconMap = {
   shopify: shopifyIcon,
   ht: htIcon,
   guelph: guelphIcon,
+  keys: keysIcon,
 };
 
 const ContribuitionContainer = styled.div`
@@ -42,7 +44,7 @@ class Resume extends Component {
 
   componentDidMount() {
     axios(
-      "https://cors-anywhere.herokuapp.com/https://github-contributions.now.sh/api/v1/alexanderMontague"
+      "https://api.alexmontague.ca/cors?url=https://github-contributions.vercel.app/api/v1/alexanderMontague"
     ).then(res => {
       this.parseCommitData(res.data);
     });
@@ -84,19 +86,11 @@ class Resume extends Component {
   };
 
   render() {
-    const {
-      skillmessage,
-      education,
-      work,
-      barSkills,
-      techSkills,
-    } = this.props.data;
+    const { skillmessage, education, work, barSkills, techSkills } =
+      this.props.data;
 
-    const {
-      totalContributions,
-      weeklyContributions,
-      dailyContributions,
-    } = this.state;
+    const { totalContributions, weeklyContributions, dailyContributions } =
+      this.state;
 
     const educationCollection = education.map(education => {
       return (
@@ -125,7 +119,7 @@ class Resume extends Component {
 
     const workCollection = work.map(work => {
       return (
-        <div key={work.company}>
+        <div key={`${work.company}-${work.title}`}>
           <h3 style={{ display: "flex", alignItems: "center" }}>
             {work.company}
             <img

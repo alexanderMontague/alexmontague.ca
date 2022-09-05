@@ -9,7 +9,7 @@ class Header extends Component {
       var description = this.props.data.description;
       var description2 = this.props.data.description2;
       var city = this.props.data.address.city;
-      var networks = this.props.data.social.map(function(network) {
+      var networks = this.props.data.social.map(function (network) {
         return (
           <li key={network.name}>
             <a href={network.url}>
@@ -66,10 +66,9 @@ class Header extends Component {
           <div className="banner-text">
             <h1 className="responsive-headline">I'm {name}.</h1>
             <h3>
-              Hey! I'm a <span>{city}</span> based <span>{occupation}</span>
-              currently in my fourth year studying at the{" "}
-              <span>University of Guelph</span>. {description}{" "}
-              <span>new opportunities</span>
+              Hey! I'm a <span>{city}</span> based <span>{occupation} </span>
+              currently working as a Full Stack Web Developer at{" "}
+              <span>Shopify</span>. {description} <span>new opportunities</span>
               {description2} <span>I am up for the challenge.</span>
             </h3>
             <hr />

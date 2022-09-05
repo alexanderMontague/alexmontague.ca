@@ -593,22 +593,31 @@ ul#nav li.current a {
   margin: 40px;
   color: black;
 }
+
+.no-m {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 /* .portfolioItem:hover {
   color: #00a5ff;
 } */
 .flexMeUp {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
+.verticalFlexMeUp {
+  flex-direction: column;
+}
+
 @media (max-width: 767px) {
   .flexMeUp {
     flex-direction: column;
   }
 }
 .portfolioImage {
-  width: 55%;
-  height: 50%;
-  padding-right: 50px;
+  max-width: 520px;
 }
 @media (max-width: 767px) {
   .portfolioImage {
@@ -616,6 +625,10 @@ ul#nav li.current a {
     height: 100%;
     padding-right: 0;
   }
+}
+
+.paddingRight {
+  padding-right: 50px
 }
 
 .slide {

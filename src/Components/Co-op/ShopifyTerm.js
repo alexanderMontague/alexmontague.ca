@@ -334,7 +334,7 @@ const StyledLine = styled.hr`
 const ShopifyTerm = () => {
   useEffect(() => {
     Prism.highlightAll();
-    renderJavascriptBuyButton();
+    // renderJavascriptBuyButton();
     return () => {};
   }, []);
 
@@ -685,11 +685,11 @@ const ShopifyTerm = () => {
             </StyledLink>
             <br />
             <br />
-            <div style={{ fontSize: 15 }}>
+            {/* <div style={{ fontSize: 15 }}>
               <i>A snippet of the Javascript Collection!</i>
             </div>
             <br />
-            <div id="collection-component-1597761206575" />
+            <div id="collection-component-1597761206575" /> */}
           </span>
           <br />
           <span id="Description">
@@ -933,11 +933,7 @@ const ShopifyTerm = () => {
                 width: "100%",
                 height: 600,
               }}
-              src={
-                process.env.NODE_ENV === "development"
-                  ? "http://192.168.0.178:8088/graphiql"
-                  : "https://api.alexmontague.ca/graphiql"
-              }
+              src={"https://api.alexmontague.ca/graphiql"}
             />
             <div style={{ fontSize: 15 }}>
               <i>

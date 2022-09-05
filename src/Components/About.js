@@ -33,7 +33,7 @@ class About extends Component {
                   <br />
                   <span>
                     <br />
-                    Toronto / Guelph / Oakville
+                    Toronto
                   </span>
                   <br />
                   <span>{phone}</span>
