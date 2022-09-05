@@ -6,6 +6,8 @@ export function ProjectItem({
   vertical = false,
 }) {
   const renderMedia = () => {
+    const mediaClass = cn("portfolioImage", !vertical && "paddingRight");
+
     if (asset.includes(".mov")) {
       // if a video
       return (
@@ -14,13 +16,13 @@ export function ProjectItem({
           loop
           muted
           playsInline
-          className="portfolioImage"
+          className={mediaClass}
           src={asset}
         />
       );
     }
 
-    return <img src={asset} alt="portfolio item" className="portfolioImage" />;
+    return <img src={asset} alt="portfolio item" className={mediaClass} />;
   };
 
   return (
@@ -57,7 +59,10 @@ export function ProjectItem({
             )}
           </div>
           {/* Be careful with XSS if ever fetching */}
-          <div dangerouslySetInnerHTML={{ __html: description }} />
+          <div
+            style={{ marginBottom: 50 }}
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         </div>
       </div>
     </div>

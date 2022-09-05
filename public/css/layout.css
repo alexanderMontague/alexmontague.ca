@@ -618,7 +618,6 @@ ul#nav li.current a {
 }
 .portfolioImage {
   max-width: 520px;
-  padding-right: 50px;
 }
 @media (max-width: 767px) {
   .portfolioImage {
@@ -626,6 +625,10 @@ ul#nav li.current a {
     height: 100%;
     padding-right: 0;
   }
+}
+
+.paddingRight {
+  padding-right: 50px
 }
 
 .slide {

@@ -85,7 +85,7 @@ export default {
       },
       {
         company: "Keys Token",
-        title: "Principal Engineer",
+        title: "Lead Engineer",
         years: "Nov 2021 - Present",
         description:
           "Was the first primary Engineer on the Keys Token Engineering team. Helped build out the infrastructure for one of the most disruptive Web3 Luxury and Virtual Real-estate companies in the space today. Built multiple Dapps, Landing Pages, and APIs for Keys Token. Generated $10 Million+ USD from MetaMansions NFT mint event. Keys Token, Meta Mansions, and Project Mercury are all Keys Token products that I have systematically helped engineer and build from the ground up with proprietary Smart Contracts, Authentication systems, and Web2 --> Web3 solutions.",

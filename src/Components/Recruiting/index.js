@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { HashLink as Link } from "react-router-hash-link";
-import resume from "../../assets/resumeData.js";
+import resume from "../../assets/resumeData.mjs";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { ProjectItem } from "../ProjectItem.js";
@@ -12,7 +12,7 @@ const GradientBackground = styled.div`
     ${props => props.companyColors[0]},
     ${props => props.companyColors[1]}
   );
-  height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -75,6 +75,7 @@ const Paragraph = styled.div`
 const CarouselContainer = styled.div`
   width: 55%;
   margin: 0 auto;
+  padding-bottom: 40px;
 
   @media (max-width: 1080px) {
     width: 95%;

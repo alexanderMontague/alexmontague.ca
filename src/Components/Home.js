@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from "react";
 
-import resumeData from "../assets/resumeData.js";
+import resumeData from "../assets/resumeData.mjs";
 
 import Header from "./Header";
 import Footer from "./Footer";
