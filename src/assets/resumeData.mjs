@@ -9,11 +9,11 @@ const publicAssetPath = "public/images/portfolio";
 export default {
   main: {
     name: "Alex Montague",
-    occupation: "Software Engineer",
+    occupation: "Senior Software Engineer",
     description: "I am always looking for ",
     description2: ". If you'd like to chat, drop me a line!",
     image: "profilepic.jpg",
-    bio: "I'm currently based in beautiful Toronto, Ontario, Canada where I probably code a little too much. When I'm not working my day job, I can be found jamming on Web3 projects, hitting the Gym, or hanging out in Trinity Bellwoods Park! I have a recent passion for developing and learning about the Web3/Crypto/DeFi space. I have been a Crypto investor for 5+ years, but never had the opportunity to build software on these platforms. So lets go!",
+    bio: "I'm currently based in the West End of beautiful Toronto, Ontario, Canada. At Shopify, I'm working on creating wonderful and elegant developer experiences for third party Shopify App Devs. When I'm not programming, I enjoy hiking, portaging, snowboarding, playing hockey, and traveling. I'm most interested in building full stack applications (Remix + TS/Ruby is my goto right now), and enjoy building well crafted experiences that captivate a user.",
     contactmessage: "Drop me a line:",
     email: "me@alexmontague.ca",
     phone: "",
@@ -62,7 +62,7 @@ export default {
         degree: "Software Engineering",
         graduated: "April 2021",
         description:
-          "Graduated with a Bachelor of Computing Degree with Distinction, Majoring in Software Engineering. Maintained a 4.0 GPA in my last 4 years. Participated and lead multiple hack-a-thons, Teaching Assistant for CIS*1200, and founded a startup called BookBuy.ca during my tenure at UofG.",
+          "Graduated with a Bachelor of Computing Degree with Distinction, Majoring in Software Engineering. Maintained a 4.0 GPA in my last 4 years. Participated and led multiple hack-a-thons, Teaching Assistant for CIS*1200, and founded a startup called BookBuy.ca during my tenure at UofG.",
         icon: "guelph",
       },
       // {
@@ -77,16 +77,16 @@ export default {
     work: [
       {
         company: "Shopify",
-        title: "Front End Developer",
+        title: "Senior Software Engineer",
         years: "May 2021 - Present",
         description:
-          "Currently an L5 Engineer at Shopify on the App Configuration team. We are building products to enable the next generation of app developers on Shopify, so all of the tools, APIs and Web Interfaces a third party developer would need to build a kick-ass app on Shopify is what our team deals with. Currently Leading multiple projects inside of our team, including overhauling the ERB Apps Navigation on the Partners Platform, Reactification and extensibility of components on the Partners Platform, and leading project specific rituals including Planning, Grooming and Task identification/assignment.",
+          "Currently a Senior Software Engineer (L6) at Shopify on the App Inner Loop team. We are building products to enable the next generation of app developers on Shopify. This includes all of the tools, APIs and Web Interfaces a third party developer would need to build a kick-ass app on Shopify. Currently Leading multiple projects inside of our team, including overhauling the ERB Apps Navigation on the Partners Platform, Reactification and extensibility of components on the Partners Platform, enabling Declarative Webhooks via an App's configuration file and many more day to day tasks.",
         icon: "shopify",
       },
       {
         company: "Keys Token",
         title: "Lead Engineer",
-        years: "Nov 2021 - Present",
+        years: "Nov 2021 - Oct. 2022",
         description:
           "Was the first primary Engineer on the Keys Token Engineering team. Helped build out the infrastructure for one of the most disruptive Web3 Luxury and Virtual Real-estate companies in the space today. Built multiple Dapps, Landing Pages, and APIs for Keys Token. Generated $10 Million+ USD from MetaMansions NFT mint event. Keys Token, Meta Mansions, and Project Mercury are all Keys Token products that I have systematically helped engineer and build from the ground up with proprietary Smart Contracts, Authentication systems, and Web2 --> Web3 solutions.",
         icon: "keys",
