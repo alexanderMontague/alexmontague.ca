@@ -12,7 +12,7 @@ class Header extends Component {
       var networks = this.props.data.social.map(function (network) {
         return (
           <li key={network.name}>
-            <a href={network.url}>
+            <a href={network.url} target="_blank">
               <i className={network.className} />
             </a>
           </li>
@@ -64,11 +64,11 @@ class Header extends Component {
 
         <div className="row banner">
           <div className="banner-text">
-            <h1 className="responsive-headline">I'm {name}.</h1>
+            <h1 className="responsive-headline">I'm {name}</h1>
             <h3>
               Hey! I'm a <span>{city}</span> based <span>{occupation} </span>
-              currently working as a Full Stack Web Developer at{" "}
-              <span>Shopify</span>. {description} <span>new opportunities</span>
+              currently working at <span>Shopify</span>. {description}{" "}
+              <span>new opportunities</span>
               {description2} <span>I am up for the challenge.</span>
             </h3>
             <hr />
